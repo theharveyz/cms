@@ -16,9 +16,6 @@
     2.  点击导航栏中的 **Dashboard**。
     3.  在**当前监控大盘**的下拉菜单中选择需要的大盘。通过选择不同的大盘，可切换大盘视图。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6124/994_zh-CN.png)
-
-
 ## **创建监控大盘** {#section_fw2_htv_tdb .section}
 
 当您的业务比较复杂，默认的 ECS 监控大盘无法满足您的监控可视化需求时，您可以创建新的监控大盘，自定义需要展示的图表。
@@ -27,13 +24,7 @@
     1.  登录[云监控控制台。](https://cloudmonitor.console.aliyun.com)
     2.  点击导航栏中的 **Dashboard**。
     3.  点击页面右上角的**创建监控大盘**。
-
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6124/996_zh-CN.png)
-
     4.  输入监控大盘名称，点击**创建**。
-
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6124/997_zh-CN.png)
-
     5.  页面会自动跳转到新创建的监控大盘页面，您就可以开始自由添加各种监控图表了。
 
 ## 添加图表 {#section_xzb_rwv_tdb .section}
@@ -67,5 +58,4 @@
     1.  登录[云监控控制台。](https://cloudmonitor.console.aliyun.com)
     2.  点击导航栏中的 **Dashboard**。
     3.  鼠标悬浮在监控大盘名称上，右侧会出现**修改名称**选项。
-    4.  ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6124/1019_zh-CN.png)
-
+    4.  
