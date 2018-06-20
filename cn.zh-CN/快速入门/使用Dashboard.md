@@ -45,8 +45,8 @@
 当您通过云监控API上报了自己的业务监控数据后，可以为该监控数据添加监控图表，进行可视化展示。
 
 -   操作步骤
-    -   [添加图表](../cn.zh-CN/用户指南/Dashboard/添加图表.md#)。
-    -   [添加日志监控](../cn.zh-CN/用户指南/Dashboard/添加日志监控.md#)。
+    -   [添加图表](../../../../intl.zh-CN/用户指南/Dashboard/添加图表.md#)。
+    -   [添加日志监控](../../../../intl.zh-CN/用户指南/Dashboard/添加日志监控.md#)。
 
 ## 删除监控大盘 {#section_lw1_z1w_tdb .section}
 
