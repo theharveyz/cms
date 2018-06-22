@@ -10,7 +10,7 @@
 
 其中：
 
--   `Endpoint`是调用的云服务的接入点，云监控的接入点是metrics.aliyuncs.com。各地域的SLB服务地址，参见[云监控接入地址](#section_xf3_lbv_zdb)。
+-   `Endpoint`是调用的云服务的接入点，云监控的接入点是[metrics.aliyuncs.com](http://metrics.aliyuncs.com)。各地域的SLB服务地址，参见[云监控接入地址](#section_xf3_lbv_zdb)。
 
 -   `Action`是要执行的操作，如使用QueryMetricList接口查询某一实例的监控数据。
 
