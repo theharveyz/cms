@@ -31,7 +31,8 @@ To view GPU-related metric charts, follow these steps:
 
 7.  Select the metrics you want from the drop-down menu. The following figure uses the instance-dimension GPU temperature as an example.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6699_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6699_en-US.png)
+
 
 ## Set alarm rules {#section_mxb_qdr_32b .section}
 
