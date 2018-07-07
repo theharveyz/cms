@@ -6,7 +6,7 @@ You can query GPU monitoring data in two ways: CloudMonitor console and API
 
 After purchasing an instance of the GPU Compute type for ECS, you only need to install the GPU drive and the 1.2.28 version of the CloudMonitor plug-in before you can view and configure GPU-related metric charts, or set alarm rules.
 
-![](images/6694_zh-CN.jpeg)
+![](6845_zh-CN.png)
 
 ## View metric charts {#section_oyk_4dr_32b .section}
 
