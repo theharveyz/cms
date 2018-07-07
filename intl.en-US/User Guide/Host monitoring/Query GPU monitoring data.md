@@ -4,7 +4,9 @@ You can query GPU monitoring data in two ways: CloudMonitor console and API
 
 ## **Query GPU monitoring data through the CloudMonitor console** {#section_hcc_4mr_32b .section}
 
-After purchasing an instance of the GPU Compute type for ECS, you only need to install the GPU drive and the 1.2.28 version of the CloudMonitor plug-in before you can view and configure GPU-related metric charts, or set alarm rules.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6845_zh-CN.png)
+After purchasing an instance of the GPU Compute type for ECS, you only need to install the GPU drive and the 1.2.28 version of the CloudMonitor plug-in before you can view and configure GPU-related metric charts, or set alarm rules.
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6845_en-US.png)
 
 ## View metric charts {#section_oyk_4dr_32b .section}
 
@@ -14,7 +16,7 @@ To view GPU-related metric charts, follow these steps:
 2.  Click **Host Monitoring** in the navigation bar.
 3.  Query GPU-related metric charts on the **GPUMonitor**page, as shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6696_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6696_en-US.png)
 
 ## Configure metric charts {#section_hzg_pdr_32b .section}
 
@@ -25,11 +27,11 @@ To view GPU-related metric charts, follow these steps:
 5.  On the refreshed page, click **Add View**.
 6.  On the **Add View** page, select the chart type you want, and then select **Metrics**, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6698_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6698_en-US.png)
 
 7.  Select the metrics you want from the drop-down menu. The following figure uses the instance-dimension GPU temperature as an example.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6699_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6699_en-US.png)
 
 ## Set alarm rules {#section_mxb_qdr_32b .section}
 
