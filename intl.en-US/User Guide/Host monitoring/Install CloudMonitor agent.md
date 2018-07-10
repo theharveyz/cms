@@ -170,6 +170,27 @@ REGION_ID=me-east-1 VERSION=1.3.2 \
 bash -c "$(curl https://cms-agent-me-east-1.oss-me-east-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
+**East China 1 Finance Cloud Hangzhou cn-hangzhou**
+
+```
+
+REGION_ID=cn-hangzhou VERSION=1.3.2 \ bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
+```
+
+**East China 2 Finance Cloud Shanghai cn-shanghai-finance-1**
+
+```
+
+REGION_ID=cn-shanghai-finance-1 VERSION=1.3.2 \ bash -c "$(curl https://cms-agent-cn-shanghai-finance-1.oss-cn-shanghai-finance-1-pub-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
+```
+
+**South China 1 Finance Cloud Shenzhen cn-shenzen-finance-1**
+
+```
+
+REGION_ID=cn-shenzhen-finance-1 VERSION=1.3.2 \ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
+```
+
 ## Install CloudMonitor agent on Windows {#section_fxr_wdf_xdb .section}
 
 **Installation procedure**
@@ -201,7 +222,7 @@ If there is no public network, you can download the package from the Intranet. F
 |:--------------|:---------------------|:-------|
 |North China 1|cn-qingdao|Qingdao|
 |North China 2|cn-beijing|Beijing|
-|North China 3|cn-zhangjiakou |Zhangjiakou|
+|North China 3|cn-zhangjiakou|Zhangjiakou|
 |North China 5|cn-huhehaote|Hohhot|
 |East China 1|cn-hangzhou|Hangzhou|
 |East China 2|cn-shanghai|Shanghai|
@@ -215,8 +236,11 @@ If there is no public network, you can download the package from the Intranet. F
 |Asia Pacific Southeast 5|ap-southeast-5|Jakarta|
 |Asia Pacific Northeast 1|ap-northeast-1 |Japan|
 |Asia Pacific South 1 |ap-south-1|Mumbai|
-|Central Europe 1|eu-central-1|Frankfurt|
+|Central Europe 1|eu-central-1|Frankfurt |
 |Eastern Middle East 1|me-east-1 |Dubai|
+|East China 1 Finance Cloud|cn-hangzhou|Hangzhou|
+|East China 2 Finance Cloud|cn-shanghai-finance-1|Shanghai|
+|South China 1 Finance Cloud|cn-shenzhen-finance-1|Shenzhen|
 
 ## Resource consumption {#section_oh3_r3f_xdb .section}
 

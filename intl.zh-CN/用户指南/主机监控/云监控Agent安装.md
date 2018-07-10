@@ -170,6 +170,27 @@ REGION_ID=me-east-1 VERSION=1.3.2 \
 bash -c "$(curl https://cms-agent-me-east-1.oss-me-east-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
+**华东1金融云 杭州 cn-hangzhou**
+
+```
+
+REGION_ID=cn-hangzhou VERSION=1.3.2 \ bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
+```
+
+**华东2金融云 上海 cn-shanghai-finance-1**
+
+```
+
+REGION_ID=cn-shanghai-finance-1 VERSION=1.3.2 \ bash -c "$(curl https://cms-agent-cn-shanghai-finance-1.oss-cn-shanghai-finance-1-pub-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
+```
+
+**华南1金融云 深圳 cn-shenzen-finance-1**
+
+```
+
+REGION_ID=cn-shenzhen-finance-1 VERSION=1.3.2 \ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
+```
+
 ## Windows Agent 安装说明 {#section_fxr_wdf_xdb .section}
 
 **安装步骤**
@@ -217,6 +238,9 @@ bash -c "$(curl https://cms-agent-me-east-1.oss-me-east-1-internal.aliyuncs.com/
 |亚太南部 1|ap-south-1|孟买|
 |欧洲中部 1|eu-central-1|法兰克福|
 |中东东部 1|me-east-1|迪拜|
+|华东1金融云|cn-hangzhou|杭州|
+|华东2金融云|cn-shanghai-finance-1|上海|
+|华南1金融云|cn-shenzhen-finance-1|深圳|
 
 ## 资源消耗 {#section_oh3_r3f_xdb .section}
 
