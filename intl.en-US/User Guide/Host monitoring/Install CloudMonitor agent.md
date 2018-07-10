@@ -174,21 +174,24 @@ bash -c "$(curl https://cms-agent-me-east-1.oss-me-east-1-internal.aliyuncs.com/
 
 ```
 
-REGION_ID=cn-hangzhou VERSION=1.3.2 \ bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
+REGION_ID=cn-hangzhou VERSION=1.3.2 \
+bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
 **East China 2 Finance Cloud Shanghai cn-shanghai-finance-1**
 
 ```
 
-REGION_ID=cn-shanghai-finance-1 VERSION=1.3.2 \ bash -c "$(curl https://cms-agent-cn-shanghai-finance-1.oss-cn-shanghai-finance-1-pub-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
+REGION_ID=cn-shanghai-finance-1 VERSION=1.3.2 \
+bash -c "$(curl https://cms-agent-cn-shanghai-finance-1.oss-cn-shanghai-finance-1-pub-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
 **South China 1 Finance Cloud Shenzhen cn-shenzen-finance-1**
 
 ```
 
-REGION_ID=cn-shenzhen-finance-1 VERSION=1.3.2 \ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
+REGION_ID=cn-shenzhen-finance-1 VERSION=1.3.2 \
+bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
 ## Install CloudMonitor agent on Windows {#section_fxr_wdf_xdb .section}
