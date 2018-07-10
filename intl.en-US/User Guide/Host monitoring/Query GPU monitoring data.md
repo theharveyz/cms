@@ -4,7 +4,7 @@ You can query GPU monitoring data in two ways: CloudMonitor console and API
 
 ## **Query GPU monitoring data through the CloudMonitor console** {#section_hcc_4mr_32b .section}
 
-After purchasing an instance of the GPU Compute type for ECS, you only need to install the [GPU driver](https://help.aliyun.com/document_detail/60149.html) and the 1.2.28 version of the CloudMonitor plug-in before you can view and configure GPU-related metric charts, or set alarm rules.
+After purchasing an instance of the GPU Compute type for ECS, you only need to install the [GPU driver](../../../../intl.en-US/User Guide/Instances/Create an instance/Create a gn4 or a gn5 instance.md#) and the 1.2.28 version of the CloudMonitor plug-in before you can view and configure GPU-related metric charts, or set alarm rules.
 
 ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6845_en-US.png)
 
@@ -35,7 +35,7 @@ To view GPU-related metric charts, follow these steps:
 
 ## Set alarm rules {#section_mxb_qdr_32b .section}
 
-The method of adding alarm rules for new GPU metrics is the same as that for other ECS metrics. It is recommended that you add GPU alarm rules in batches by applying the template to groups after creating the template. For details, see [Alarm template](https://help.aliyun.com/document_detail/56012.html).
+The method of adding alarm rules for new GPU metrics is the same as that for other ECS metrics. It is recommended that you add GPU alarm rules in batches by applying the template to groups after creating the template. For details, see [Alarm template](../../../../intl.en-US/Best Practices/Alarm template Best Practices.md#).
 
 ## Metrics description {#section_iyy_qjr_32b .section}
 
@@ -94,6 +94,6 @@ Group-dimension metrics measure the maximum, minimum, or average value of multip
 
 ## Query GPU monitoring data through the API {#section_iq4_gnr_32b .section}
 
--   See [**QueryMetricList**](https://help.aliyun.com/document_detail/51936.html).
+-   See [QueryMetricList](../../../../intl.en-US/API Reference/QueryMetricList.md#).
 -   Parameter description: The "Project" parameter should be set to "acs\_ecs\_dashboard." For the values of the "Metric" and "Dimensions" parameters, see the GPU metrics in the preceding tables.
 
