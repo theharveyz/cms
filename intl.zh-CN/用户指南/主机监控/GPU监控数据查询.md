@@ -4,7 +4,7 @@ GPU监控数据可以通过两种方式查询：云监控控制台和API。
 
 ## **通过云监控控制台查询GPU监控数据** {#section_hcc_4mr_32b .section}
 
-在您购买ECS的GPU计算型实例后，只需安装GPU驱动和云监控插件的1.2.28版本，即可查看GPU相关监控图表、配置监控图表或设置报警规则。
+在您购买ECS的GPU计算型实例后，只需安装[GPU驱动](https://help.aliyun.com/document_detail/60149.html)和云监控插件的1.2.28版本，即可查看GPU相关监控图表、配置监控图表或设置报警规则。
 
 ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6845_zh-CN.png)
 
