@@ -27,7 +27,7 @@
     |DiskWriteIOPS|System disk write IOPS|Count/Second|instanceId|Average, Minimum, and Maximum|
     |VPC\_PublicIP\_InternetInRate|VPC - Inbound public network bandwidth|bits/s|instanceId|Average, Minimum, and Maximum|
     |VPC\_PublicIP\_InternetOutRate|VPC - Outbound public network bandwidth|bits/s|instanceId|Average, Minimum, and Maximum|
-    |VPC\_PublicIP\_InternetOutRate\_Percent|VPC - Outbound public network bandwidth usage|%|instanceId|Average|
+    |VPC\_PublicIP\_InternetOutRate\_Percent|VPC - Outbound public network bandwidth usage|%|instanceId|Average |
 
 
 -   Operating system metrics
@@ -60,13 +60,13 @@
     |disk\_readiops|Host.disk.readiops, number of read requests sent to the disk per second|Requests/s|instanceId, device|Average, Minimum, and Maximum|
     |disk\_writeiops|Host.disk.writeiops, number of write requests sent to the disk per second|Requests/s|instanceId, device|Average, Minimum, and Maximum|
     |fs\_inodeutilization|Host.fs.inode, inode usage|%|instanceId, device|Average, Minimum, and Maximum|
-    |networkin\_rate|Host.netin.rate, number of bits received by the network adapter per second, that is, the uplink bandwidth of the network adapter|bits/s|instanceId, device|Average, Minimum, and Maximum|
-    |networkout\_rate|Host.netout.rate, number of bits sent by the network adapter per second, that is, the downlink bandwidth of the network adapter|bits/s|instanceId, device|Average, Minimum, and Maximum|
+    |networkin\_rate|Host.netin.rate, number of bits received by the network adapter per second, that is, the uplink bandwidth of the network adapter|bits/s| instanceId, device|Average, Minimum, and Maximum|
+    |networkout\_rate|Host.netout.rate, number of bits sent by the network adapter per second, that is, the downlink bandwidth of the network adapter|bits/s| instanceId, device|Average, Minimum, and Maximum|
     |networkin\_packages|Host.netin.packages, number of packets received by the network adapter per second|Packets/s|instanceId, device|Average, Minimum, and Maximum|
     |networkout\_packages|Host.netout.packages, number of packets sent by the network adapter per second|Packets/s|instanceId, device|Average, Minimum, and Maximum|
     |networkin\_errorpackages|Host.netin.errorpackage, number of incoming error packets detected by the drive|Packets/s|instanceId, device|Average, Minimum, and Maximum|
     |networkout\_errorpackages|Host.netout.errorpackages, number of outgoing error packets detected by the drive|Packets/s|instanceId, device|Average, Minimum, and Maximum|
-    |net\_tcpconnection|Host.tcpconnection, number of TCP connections in various states, including LISTEN, SYN\_SENT, ESTABLISHED, SYN\_RECV, FIN\_WAIT1, CLOSE\_WAIT, FIN\_WAIT2, LAST\_ACK, TIME\_WAIT, CLOSING, and CLOSED|Connections|instanceId, state|Average, Minimum, and Maximum|
+    |net\_tcpconnection|Host.tcpconnection, number of TCP connections in various states, including LISTEN, SYN\_SENT, ESTABLISHED, SYN\_RECV, FIN\_WAIT1, CLOSE\_WAIT, FIN\_WAIT2, LAST\_ACK, TIME\_WAIT, CLOSING, and CLOSED|Requests|instanceId, state|Average, Minimum, and Maximum|
 
 
 ## ApsaraDB for RDS metric reference {#section_ukj_mkz_zdb .section}
@@ -101,19 +101,19 @@
     |:-----|:----------|:---|:---------|:---------|
     |HeathyServerCount|Number of healthy backend ECS instances|Count|instanceId|Average, Minimum, and Maximum|
     |UnhealthyServerCount|Number of faulty backend ECS instances|Count|instanceId|Average, Minimum, and Maximum|
-    |PacketTX|Number of outgoing packets per second on the port|Count/Second|instanceId, port, vip|Average, Minimum, and Maximum|
-    |PacketRX|Number of incoming packets per second on the port|Count/Second|instanceId, port, vip|Average, Minimum, and Maximum|
-    |TrafficRXNew|Inbound data volume per second on the port|bits/s|instanceId, port, vip|Average, Minimum, and Maximum|
-    |TrafficTXNew|Outbound data volume per second on the port|bits/s|instanceId, port, vip|Average, Minimum, and Maximum|
-    |ActiveConnection|Number of active connections on the port, that is, the number of connections that clients set up to access Server Load Balancer|Count|instanceId, port, vip|Average, Minimum, and Maximum|
-    |InactiveConnection|Number of inactive connections on the port, that is, the number of connections that are idle after access to Server Load Balancer|Count|instanceId, port, vip|Average, Minimum, and Maximum|
-    |NewConnection|Current number of new connections on the port|Count|instanceId, port, vip|Average, Minimum, and Maximum|
-    |MaxConnection|Number of concurrent connections on the port|Count|instanceId, port, vip|Average, Minimum, and Maximum|
-    |DropConnection|Number of dropped connections per second during monitoring|Count/Second|instanceId, port, vip|Average, Minimum, and Maximum|
-    |DropPacketRX|Number of dropped incoming packets per second during monitoring|Count/Second|instanceId, port, vip|Average, Minimum, and Maximum|
-    |DropPacketTX|Number of dropped outgoing packets per second during monitoring|Count/Second|instanceId, port, vip|Average, Minimum, and Maximum|
-    |DropTrafficRX|Number of dropped incoming bits per second during monitoring|bits/s|instanceId, port, vip|Average, Minimum, and Maximum|
-    |DropTrafficTX|Number of dropped outgoing bits per second during monitoring|bits/s|instanceId, port, vip|Average, Minimum, and Maximum|
+    |PacketTX|Number of outgoing packets per second on the port|Count/Second|instanceId, port, vip||Average, Minimum, and Maximum|
+    |PacketRX|Number of incoming packets per second on the port|Count/Second|instanceId, port, vip||Average, Minimum, and Maximum|
+    |TrafficRXNew|Inbound data volume per second on the port|bits/s|instanceId, port, vip||Average, Minimum, and Maximum|
+    |TrafficTXNew|Outbound data volume per second on the port|bits/s|instanceId, port, vip||Average, Minimum, and Maximum|
+    |ActiveConnection|Number of active connections on the port, that is, the number of connections that clients set up to access Server Load Balancer|Count|instanceId, port, vip||Average, Minimum, and Maximum|
+    |InactiveConnection|Number of inactive connections on the port, that is, the number of connections that are idle after access to Server Load Balancer|Count|instanceId, port, vip||Average, Minimum, and Maximum|
+    |NewConnection|Current number of new connections on the port|Count|instanceId, port, vip||Average, Minimum, and Maximum|
+    |MaxConnection|Number of concurrent connections on the port|Count|instanceId, port, vip||Average, Minimum, and Maximum|
+    |DropConnection|Number of dropped connections per second during monitoring|Count/Second|instanceId, port, vip||Average, Minimum, and Maximum|
+    |DropPacketRX|Number of dropped incoming packets per second during monitoring|Count/Second|instanceId, port, vip||Average, Minimum, and Maximum|
+    |DropPacketTX|Number of dropped outgoing packets per second during monitoring|Count/Second|instanceId, port, vip||Average, Minimum, and Maximum|
+    |DropTrafficRX|Number of dropped incoming bits per second during monitoring|bits/s|instanceId, port, vip||Average, Minimum, and Maximum|
+    |DropTrafficTX|Number of dropped outgoing bits per second during monitoring|bits/s|instanceId, port, vip||Average, Minimum, and Maximum|
     |InstanceActiveConnection|Number of active connections per second on the instance|Count/Second|instanceId|Average, Minimum, and Maximum|
     |InstanceDropConnection|Number of dropped connections per second on the instance|Count/Second|instanceId|Average, Minimum, and Maximum|
     |InstanceDropPacketRX|Number of dropped incoming packets per second on the instance|Count/Second|instanceId|Average, Minimum, and Maximum|
@@ -135,13 +135,13 @@
     |Qps|Layer-7 protocol port QPS|Count/Second|instanceId, port, vip|Average|
     |Rt|Layer-7 protocol port RT|ms|instanceId, port, vip|Average|
     |StatusCode2xx|Layer-7 protocol port status code 2XX|Count/Second|instanceId, port, vip|Average|
-    |StatusCode3xx|Layer-7 protocol port status code 3XX|Count/Second|instanceId, port, vip|Average |
-    |StatusCode4xx|Layer-7 protocol port status code 4XX|Count/Second|instanceId, port, vip|Average |
-    |StatusCode5xx|Layer-7 protocol port status code 5XX|Count/Second|instanceId, port, vip|Average |
-    |StatusCodeOther|Layer-7 protocol port status code others|Count/Second|instanceId, port, vip|Average |
-    |UpstreamCode4xx|Layer-7 protocol port Upstream status code 4xx|Count/Second|instanceId, port, vip|Average |
-    |UpstreamCode5xx|Layer-7 protocol port Upstream status code 5xx|Count/Second|instanceId, port, vip|Average |
-    |UpstreamRt|Layer-7 protocol port UpstreamRT|ms|instanceId, port, vip|Average |
+    |StatusCode3xx|Layer-7 protocol port status code 3XX|Count/Second|instanceId, port, vip|Average|
+    |StatusCode4xx|Layer-7 protocol port status code 4XX|Count/Second|instanceId, port, vip|Average|
+    |StatusCode5xx|Layer-7 protocol port status code 5XX|Count/Second|instanceId, port, vip|Average|
+    |StatusCodeOther|Layer-7 protocol port status code others|Count/Second|instanceId, port, vip|Average|
+    |UpstreamCode4xx|Layer-7 protocol port Upstream status code 4xx|Count/Second|instanceId, port, vip|Average|
+    |UpstreamCode5xx|Layer-7 protocol port Upstream status code 5xx|Count/Second|instanceId, port, vip|Average|
+    |UpstreamRt|Layer-7 protocol port UpstreamRT|ms|instanceId, port, vip|Average|
     |InstanceQps|Layer-7 protocol instance QPS|Count/Second|instanceId|Average |
     |InstanceRt|Layer-7 protocol instance RT|ms|instanceId|Average |
     |InstanceStatusCode2xx|Layer-7 protocol instance status code 2XX|Count/Second|instanceId|Average |
@@ -166,7 +166,7 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
     -   The instanceId value for Dimensions is the instanceId of the Memcache instance.
     |Metric|Description|Unit|Dimensions|Statistics|
     |:-----|:----------|:---|:---------|:---------|
-    |ConnectionUsage|Connection usage|Connections|instanceId|Average, Minimum, and Maximum|
+    |ConnectionUsage|Connection usage|Requests|instanceId|Average, Minimum, and Maximum|
     |UsedConnection|Number of used connections|Count|instanceId|Average, Minimum, and Maximum|
     |CpuUsage|CPU usage|Percent|instanceId|Average, Minimum, and Maximum|
     |FailedCount|Number of operation failures|Count/Second|instanceId|Average, Minimum, and Maximum|
@@ -204,6 +204,7 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 |net\_rx.rate|Inbound bandwidth|bits/s|instanceId|Value|
 |net\_txPkgs.rate|Number of outgoing packets per second|Count/s|instanceId|Value|
 |net\_rxPkgs.rate|Number of incoming packets per second|Count/s|instanceId|Value|
+|out\_ratelimit\_drop\_speed|Speed-limit packet loss rate|pps|instanceId|Average|
 
 ## ApsaraDB for Redis {#section_jzf_dnz_zdb .section}
 
