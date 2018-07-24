@@ -20,14 +20,14 @@
     |IntranetInRate|Inbound private network bandwidth|bits/s|instanceId|Average, Minimum, and Maximum|
     |InternetOutRate|Outbound public network bandwidth|bits/s|instanceId|Average, Minimum, and Maximum|
     |IntranetOutRate|Outbound private network bandwidth|bits/s|instanceId|Average, Minimum, and Maximum|
-    |InternetOutRate\_Percent|Outbound public network bandwidth usage|%|instanceId|Average |
+    |InternetOutRate\_Percent|Outbound public network bandwidth usage|%|instanceId|Average|
     |DiskReadBPS|Total system disk read BPS|Bps|instanceId|Average, Minimum, and Maximum|
     |DiskWriteBPS|Total system disk write BPS|Bps|instanceId|Average, Minimum, and Maximum|
     |DiskReadIOPS|System disk read IOPS|Count/Second|instanceId|Average, Minimum, and Maximum|
     |DiskWriteIOPS|System disk write IOPS|Count/Second|instanceId|Average, Minimum, and Maximum|
     |VPC\_PublicIP\_InternetInRate|VPC - Inbound public network bandwidth|bits/s|instanceId|Average, Minimum, and Maximum|
     |VPC\_PublicIP\_InternetOutRate|VPC - Outbound public network bandwidth|bits/s|instanceId|Average, Minimum, and Maximum|
-    |VPC\_PublicIP\_InternetOutRate\_Percent|VPC - Outbound public network bandwidth usage|%|instanceId|Average |
+    |VPC\_PublicIP\_InternetOutRate\_Percent|VPC - Outbound public network bandwidth usage|%|instanceId|Average|
 
 
 -   Operating system metrics
@@ -142,15 +142,15 @@
     |UpstreamCode4xx|Layer-7 protocol port Upstream status code 4xx|Count/Second|instanceId, port, vip|Average|
     |UpstreamCode5xx|Layer-7 protocol port Upstream status code 5xx|Count/Second|instanceId, port, vip|Average|
     |UpstreamRt|Layer-7 protocol port UpstreamRT|ms|instanceId, port, vip|Average|
-    |InstanceQps|Layer-7 protocol instance QPS|Count/Second|instanceId|Average |
-    |InstanceRt|Layer-7 protocol instance RT|ms|instanceId|Average |
-    |InstanceStatusCode2xx|Layer-7 protocol instance status code 2XX|Count/Second|instanceId|Average |
-    |InstanceStatusCode3xx|Layer-7 protocol instance status code 3XX|Count/Second|instanceId|Average |
-    |InstanceStatusCode4xx|Layer-7 protocol instance status code 4XX|Count/Second|instanceId|Average |
-    |InstanceStatusCode5xx|Layer-7 protocol instance status code 5XX|Count/Second|instanceId|Average |
-    |InstanceStatusCodeOther|Layer-7 protocol instance status code Other|Count/Second|instanceId|Average |
-    |InstanceUpstreamCode4xx|Layer-7 protocol instance Upstream status code 4XX|Count/Second|instanceId|Average |
-    |InstanceUpstreamCode5xx|Layer-7 protocol instance Upstream status code 5XX|Count/Second|instanceId|Average |
+    |InstanceQps|Layer-7 protocol instance QPS|Count/Second|instanceId|Average|
+    |InstanceRt|Layer-7 protocol instance RT|ms|instanceId|Average|
+    |InstanceStatusCode2xx|Layer-7 protocol instance status code 2XX|Count/Second|instanceId|Average|
+    |InstanceStatusCode3xx|Layer-7 protocol instance status code 3XX|Count/Second|instanceId|Average|
+    |InstanceStatusCode4xx|Layer-7 protocol instance status code 4XX|Count/Second|instanceId|Average|
+    |InstanceStatusCode5xx|Layer-7 protocol instance status code 5XX|Count/Second|instanceId|Average|
+    |InstanceStatusCodeOther|Layer-7 protocol instance status code Other|Count/Second|instanceId|Average|
+    |InstanceUpstreamCode4xx|Layer-7 protocol instance Upstream status code 4XX|Count/Second|instanceId|Average|
+    |InstanceUpstreamCode5xx|Layer-7 protocol instance Upstream status code 5XX|Count/Second|instanceId|Average|
     |InstanceUpstreamRt|Layer-7 protocol instance UpstreamRT|ms|instanceId|Average |
 
 
@@ -297,6 +297,8 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 |IntranetTX|Outbound network traffic|Bytes|instanceId|
 |ReceiveBandwidth|Inbound network bandwidth|bit/s|instanceId|
 |TransportedBandwidth|Outbound network bandwidth|bit/s|instanceId|
+|RouterInterfaceResponseTime|Latency|ms|instanceId|
+|RouterInterfaceLossRate|Packet loss rate|%|instanceId|
 
 ## Function Compute metric reference {#section_d5t_2tz_zdb .section}
 
