@@ -230,7 +230,7 @@ If there is no public network, you can download the package from the Intranet. F
 |East China 1|cn-hangzhou|Hangzhou|
 |East China 2|cn-shanghai|Shanghai|
 |South China 1|cn-shenzhen|Shenzhen|
-|Hong Kong|cn-hongkong|Hong Kong|
+|China \(Hong Kong\)|cn-hongkong|China \(Hong Kong\)|
 |West US 1|us-west-1|Silicon Valley|
 |East US 1|us-east-1|Virginia|
 |Asia Pacific Southeast 1|ap-southeast-1|Singapore|
@@ -244,6 +244,17 @@ If there is no public network, you can download the package from the Intranet. F
 |East China 1 Finance Cloud|cn-hangzhou|Hangzhou|
 |East China 2 Finance Cloud|cn-shanghai-finance-1|Shanghai|
 |South China 1 Finance Cloud|cn-shenzhen-finance-1|Shenzhen|
+
+## **Security configuration instructions** {#section_s5t_313_p2b .section}
+
+The following table lists the ports that the CloudMonitor agent uses to interact with the server. If these ports are disabled by the security software, monitoring data may fail to be collected. If your ECS server requires a higher level of security, you can add the following IP addresses to the white list.
+
+**Note:** Future updates and maintenance of the CloudMonitor version may add more IP addresses or change the IP addresses. To simplify the configuration of the firewall rules, you can directly allow the outbound direction of the 100.100 network segment, which is reserved for the intranet of Alibaba Cloud and used to provide official Alibaba Cloud services, with no security issues in general.
+
+|Port|IP address|Direction|Description|
+|32000|127.0.0.1|Inbound, outbound|Bound to 127.0.0.1, used for CloudMonitor agent process Daemon|
+|3128, 8080|100.100.19.43 cn-hangzhou100.100.18.22 cn-beijing100.100.36.102 cn-qingdao100.100.0.13 cn-shenzhen100.100.35.4 cn-hongkong100.100.38.1 us-west-1100.100.38.1 us-east-1100.100.30.20 ap-southeast-1100.100.36.11 cn-shanghai100.100.80.184 ap-northeast-1100.100.80.241 eu-central-1100.100.80.142 me-east-1100.100.80.92 ap-southeast-2100.100.80.92 cn-zhangjiakou100.100.80.153 ap-southeast-3100.100.80.135 cn-huhehaote100.100.80.152 ap-south-1100.100.80.160 ap-southeast-5100.100.80.229 cn-chengdu|Outbound|Used for agent upgrade, monitoring configuration management, and other management and control operations|
+|80|100.100.80.198 cn-zhangjiakou100.100.36.6 cn-shanghai100.100.38.3 us-east-1100.100.29.7 us-west-1100.100.35.11 cn-hongkong100.100.80.137 ap-northeast-1100.100.80.72 eu-central-1100.100.0.31 cn-shenzhen100.100.18.50 cn-beijing100.100.45.73 cn-hangzhou100.100.15.23 cn-qingdao100.100.80.151 me-east-1100.100.80.13 ap-southeast-2100.100.103.7 ap-southeast-1100.100.80.140 ap-southeast-3100.100.80.12 cn-huhehaote100.100.80.66 ap-south-1100.100.80.180 ap-southeast-5100.100.80.14 cn-chengdu|Outbound|Used to collect monitoring data to the CloudMonitor server|
 
 ## Resource consumption {#section_oh3_r3f_xdb .section}
 

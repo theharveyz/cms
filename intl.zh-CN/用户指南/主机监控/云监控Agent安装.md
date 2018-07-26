@@ -245,6 +245,17 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 |华东2金融云|cn-shanghai-finance-1|上海|
 |华南1金融云|cn-shenzhen-finance-1|深圳|
 
+## **安全配置说明** {#section_s5t_313_p2b .section}
+
+以下是云监控Agent与服务端交互用到的端口，这些端口被安全软件禁用后，会导致监控数据采集异常，如果您的ECS服务器对安全要求较高，需要针对具体IP地址放行，可以将下列IP加入白名单。
+
+**说明：** 未来随着云监控版本的更新维护，可能会加入更多的IP或变更IP地址，为简化防火墙规则的配置，可以直接配置允许100.100网段的出方向，这个网段是阿里云内网保留网段，用于提供阿里云官方服务，一般不会有安全问题。
+
+|端口|IP|方向|描述|
+|32000|127.0.0.1|入、出|绑定在127.0.0.1地址上，用于云监控Agent的进程守护。|
+|3128，8080|100.100.19.43 cn-hangzhou100.100.18.22 cn-beijing100.100.36.102 cn-qingdao100.100.0.13 cn-shenzhen100.100.35.4 cn-hongkong100.100.38.1 us-west-1100.100.38.1 us-east-1100.100.30.20 ap-southeast-1100.100.36.11 cn-shanghai100.100.80.184 ap-northeast-1100.100.80.241 eu-central-1100.100.80.142 me-east-1100.100.80.92 ap-southeast-2100.100.80.92 cn-zhangjiakou100.100.80.153 ap-southeast-3100.100.80.135 cn-huhehaote100.100.80.152 ap-south-1100.100.80.160 ap-southeast-5100.100.80.229 cn-chengdu|出方向|用于Agent升级，监控配置管理等管控类操作|
+|80|100.100.80.198 cn-zhangjiakou100.100.36.6 cn-shanghai100.100.38.3 us-east-1100.100.29.7 us-west-1100.100.35.11 cn-hongkong100.100.80.137 ap-northeast-1100.100.80.72 eu-central-1100.100.0.31 cn-shenzhen100.100.18.50 cn-beijing100.100.45.73 cn-hangzhou100.100.15.23 cn-qingdao100.100.80.151 me-east-1100.100.80.13 ap-southeast-2100.100.103.7 ap-southeast-1100.100.80.140 ap-southeast-3100.100.80.12 cn-huhehaote100.100.80.66 ap-south-1100.100.80.180 ap-southeast-5100.100.80.14 cn-chengdu|出方向|用于收集监控数据到云监控服务端|
+
 ## 资源消耗 {#section_oh3_r3f_xdb .section}
 
 -   安装包: 75M。
