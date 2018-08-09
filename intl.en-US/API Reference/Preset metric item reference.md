@@ -97,8 +97,8 @@
 
 -   Layer-4 protocol metrics
 
-    |Metric|Description |Unit|Dimensions|Statistics|
-    |:-----|:-----------|:---|:---------|:---------|
+    |Metric|Description|Unit|Dimensions|Statistics|
+    |:-----|:----------|:---|:---------|:---------|
     |HeathyServerCount|Number of healthy backend ECS instances|Count|instanceId|Average, Minimum, and Maximum|
     |UnhealthyServerCount|Number of faulty backend ECS instances|Count|instanceId|Average, Minimum, and Maximum|
     |PacketTX|Number of outgoing packets per second on the port|Count/Second|instanceId, port, vip||Average, Minimum, and Maximum|
@@ -130,8 +130,8 @@
 
 -   Layer-7 protocol metrics
 
-    |Metric|Description |Unit|Dimensions|Statistics|
-    |:-----|:-----------|:---|:---------|:---------|
+    |Metric|Description|Unit|Dimensions|Statistics|
+    |:-----|:----------|:---|:---------|:---------|
     |Qps|Layer-7 protocol port QPS|Count/Second|instanceId, port, vip|Average|
     |Rt|Layer-7 protocol port RT|ms|instanceId, port, vip|Average|
     |StatusCode2xx|Layer-7 protocol port status code 2XX|Count/Second|instanceId, port, vip|Average|
@@ -164,8 +164,8 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 
     -   The Project is named acs\_memcache, the sampling period is 60s, and the Period value is 60 or an integer multiple of 60.
     -   The instanceId value for Dimensions is the instanceId of the Memcache instance.
-    |Metric|Description |Unit|Dimensions|Statistics|
-    |:-----|:-----------|:---|:---------|:---------|
+    |Metric|Description|Unit|Dimensions|Statistics|
+    |:-----|:----------|:---|:---------|:---------|
     |ConnectionUsage|Connection usage|Requests|instanceId|Average, Minimum, and Maximum|
     |UsedConnection|Number of used connections|Count|instanceId|Average, Minimum, and Maximum|
     |CpuUsage|CPU usage|Percent|instanceId|Average, Minimum, and Maximum|
@@ -181,8 +181,8 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 
     -   The Project is named acs\_ocs, the sampling period is 60s, and the Period value is 60 or an integer multiple of 60.
     -   The instanceId value for Dimensions is the instanceId of the ApsaraDB for Memcache instance.
-    |Metric|Description |Unit|Dimensions|Statistics|
-    |:-----|:-----------|:---|:---------|:---------|
+    |Metric|Description|Unit|Dimensions|Statistics|
+    |:-----|:----------|:---|:---------|:---------|
     |Evict|Amount of data evicted from the cache per second|Count/Second|instanceId|Average, Minimum, and Maximum|
     |HitRate|Cache hit rate|Percent|instanceId|Average, Minimum, and Maximum|
     |IntranetIn|Cache input bandwidth|Bytes/s|instanceId|Average, Minimum, and Maximum|
@@ -198,8 +198,8 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 -   The instanceId value for Dimensions is the instanceId of the EIP instance.
 -   The ip value for Dimensions is the IP address of the EIP instance.
 
-|Metric|Description |Unit|Dimensions|Statistics|
-|:-----|:-----------|:---|:---------|:---------|
+|Metric|Description|Unit|Dimensions|Statistics|
+|:-----|:----------|:---|:---------|:---------|
 |net\_tx.rate|Outbound bandwidth|bits/s|instanceId|Value|
 |net\_rx.rate|Inbound bandwidth|bits/s|instanceId|Value|
 |net\_txPkgs.rate|Number of outgoing packets per second|Count/s|instanceId|Value|
@@ -211,8 +211,8 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 -   The Project is named acs\_kvstore, the sampling period is 60s, and the Period value is 60 or an integer multiple of 60.
 -   The instanceId value for Dimensions is the instanceId of the Redis instance.
 
-|Metric|Description |Unit|Dimensions|Statistics|
-|:-----|:-----------|:---|:---------|:---------|
+|Metric|Description|Unit|Dimensions|Statistics|
+|:-----|:----------|:---|:---------|:---------|
 |MemoryUsage|Percentage of memory in use|Percent|instanceId|Average, Minimum, and Maximum|
 |ConnectionUsage|Percentage of connections in use|Percent|instanceId|Average, Minimum, and Maximum|
 |IntranetInRatio|Percentage of bandwidth consumed during write operations|Percent|instanceId|Average, Minimum, and Maximum|
@@ -226,12 +226,12 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 
 ## Message Service metric reference {#section_npl_dsz_zdb .section}
 
--   The Project is named acs\_messageservice\_new, the sampling period is 300s, and the Period value is 300 or an integer multiple of 300.
+-   The Project is named acs\_mns\_new, the sampling period is 300s, and the Period value is 300 or an integer multiple of 300.
 -   The region value for Dimensions is the region where the queue is located.
 -   The queue value for Dimensions is the name of the queue.
 
-|Metric|Description |Unit|Dimensions|Statistics|
-|:-----|:-----------|:---|:---------|:---------|
+|Metric|Description|Unit|Dimensions|Statistics|
+|:-----|:----------|:---|:---------|:---------|
 |ActiveMessages|Number of active messages|Count|region,queue|Average, Minimum, and Maximum|
 |InactiveMessages|Number of inactive messages|Count|region,queue|Average, Minimum, and Maximum|
 |DelayMessages|Number of delayed messages|Count|region,queue|Average, Minimum, and Maximum|
@@ -241,8 +241,8 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 -   The Project is named acs\_cdn, the sampling period is 60s, and the Period value is 60 or an integer multiple of 60.
 -   The instanceId value for Dimensions is the instanceId of the CDN instance.
 
-|Metric|Description |Unit|Dimensions|Statistics|
-|------|------------|----|----------|----------|
+|Metric|Description|Unit|Dimensions|Statistics|
+|------|-----------|----|----------|----------|
 |QPS|Queries per second, that is, total access requests in a specific time interval/Time interval|Count|instanceId|Average, Minimum, and Maximum|
 |BPS|Peak bandwidth, that is, maximum network traffic per unit time|bits/s|instanceId|Average, Minimum, and Maximum|
 |hitRate|Bytes hit rate, that is, the probability that request bytes hit the cache in a specific time interval|Percent|instanceId|Average, Minimum, and Maximum|
@@ -253,8 +253,8 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 ## Analytic DB metric reference {#section_n2c_1tz_zdb .section}
 
 -   The Project is named acs\_ads, the sampling period is 60s, and the Period value is 60 or an integer multiple of 60.
--   |Metric|Description |Unit|Dimensions|Statistics|
-|:-----|:-----------|:---|:---------|:---------|
+-   |Metric|Description|Unit|Dimensions|Statistics|
+|:-----|:----------|:---|:---------|:---------|
 |ads.diskSize|Rated disk capacity|MB|instanceId,tableSchema,workerId|Average, Minimum, and Maximum|
 |ads.diskUsed|Used disk capacity|MB|instanceId,tableSchema,workerId|Average, Minimum, and Maximum|
 |ads.diskUsedPercent|Disk usage|Percent|instanceId,tableSchema,workerId|Average, Minimum, and Maximum|
