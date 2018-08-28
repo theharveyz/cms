@@ -1,5 +1,7 @@
 # 云监控Agent安装 {#concept_d5f_vhv_vdb .concept}
 
+Go语言版本的插件已上线。如果您不希望服务器引入Java进程或者您希望插件消耗更少的资源，可以手动安装此插件。详情参见[Go语言版本云监控插件](https://yq.aliyun.com/articles/628229%E3%80%91)。
+
 ## Linux Agent 安装说明 {#section_vhm_3cf_xdb .section}
 
 **常用命令**
