@@ -17,7 +17,7 @@ In site monitoring, you can detect domain names, IP addresses, port connectivity
 
 1.  Log on to the [CloudMonitor console](https://cms-intl.console.aliyun.com).
 2.  Click **Site Management** in the left-side navigation pane to enter the **Site Monitoring** page.
-3.  Click the name of a monitoring site in the monitoring site list or click **Monitoring Chart** in the **Action** column.
+3.  Click the name of a monitoring site in the monitoring site list or click **Monitoring Chart** in the **Actions** column.
 4.  View site monitoring details.
 
 ## Delete a monitoring site {#section_lrp_tkc_5db .section}
@@ -31,5 +31,5 @@ In site monitoring, you can detect domain names, IP addresses, port connectivity
 
 1.  Log on to the [CloudMonitor console](https://cms-intl.console.aliyun.com).
 2.  Click **Site Management** in the left-side navigation pane to enter the **Site Monitoring** page.
-3.  Click **Alarm Rules** in the **Action** column in the monitoring site list to enter the page for setting alarm rules.
+3.  Click **Alarm Rules** in the **Actions** column in the monitoring site list to enter the page for setting alarm rules.
 
