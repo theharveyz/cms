@@ -19,10 +19,10 @@ Following are the guidelines that will help you to monitor the availability of l
 
     -   Target Server: This is the machine that initiates the test. The local service availability monitoring test source and test target are the same machine.
     -   Detection Type: Select URL or IP address.
-    -   Detection Target: The syntax of HTTP\(S\) is localhost:port/path and that of **TELNET** is 127.0.0.1:port. For example, to test whether Tomcat is responsive, selectHTTP\(S\) and enter localhost:8080/monitor; to test MySQL connectivity, select TELNET and enter 127.0.0.1:3306.
+    -   Detection Target: The syntax of HTTP\(S\) is localhost:port/path and that of **TELNET** is 127.0.0.1:port. For example, to test whether Tomcat is responsive, select HTTP\(S\) and enter localhost:8080/monitor; to test MySQL connectivity, select TELNET and enter 127.0.0.1:3306.
     **Alarm Configuration** area:
 
-    Alarms can be configured by status code or  response time. An alarm is triggered when the returned status code is the same as the setting or no response is returned after the predefined timeout threshold has lapsed. The alarm notification will be sent to the contact group associated with the application group. For local availability monitoring, set the status code setting to greater than 400.
+    Alarms can be configured by status code or response time. An alarm is triggered when the returned status code is the same as the setting or no response is returned after the predefined timeout threshold has lapsed. The alarm notification will be sent to the contact group associated with the application group. For local availability monitoring, set the status code setting to greater than 400.
 
     -   **Status code**: An alarm is triggered when the returned status code is the same as the setting.
     -   **Notification method**: It is the method by which alarm notifications are sent.
