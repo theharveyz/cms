@@ -27,11 +27,13 @@ pip install aliyun-python-sdk-core
 pip install aliyun-python-sdk-cms
 ```
 
+[最新版Python SDK](https://github.com/aliyun/aliyun-openapi-python-sdk/blob/master/aliyun-python-sdk-cms/aliyunsdkcms/request/v20180308/PutCustomMetricRequest.py)
+
 **code示例**
 
 ```
 from aliyunsdkcore import client
-from aliyunsdkcms.request.v20170301 import QueryMetricListRequest
+from aliyunsdkcms.request.v20180308 import QueryMetricListRequest
 import time
 clt = client.AcsClient('your_access_key','your_access_secret','your_region_id')
 request = QueryMetricListRequest.QueryMetricListRequest()
