@@ -1,16 +1,16 @@
-# Python SDK使用手册 {#concept_ec4_x1p_zdb .concept}
+# Python SDK User Manual {#concept_ec4_x1p_zdb .concept}
 
 ```
-需要安装有python2.7版本。
+You must have Python 2.7 installed.
 ```
 
-## 安装pip {#section_xm1_z1p_zdb .section}
+## Install pip {#section_xm1_z1p_zdb .section}
 
-如果已有pip或者使用其他方案，可忽略此步骤。
+Skip this step if you already have pip or an alternative.
 
-[如何安装pip](http://pip-cn.readthedocs.org/en/latest/installing.html)
+[How to install pip](http://pip-cn.readthedocs.org/en/latest/installing.html)
 
-## 命令行工具 CLI（如果已安装，请略过）： {#section_ym1_z1p_zdb .section}
+## CLI \(skip this step if it has been installed\): {#section_ym1_z1p_zdb .section}
 
 ```
 pip install aliyuncli
@@ -18,20 +18,20 @@ pip install -Iv aliyun-python-sdk-cms==5.0.0
 aliyuncli configure
 ```
 
-[命令行工具 CLI 安装说明](https://help.aliyun.com/document_detail/43008.html)
+[How to install CLI](https://help.aliyun.com/document_detail/43008.html)
 
-[命令行工具 CLI 安装说明](https://www.alibabacloud.com/help/doc-detail/43008.htm?spm=a2c63.l28256.a3.5.520d7bd4habdyE)
+[How to install CLI](https://www.alibabacloud.com/help/doc-detail/43008.htm?spm=a2c63.l28256.a3.5.520d7bd4habdyE)
 
-## 安装cms-python-sdk的依赖 {#section_agq_3bp_zdb .section}
+## Dependencies for installing cms-python-sdk: {#section_agq_3bp_zdb .section}
 
 ```
 pip install aliyun-python-sdk-core
 pip install aliyun-python-sdk-cms
 ```
 
-[最新版Python SDK](https://github.com/aliyun/aliyun-openapi-python-sdk/blob/master/aliyun-python-sdk-cms/aliyunsdkcms/request/v20180308/PutCustomMetricRequest.py)
+[Latest version of Python SDK](https://github.com/aliyun/aliyun-openapi-python-sdk/blob/master/aliyun-python-sdk-cms/aliyunsdkcms/request/v20180308/PutCustomMetricRequest.py)
 
-**code示例**
+**Code example:**
 
 ```
 from aliyunsdkcore import client
