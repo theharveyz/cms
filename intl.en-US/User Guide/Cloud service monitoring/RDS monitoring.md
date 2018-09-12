@@ -29,7 +29,7 @@ You can learn of the RDS operation status through metrics such as the disk usage
     The incoming and outgoing network traffic indicators only support MySQL and SQLServer databases.
 
 -   View monitoring data
-    1.  Log on to the [CloudMonitor console](http://cms.console.aliyun.com/#/groups/).
+    1.  Log on to the [CloudMonitor console](https://cms-intl.console.aliyun.com).
     2.  Go to the **ApsaraDB for RDS**instance list under **Cloud Service Monitoring**.
     3.  Click an instance name in the product instance list or click **Monitoring Charts** in the **Actions** column to access the instance monitoring details page.
 
@@ -54,7 +54,7 @@ You can learn of the RDS operation status through metrics such as the disk usage
 
 
 -   Set alarm rules
-    1.  Log on to the [CloudMonitor console](http://cms.console.aliyun.com/#/groups/).
+    1.  Log on to the [CloudMonitor console](https://cms-intl.console.aliyun.com).
     2.  Go to the **ApsaraDB for RDS **instance list under **Cloud Service Monitoring**.
     3.  Click an instance name in the product instance list or click **Alarm Rules** in the **Actions** column to access the instance monitoring details page.
     4.  Click **Create Alarm Rules** at the upper right of the alert policies page to create an alert policy based on the entered parameters.
