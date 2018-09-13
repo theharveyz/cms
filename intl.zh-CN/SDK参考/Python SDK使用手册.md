@@ -18,8 +18,6 @@ pip install -Iv aliyun-python-sdk-cms==5.0.0
 aliyuncli configure
 ```
 
-[命令行工具 CLI 安装说明](https://help.aliyun.com/document_detail/43008.html)
-
 [命令行工具 CLI 安装说明](https://www.alibabacloud.com/help/doc-detail/43008.htm?spm=a2c63.l28256.a3.5.520d7bd4habdyE)
 
 ## 安装cms-python-sdk的依赖 {#section_agq_3bp_zdb .section}
