@@ -1,6 +1,6 @@
 # ApsaraDB for Memcache {#concept_fvw_vt4_ydb .concept}
 
-CloudMonitor provides seven monitoring metrics for ApsaraDB for Memcache, including cache used and read hit rate, to help you monitor the status of the service instances. It also allows you to set alarm rules for these monitoring metrics. After you purchase the Memcache service, CloudMonitor automatically collects data for the aforementioned monitoring metrics.
+CloudMonitor provides seven monitoring metrics for ApsaraDB for Memcache, including cache used and read hit rate, to help you monitor the status of the service instances. It also allows you to set alarm rules for these monitoring metrics. After you purchase the Memcache service, CloudMonitor automatically collects data for the previous monitoring metrics.
 
 ## Monitoring service {#section_kgs_yt4_ydb .section}
 
