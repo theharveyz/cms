@@ -1,8 +1,8 @@
 # Java SDK User Manual {#concept_llz_kz4_zdb .concept}
 
-## SDK Installation {#section_vlh_lz4_zdb .section}
+## Install SDK {#section_vlh_lz4_zdb .section}
 
-When performing installation via maven, the following dependencies must be added:
+When performing installation through maven, the following dependencies must be added:
 
 ```
 <dependencies>
@@ -19,13 +19,13 @@ When performing installation via maven, the following dependencies must be added
 </dependencies>
 ```
 
-## Download SDKs {#section_t5g_5z4_zdb .section}
+## Download SDK {#section_t5g_5z4_zdb .section}
 
-+ Download from https://github.com/aliyun/aliyun-openapi-java-sdk/tree/master/aliyun-java-sdk-cms
+[Download address](https://github.com/aliyun/aliyun-openapi-java-sdk/tree/master/aliyun-java-sdk-cms)
 
 ## Test code {#section_yyd_dn1_f2b .section}
 
--   2\) query Monitoring Data
+-   Query monitoring data
     -   Request example
 
         Make sure that you replace the "accessKey" and "accessSecret" given in the following example with your Access Key in actual use.
@@ -73,7 +73,7 @@ When performing installation via maven, the following dependencies must be added
         }
         ```
 
-    -   Response example
+    -   Return example
 
         ```
         Code:200
@@ -164,7 +164,7 @@ When performing installation via maven, the following dependencies must be added
         }
         ```
 
--   Creating Alarm Rules
+-   Create an alarm rule
     -   Request example
 
         ```
@@ -224,7 +224,7 @@ When performing installation via maven, the following dependencies must be added
         }
         ```
 
-    -   Response example
+    -   Return example
 
         ```
         Code:200
