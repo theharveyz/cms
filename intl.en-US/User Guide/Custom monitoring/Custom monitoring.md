@@ -10,9 +10,9 @@ Event monitoring is used to resolve non-continuous event type data monitoring da
 
 ## Procedure {#section_fbb_ymk_zdb .section}
 
--   [Reporting Monitoring Data](intl.en-US/User Guide/Custom monitoring/Reporting Monitoring Data.md#)
+-   [Reporting Monitoring Data](intl.en-US/User Guide/Custom monitoring/Report monitoring data.md#)
 
--   2\) query Monitoring Data
+-   query Monitoring Data
 
     Once the report of the monitored data is complete, you can view the data that has been reported in the console. You can view all monitoring data in custom monitoring, you can also go to a specified application group to view the relevant Custom monitoring data for this grouping
 
@@ -29,7 +29,8 @@ Event monitoring is used to resolve non-continuous event type data monitoring da
         3.  Click the Customize monitoring menu to go to the custom monitoring details page.
         4.  Select the appropriate monitoring item to enter the time series details page.
         5.  Check the time series you want to view.
-        6.  ![](images/4926_en-US.png)
+
+            ![](images/4926_en-US.png)
 
 -   Set alarm rules
 
