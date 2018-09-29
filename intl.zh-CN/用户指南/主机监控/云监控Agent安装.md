@@ -1,5 +1,7 @@
 # 云监控Agent安装 {#concept_d5f_vhv_vdb .concept}
 
+Go语言版本的插件已上线。如果您不希望服务器引入Java进程或者您希望插件消耗更少的资源，可以手动安装此插件。详见[Go语言版本云监控插件](https://yq.aliyun.com/articles/628229)。
+
 ## Linux Agent 安装说明 {#section_vhm_3cf_xdb .section}
 
 **常用命令**
@@ -30,7 +32,7 @@ rm -rf /usr/local/cloudmonitor
 
 ```
 
-REGION_ID=cn-qingdao VERSION=1.3.2 \
+REGION_ID=cn-qingdao VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-qingdao.oss-cn-qingdao-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -38,7 +40,7 @@ bash -c "$(curl https://cms-agent-cn-qingdao.oss-cn-qingdao-internal.aliyuncs.co
 
 ```
 
-REGION_ID=cn-beijing VERSION=1.3.2 \
+REGION_ID=cn-beijing VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -46,7 +48,7 @@ bash -c "$(curl https://cms-agent-cn-beijing.oss-cn-beijing-internal.aliyuncs.co
 
 ```
 
-REGION_ID=cn-zhangjiakou VERSION=1.3.2 \
+REGION_ID=cn-zhangjiakou VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-zhangjiakou.oss-cn-zhangjiakou-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -54,7 +56,7 @@ bash -c "$(curl https://cms-agent-cn-zhangjiakou.oss-cn-zhangjiakou-internal.ali
 
 ```
 
-REGION_ID=cn-huhehaote VERSION=1.3.2 \
+REGION_ID=cn-huhehaote VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-huhehaote.oss-cn-huhehaote-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -62,7 +64,7 @@ bash -c "$(curl https://cms-agent-cn-huhehaote.oss-cn-huhehaote-internal.aliyunc
 
 ```
 
-REGION_ID=cn-hangzhou VERSION=1.3.2 \
+REGION_ID=cn-hangzhou VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -70,7 +72,7 @@ bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.
 
 ```
 
-REGION_ID=cn-shanghai VERSION=1.3.2 \
+REGION_ID=cn-shanghai VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-shanghai.oss-cn-shanghai-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -78,7 +80,7 @@ bash -c "$(curl https://cms-agent-cn-shanghai.oss-cn-shanghai-internal.aliyuncs.
 
 ```
 
-REGION_ID=cn-shenzhen VERSION=1.3.2 \
+REGION_ID=cn-shenzhen VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-shenzhen.oss-cn-shenzhen-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -86,7 +88,7 @@ bash -c "$(curl https://cms-agent-cn-shenzhen.oss-cn-shenzhen-internal.aliyuncs.
 
 ```
 
-REGION_ID=cn-hongkong VERSION=1.3.2 \
+REGION_ID=cn-hongkong VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-hongkong.oss-cn-hongkong-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -94,7 +96,7 @@ bash -c "$(curl https://cms-agent-cn-hongkong.oss-cn-hongkong-internal.aliyuncs.
 
 ```
 
-REGION_ID=us-west-1 VERSION=1.3.2 \
+REGION_ID=us-west-1 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-us-west-1.oss-us-west-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -102,7 +104,7 @@ bash -c "$(curl https://cms-agent-us-west-1.oss-us-west-1-internal.aliyuncs.com/
 
 ```
 
-REGION_ID=us-east-1 VERSION=1.3.2 \
+REGION_ID=us-east-1 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-us-east-1.oss-us-east-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -110,7 +112,7 @@ bash -c "$(curl https://cms-agent-us-east-1.oss-us-east-1-internal.aliyuncs.com/
 
 ```
 
-REGION_ID=ap-southeast-1 VERSION=1.3.2 \
+REGION_ID=ap-southeast-1 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-ap-southeast-1.oss-ap-southeast-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -118,7 +120,7 @@ bash -c "$(curl https://cms-agent-ap-southeast-1.oss-ap-southeast-1-internal.ali
 
 ```
 
-REGION_ID=ap-southeast-2 VERSION=1.3.2 \
+REGION_ID=ap-southeast-2 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-ap-southeast-2.oss-ap-southeast-2-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -126,7 +128,7 @@ bash -c "$(curl https://cms-agent-ap-southeast-2.oss-ap-southeast-2-internal.ali
 
 ```
 
-REGION_ID=ap-southeast-3 VERSION=1.3.2 \
+REGION_ID=ap-southeast-3 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-ap-southeast-3.oss-ap-southeast-3-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -134,7 +136,7 @@ bash -c "$(curl https://cms-agent-ap-southeast-3.oss-ap-southeast-3-internal.ali
 
 ```
 
-REGION_ID=ap-southeast-5 VERSION=1.3.2 \
+REGION_ID=ap-southeast-5 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-ap-southeast-5.oss-ap-southeast-5-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -142,7 +144,7 @@ bash -c "$(curl https://cms-agent-ap-southeast-5.oss-ap-southeast-5-internal.ali
 
 ```
 
-REGION_ID=ap-northeast-1 VERSION=1.3.2 \
+REGION_ID=ap-northeast-1 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-ap-northeast-1.oss-ap-northeast-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -150,7 +152,7 @@ bash -c "$(curl https://cms-agent-ap-northeast-1.oss-ap-northeast-1-internal.ali
 
 ```
 
-REGION_ID=ap-south-1 VERSION=1.3.2 \
+REGION_ID=ap-south-1 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-ap-south-1.oss-ap-south-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -158,15 +160,22 @@ bash -c "$(curl https://cms-agent-ap-south-1.oss-ap-south-1-internal.aliyuncs.co
 
 ```
 
-REGION_ID=eu-central-1 VERSION=1.3.2 \
+REGION_ID=eu-central-1 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-eu-central-1.oss-eu-central-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)""
+```
+
+**欧洲西部 英国伦敦 eu-west-1**
+
+```
+
+REGION_ID=eu-west-1 VERSION=1.3.7 \ bash -c "$(curl https://cms-agent-eu-west-1.oss-eu-west-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
 **中东东部 迪拜 me-east-1**
 
 ```
 
-REGION_ID=me-east-1 VERSION=1.3.2 \
+REGION_ID=me-east-1 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-me-east-1.oss-me-east-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -174,7 +183,7 @@ bash -c "$(curl https://cms-agent-me-east-1.oss-me-east-1-internal.aliyuncs.com/
 
 ```
 
-REGION_ID=cn-hangzhou VERSION=1.3.2 \
+REGION_ID=cn-hangzhou VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -182,7 +191,7 @@ bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.
 
 ```
 
-REGION_ID=cn-shanghai-finance-1 VERSION=1.3.2 \
+REGION_ID=cn-shanghai-finance-1 VERSION=1.3.7 \
 bash -c "$(curl https://cms-agent-cn-shanghai-finance-1.oss-cn-shanghai-finance-1-pub-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -190,7 +199,7 @@ bash -c "$(curl https://cms-agent-cn-shanghai-finance-1.oss-cn-shanghai-finance-
 
 ```
 
-REGION_ID=cn-shenzhen-finance-1 VERSION=1.3.2 \
+REGION_ID=cn-shenzhen-finance-1 VERSION=1.3.7 \
 bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
@@ -198,7 +207,7 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 
 **安装步骤**
 
-1.  根据系统情况，下载云监控Agent [64位版本Agent](http://cms-download.aliyun.com/release/1.3.2/windows64/agent-windows64-1.3.2-package.zip)或[32位版本Agent](http://cms-download.aliyun.com/release/1.3.2/windows32/agent-windows32-1.3.2-package.zip)。
+1.  根据系统情况，下载云监控Agent [64位版本Agent](http://cms-download.aliyun.com/release/1.3.7/windows64/agent-windows64-1.3.7-package.zip)或[32位版本Agent](http://cms-download.aliyun.com/release/1.3.7/windows32/agent-windows32-1.3.7-package.zip)。
 2.  在C:/Program Files/Alibaba路径下新建文件夹cloudmonitor。
 3.  解压到C:/Program Files/Alibaba/cloudmonitor目录。
 4.  使用管理员权限双击运行安装云监控C:/Program Files/Alibaba/cloudmonitor/wrapper/bin/InstallApp-NT.bat。
@@ -213,11 +222,11 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 
 **无公网下载**
 
-如果没有公网可以通过内网地址下载，例如青岛64位安装包下载地址为：[http://cms-agent-cn-qingdao.oss-cn-qingdao.aliyuncs.com/release/1.3.2/windows64/agent-windows64-1.3.2-package.zip](http://cms-agent-cn-qingdao.oss-cn-qingdao.aliyuncs.com/release/1.3.2/windows64/agent-windows64-1.3.2-package.zip)
+如果没有公网可以通过内网地址下载，例如青岛64位安装包下载地址为：[http://cms-agent-cn-qingdao.oss-cn-qingdao.aliyuncs.com/release/1.3.7/windows64/agent-windows64-1.3.7-package.zip](http://cms-agent-cn-qingdao.oss-cn-qingdao.aliyuncs.com/release/1.3.7/windows64/agent-windows64-1.3.7-package.zip)
 
 -   可以通过修改两处cn-qingdao切换到其他region下载地址
 -   可以通过修改两处windows64成windows32来切换到32位版本
--   可以通过修改两处1.3.2切换到其他版本
+-   可以通过修改两处1.3.7切换到其他版本
 
 **Region列表**
 
@@ -244,6 +253,7 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 |华东1金融云|cn-hangzhou|杭州|
 |华东2金融云|cn-shanghai-finance-1|上海|
 |华南1金融云|cn-shenzhen-finance-1|深圳|
+|英国 伦敦|eu-west-1|伦敦|
 
 ## **安全配置说明** {#section_s5t_313_p2b .section}
 
@@ -253,8 +263,88 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 
 |端口|IP|方向|描述|
 |32000|127.0.0.1|入、出|绑定在127.0.0.1地址上，用于云监控Agent的进程守护。|
-|3128，8080|100.100.19.43 cn-hangzhou100.100.18.22 cn-beijing100.100.36.102 cn-qingdao100.100.0.13 cn-shenzhen100.100.35.4 cn-hongkong100.100.38.1 us-west-1100.100.38.1 us-east-1100.100.30.20 ap-southeast-1100.100.36.11 cn-shanghai100.100.80.184 ap-northeast-1100.100.80.241 eu-central-1100.100.80.142 me-east-1100.100.80.92 ap-southeast-2100.100.80.92 cn-zhangjiakou100.100.80.153 ap-southeast-3100.100.80.135 cn-huhehaote100.100.80.152 ap-south-1100.100.80.160 ap-southeast-5100.100.80.229 cn-chengdu|出方向|用于Agent升级，监控配置管理等管控类操作|
-|80|100.100.0.19 cn-zhangjiakou100.100.36.6 cn-shanghai100.100.38.3 us-east-1100.100.29.7 us-west-1100.100.35.11 cn-hongkong100.100.80.137 ap-northeast-1100.100.80.72 eu-central-1100.100.0.31 cn-shenzhen100.100.18.50 cn-beijing100.100.45.73 cn-hangzhou100.100.15.23 cn-qingdao100.100.80.151 me-east-1100.100.80.13 ap-southeast-2100.100.103.7 ap-southeast-1100.100.80.140 ap-southeast-3100.100.80.12 cn-huhehaote100.100.80.66 ap-south-1100.100.80.180 ap-southeast-5100.100.80.14 cn-chengdu|出方向|用于收集监控数据到云监控服务端|
+|3128，8080| 100.100.19.43 cn-hangzhou
+
+ 100.100.18.22 cn-beijing
+
+ 100.100.36.102 cn-qingdao
+
+ 100.100.0.13 cn-shenzhen
+
+ 100.100.35.4 cn-hongkong
+
+ 100.100.38.1 us-west-1
+
+ 100.100.38.1 us-east-1
+
+ 100.100.30.20 ap-southeast-1
+
+ 100.100.36.11 cn-shanghai
+
+ 100.100.80.184 ap-northeast-1
+
+ 100.100.80.241 eu-central-1
+
+ 100.100.80.142 me-east-1
+
+ 100.100.80.92 ap-southeast-2
+
+ 100.100.80.92 cn-zhangjiakou
+
+ 100.100.80.153 ap-southeast-3
+
+ 100.100.80.135 cn-huhehaote
+
+ 100.100.80.152 ap-south-1
+
+ 100.100.80.160 ap-southeast-5
+
+ 100.100.80.229 cn-chengdu
+
+ 100.100.0.3 eu-west-1
+
+ |出方向|用于Agent升级，监控配置管理等管控类操作|
+|80| 100.100.0.19 cn-zhangjiakou
+
+ 100.100.36.6 cn-shanghai
+
+ 100.100.38.3 us-east-1
+
+ 100.100.29.7 us-west-1
+
+ 100.100.35.11 cn-hongkong
+
+ 100.100.80.137 ap-northeast-1
+
+ 100.100.80.72 eu-central-1
+
+ 100.100.0.31 cn-shenzhen
+
+ 100.100.18.50 cn-beijing
+
+ 100.100.45.73 cn-hangzhou
+
+ 100.100.15.23 cn-qingdao
+
+ 100.100.80.151 me-east-1
+
+ 100.100.80.13 ap-southeast-2
+
+ 100.100.103.7 ap-southeast-1
+
+ 100.100.80.140 ap-southeast-3
+
+ 100.100.80.12 cn-huhehaote
+
+ 100.100.80.66 ap-south-1
+
+ 100.100.80.180 ap-southeast-5
+
+ 100.100.80.14 cn-chengdu
+
+ 100.100.0.2 eu-west-1
+
+ |出方向|用于收集监控数据到云监控服务端|
 
 ## 资源消耗 {#section_oh3_r3f_xdb .section}
 
@@ -267,8 +357,8 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 ## 常见问题 {#section_vv2_nff_xdb .section}
 
 -   云监控日志位置
--   -   Linux：/usr/local/cloudmonitor/logs
--   Windows：C:/Program Files/Alibaba/cloudmonitor/logs
+    -   Linux：/usr/local/cloudmonitor/logs
+    -   Windows：C:/Program Files/Alibaba/cloudmonitor/logs
 
 -   插件占用的端口和我的业务端口冲突怎么办？
 
