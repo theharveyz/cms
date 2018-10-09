@@ -2,7 +2,7 @@
 
 ## Note {#section_vtc_sjz_zdb .section}
 
--   "Sum" is the sum of values obtained in a statistical period. Take ECS Internet traffic measurement as an example. The unit is KB/min and the statistical period is 5 minutes. Then the returned result is the total traffic in 5 minutes.
+-   Sum is the sum of values obtained in a statistical period. Take ECS Internet traffic measurement as an example. The unit is KB/min and the statistical period is 5 minutes. Then the returned result is the total traffic in 5 minutes.
 -   OpenAPI supports the query of metric data from the last 31 days.
 -   The Dimensions for each parameter is a JSON string, for example, `{"instanceId":"i-23gyb3kkd"}`.
 
@@ -48,9 +48,9 @@
     |memory\_freespace|Host.mem.free, available memory|bytes|instanceId|Average, Minimum, and Maximum|
     |memory\_freeutilization|Host.mem.freeutilization, percentage of available memory|%|instanceId|Average, Minimum, and Maximum|
     |memory\_usedutilization|Host.mem.usedutilization, memory usage|%|instanceId|Average, Minimum, and Maximum|
-    |load\_1m|Host.load1, average system load during the past minute. This metric is not available in Windows.| None|instanceId|Average, Minimum, and Maximum|
-    |load\_5m|Host.load5, average system load during the past 5 minutes. This metric is not available in Windows.| None|instanceId|Average, Minimum, and Maximum|
-    |load\_15m|Host.load15, average system load during the past 15 minutes. This metric is not available in Windows.| None|instanceId|Average, Minimum, and Maximum|
+    |load\_1m|Host.load1, average system load during the past minute. This metric is not available in Windows.|N/A|instanceId|Average, Minimum, and Maximum|
+    |load\_5m|Host.load5, average system load during the past 5 minutes. This metric is not available in Windows.|N/A|instanceId|Average, Minimum, and Maximum|
+    |load\_15m|Host.load15, average system load during the past 15 minutes. This metric is not available in Windows.|N/A|instanceId|Average, Minimum, and Maximum|
     |diskusage\_used|Host.diskusage.used, disk space in use|bytes|instanceId, device|Average, Minimum, and Maximum|
     |diskusage\_utilization|Host.disk.utilization, disk usage|%|instanceId, device|Average, Minimum, and Maximum|
     |diskusage\_free|Host.diskusage.free, available disk space|bytes/s|instanceId, device|Average, Minimum, and Maximum|
@@ -158,7 +158,7 @@
 
 See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 
-## ApsaraDB for Memcache {#section_bbq_nlz_zdb .section}
+## ApsaraDB for Memcache metric reference {#section_bbq_nlz_zdb .section}
 
 -   New version
 
@@ -206,7 +206,7 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 |net\_rxPkgs.rate|Number of incoming packets per second|Count/s|instanceId|Value|
 |out\_ratelimit\_drop\_speed|Speed-limit packet loss rate|pps|instanceId|Average|
 
-## ApsaraDB for Redis {#section_jzf_dnz_zdb .section}
+## ApsaraDB for Redis metric reference {#section_jzf_dnz_zdb .section}
 
 -   The Project is named acs\_kvstore, the sampling period is 60s, and the Period value is 60 or an integer multiple of 60.
 -   The instanceId value for Dimensions is the instanceId of the Redis instance.
@@ -223,6 +223,7 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 |CpuUsage|CPU usage|Percent|instanceId|Average, Minimum, and Maximum|
 |UsedMemory|Memory in use|Bytes|instanceId|Average, Minimum, and Maximum|
 |UsedConnection|Number of used connections|Count|instanceId|Average, Minimum, and Maximum|
+|UsedQPS|Number of used QPSs|Count/Second|instanceId|Average, Minimum, and Maximum|
 
 ## Message Service metric reference {#section_npl_dsz_zdb .section}
 
@@ -426,4 +427,36 @@ See [OSS metric reference](https://help.aliyun.com/document_detail/31879.html).
 |VBRHealthyCheckLossRate|VBR packet loss rate|%|cenId, vbrInstanceId|
 |VBRInternetOutRate|VBR outbound bandwidth|bits/s|cenId, vbrInstanceId|
 |VBRInternetInRate|VBR inbound bandwidth|bits/s|cenId, vbrInstanceId|
+
+## Edge Node Service metric reference {#section_ryf_4pp_1fb .section}
+
+-   The project is named acs\_ens, the sampling period is 300s, and the Period value is 300 or an integer multiple of 300.
+-   nodeId indicates the city and the operator. For example, "cn-kunming-telecom" indicates Kunming Telecom; "cn-wuhan-cmcc" indicates Wuhan Mobile; "cn-wuhan-cucc" indicates Wuhan Unicom.
+-   instanceId indicates the instance ID.
+
+|Metric|Description|Unit|Dimensions|
+|:-----|:----------|:---|:---------|
+|Instance\_internetin\_rate|Instance-dimension uplink network bandwidth|bits/s|nodeId, instanceId|
+|instance\_internetout\_rate|Instance-dimension downlink network bandwidth|bits/s|nodeId, instanceId|
+|node\_internetin\_rate|Node-dimension uplink network bandwidth|bits/s|nodeId|
+|node\_internetout\_rate|Node-dimension downlink network bandwidth|bits/s|nodeId|
+|user\_internetin\_rate|User-dimension uplink network bandwidth|bits/s|Null|
+|user\_internetout\_rate|User-dimension downlink network bandwidth|bits/s|Null|
+
+## Open Search metric reference {#section_hcn_tkd_dfb .section}
+
+-   The project is named acs\_opensearch. For the sampling period, see the following table.
+-   The regionId value for Dimensions can be queried through [**DescribeRegions**](https://www.alibabacloud.com/help/doc-detail/25609.htm).
+
+|Metric|Description|Unit|Dimensions|Minimum monitoring granularity|
+|:-----|:----------|:---|:---------|:-----------------------------|
+|DocSizebyApp|Storage capacity|Bytes|regionId, appName, appId|10 minutes|
+|DocSizeRatiobyApp|Storage capacity usage|%|regionId, appName, appId|10 minutes|
+|DocCountbyApp|Document count|Count|regionId, appName, appId|10 minutes|
+|QPSbyApp|Query QPS|Count/Second|regionId, appName, appId|20 seconds|
+|LossQPSbyApp|Query limit QPS|Count/Second|regionId, appName, appId|20 seconds|
+|LatencybyApp|Query elapsed time|ms|regionId, appName, appId|20 seconds|
+|ComputeResourcebyApp|Compute resource|LCU|regionId, appName, appId|20 seconds|
+|ComputeResourceRatiobyApp|Compute resource usage|%|regionId, appName, appId|20 seconds|
+|ComputeCostbyApp|Single query compute cost|LCU|regionId, appName, appId|20 seconds|
 
