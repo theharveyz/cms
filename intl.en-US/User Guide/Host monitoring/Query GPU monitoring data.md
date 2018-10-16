@@ -4,19 +4,19 @@ You can query GPU monitoring data in two ways: CloudMonitor console and API
 
 ## **Query GPU monitoring data through the CloudMonitor console** {#section_hcc_4mr_32b .section}
 
-After purchasing an instance of the GPU Compute type for ECS, you only need to install the [GPU driver](../../../../intl.en-US/User Guide/Instances/Create an instance/Create a gn4 or a gn5 instance.md#) and the 1.2.28 version of the CloudMonitor plug-in before you can view and configure GPU-related metric charts, or set alarm rules.
+After purchasing an instance of the GPU Compute type for ECS, you only need to install the [GPU driver](../../../../reseller.en-US/User Guide/Instances/Create an instance/Create a compute optimized instance with GPUs.md#) and the 1.2.28 version of the CloudMonitor plug-in before you can view and configure GPU-related metric charts, or set alarm rules.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6845_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/15396828496845_en-US.png)
 
 ## View metric charts {#section_oyk_4dr_32b .section}
 
 To view GPU-related metric charts, follow these steps:
 
-1.  Log on to the [CloudMonitor console](https://cloudmonitor.console.aliyun.com).
+1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  Click **Host Monitoring** in the navigation bar.
 3.  Query GPU-related metric charts on the **GPUMonitor** page, as shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6696_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/15396828496696_en-US.png)
 
 ## Configure metric charts {#section_hzg_pdr_32b .section}
 
@@ -27,15 +27,15 @@ To view GPU-related metric charts, follow these steps:
 5.  On the refreshed page, click **Add View**.
 6.  On the **Add View** page, select the chart type you want, and then select **Metrics**, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6698_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/15396828496698_en-US.png)
 
 7.  Select the metrics you want from the drop-down menu. The following figure uses the instance-dimension GPU temperature as an example.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/6699_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15305/15396828496699_en-US.png)
 
 ## Set alarm rules {#section_mxb_qdr_32b .section}
 
-The method of adding alarm rules for new GPU metrics is the same as that for other ECS metrics. It is recommended that you add GPU alarm rules in batches by applying the template to groups after creating the template. For details, see [Alarm template](../../../../intl.en-US/Best Practices/Alarm template Best Practices.md#).
+The method of adding alarm rules for new GPU metrics is the same as that for other ECS metrics. It is recommended that you add GPU alarm rules in batches by applying the template to groups after creating the template. For details, see [Alarm template](../../../../reseller.en-US/Best Practices/Alarm template Best Practices.md#).
 
 ## Metrics description {#section_iyy_qjr_32b .section}
 
@@ -47,9 +47,9 @@ GPU-dimension metrics measure monitoring data on a per GPU basis. The following 
 
 |Metric Name|Unit|Description|Dimensions|
 |:----------|:---|:----------|:---------|
-|gpu\_memory\_freespace|Bytes|GPU-dimension memory free space|instanceId,gpuId|
-|gpu\_memory\_totalspace|Bytes|GPU-dimension memory total space|instanceId,gpuId|
-|gpu\_memory\_usedspace|Bytes|GPU-dimension memory used space|instanceId,gpuId|
+|gpu\_memory\_freespace|Byte|GPU-dimension memory free space|instanceId,gpuId|
+|gpu\_memory\_totalspace|Byte|GPU-dimension memory total space|instanceId,gpuId|
+|gpu\_memory\_usedspace|Byte|GPU-dimension memory used space|instanceId,gpuId|
 |gpu\_gpu\_usedutilization|%|GPU-dimension GPU utilization|instanceId,gpuId|
 |gpu\_encoder\_utilization|%|GPU-dimension encoder utilization|instanceId,gpuId|
 |gpu\_decoder\_utilization|%|GPU-dimension decoder utilization|instanceId,gpuId|
@@ -68,10 +68,10 @@ Instance-dimension metrics measure the maximum, minimum, or average value of mul
 |instance\_gpu\_encoder\_utilization|%|Instance-dimension GPU encoder utilization|instanceId|
 |instance\_gpu\_gpu\_temperature|℃|Instance-dimension GPU temperature|instanceId|
 |instance\_gpu\_gpu\_usedutilization|%|Instance-dimension GPU utilization|instanceId|
-|instance\_gpu\_memory\_freespace|Bytes|Instance-dimension GPU memory free space|instanceId|
+|instance\_gpu\_memory\_freespace|Byte|Instance-dimension GPU memory free space|instanceId|
 |instance\_gpu\_memory\_freeutilization|%|Instance-dimension GPU memory idle rate|instanceId|
-|instance\_gpu\_memory\_totalspace|Bytes|Instance-dimension GPU memory total space|instanceId|
-|instance\_gpu\_memory\_usedspace|Bytes|Instance-dimension GPU memory used space|instanceId|
+|instance\_gpu\_memory\_totalspace|Byte|Instance-dimension GPU memory total space|instanceId|
+|instance\_gpu\_memory\_usedspace|Byte|Instance-dimension GPU memory used space|instanceId|
 |instance\_gpu\_memory\_usedutilization|%|Instance-dimension GPU memory utilization|instanceId|
 |instance\_gpu\_power\_readings\_power\_draw|W|Instance-dimension GPU power|instanceId|
 
@@ -85,15 +85,15 @@ Group-dimension metrics measure the maximum, minimum, or average value of multip
 |group\_gpu\_encoder\_utilization|%|Group-dimension GPU encoder utilization|groupId|
 |group\_gpu\_gpu\_temperature|℃|Group-dimension GPU temperature|groupId|
 |group\_gpu\_gpu\_usedutilization|%|Group-dimension GPU utilization|groupId|
-|group\_gpu\_memory\_freespace|Bytes|Group-dimension GPU memory free space|groupId|
+|group\_gpu\_memory\_freespace|Byte|Group-dimension GPU memory free space|groupId|
 |group\_gpu\_memory\_freeutilization|%|Group-dimension GPU memory idle rate|groupId|
-|group\_gpu\_memory\_totalspace|Bytes|Group-dimension GPU memory total space|groupId|
-|group\_gpu\_memory\_usedspace|Bytes|Group-dimension GPU memory used space|groupId|
+|group\_gpu\_memory\_totalspace|Byte|Group-dimension GPU memory total space|groupId|
+|group\_gpu\_memory\_usedspace|Byte|Group-dimension GPU memory used space|groupId|
 |group\_gpu\_memory\_usedutilization|%|Group-dimension GPU memory utilization|groupId|
 |group\_gpu\_power\_readings\_power\_draw|W|Group-dimension GPU power|groupId|
 
 ## Query GPU monitoring data through the API {#section_iq4_gnr_32b .section}
 
--   See [QueryMetricList](../../../../intl.en-US/API Reference/QueryMetricList.md#).
+-   See [QueryMetricList](../../../../reseller.en-US/API Reference/QueryMetricList.md#).
 -   Parameter description: The "Project" parameter should be set to "acs\_ecs\_dashboard." For the values of the "Metric" and "Dimensions" parameters, see the GPU metrics in the preceding tables.
 
