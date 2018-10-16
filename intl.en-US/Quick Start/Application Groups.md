@@ -18,17 +18,13 @@
 ## Features {#section_svf_ckb_5db .section}
 
 -   The application groups allow you to manage your cloud resources across products and regions from the business perspective.
-
 -   You can configure only one alarm rule to manage various resources for the entire group. This improves O&M efficiency and you are no longer required to set alarm rules for individual instances.instances.
-
 -   Fault list helps you to identify fault instances immediately.
-
 -   The application group details page provides custom monitoring charts. This helps you to display group monitoring data based on your requirements.
-
 
 ## Procedure {#section_xtx_hkb_5db .section}
 
-1.  Log on to the [CloudMonitor console](https://cms.console.aliyun.com/).
+1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  Select Application Groups from the left-side navigation pane to go to the **Application Group** page.
 3.  Click **Create Group** in the upper-right corner of the edit page.
 4.  Type group name in the Product Group Name field.
