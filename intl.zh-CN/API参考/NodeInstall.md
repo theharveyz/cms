@@ -2,12 +2,12 @@
 
 ## 描述 {#section_vlf_4xy_zdb .section}
 
-调用接口为指定ECS 实例安装云监控插件。可参见[主机监控插件介绍](../../../../intl.zh-CN/用户指南/主机监控/主机监控插件介绍.md#)
+调用接口为指定ECS 实例安装云监控插件。可参见[主机监控插件介绍](../../../../intl.zh-CN/用户指南/主机监控/主机监控插件介绍.md#)。
 
 **说明：** 
 
--   使用接口前请确保您的实例已安装[服务器安全（安骑士）](https://help.aliyun.com/document_detail/28451.html)插件。安骑士插件目前集成于安全镜像中，在购买ECS后，一般都已经默认安装，您可以进入[安骑士控制台](https://yundun.console.aliyun.com/?p=aqs#/aqs/overviews)，查看每台服务器的在线状态。
--   接口安装云监控插件的成功率约为95%，如安装失败，可登录机器[手工安装](https://help.aliyun.com/document_detail/38859.html)。
+-   使用接口前请确保您的实例已安装[服务器安全（安骑士）](https://www.alibabacloud.com/help/doc-detail/28451.htm)插件。安骑士插件目前集成于安全镜像中，在购买ECS后，一般都已经默认安装，您可以进入[安骑士控制台](https://yundun.console.aliyun.com/?p=aqs#/aqs/overviews)，查看每台服务器的在线状态。
+-   接口安装云监控插件的成功率约为95%，如安装失败，可登录机器[手工安装](../../../../dita-oss-bucket/SP_64/DNCMS11863785/ZH-CN_TP_6156.dita)。
 
 ## 请求参数 {#section_rxf_qxy_zdb .section}
 
