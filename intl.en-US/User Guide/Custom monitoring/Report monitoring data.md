@@ -273,7 +273,7 @@ You have an Alibaba Cloud account and have generated a sub-account AK with Cloud
             Successfully installed pip-8.1.2
             ```
 
-        1.  Run the following command to install the Alibaba Cloud command line tool:
+        2.  Run the following command to install the Alibaba Cloud command line tool:
 
             ```
             sudo pip install aliyuncli
@@ -359,7 +359,7 @@ You have an Alibaba Cloud account and have generated a sub-account AK with Cloud
 
 When you report event data using the AK of the sub-account, you must grant the CloudMonitor management permission to the corresponding sub-account. If the sub-account is not authorized with the CloudMonitor management permission, the system displays "cannot upload, please use ram to auth" during data reporting.
 
-1.  Log on to the [RAM console](https://ram.console.aliyun.com/#/overview).
+1.  Log on to the [RAM console](https://partners-intl.console.aliyun.com/#/ram).
 2.  In the left navigation bar, click **Users**.
 3.  Select the sub-account which needs to report data. Click **Authorize** in the Actions column.
 4.  On the authorization page, select **Manage CloudMonitor** and click **OK**.
