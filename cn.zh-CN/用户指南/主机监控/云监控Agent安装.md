@@ -161,7 +161,7 @@ bash -c "$(curl https://cms-agent-ap-south-1.oss-ap-south-1-internal.aliyuncs.co
 ```
 
 REGION_ID=eu-central-1 VERSION=1.3.7 \
-bash -c "$(curl https://cms-agent-eu-central-1.oss-eu-central-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)""
+bash -c "$(curl https://cms-agent-eu-central-1.oss-eu-central-1-internal.aliyuncs.com/release/cms_install_for_linux.sh)"
 ```
 
 **欧洲西部 英国伦敦 eu-west-1**
