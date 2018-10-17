@@ -18,7 +18,7 @@ CloudMonitor provides service latency metrics of StreamCompute to help you monit
     -   Monitoring data is saved for up to 31 days.You can view the monitoring data for up to 14 consecutive days.
 
 -   Viewing Monitoring Data
-    1.  Log on to the.[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
+    1.  Log on to the[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
     2.  Go to the **StreamCompute** instance list under **Cloud Service Monitoring**.
     3.  Click an instance name or click **Monitoring Chart** in the **Actions**column to access the instance monitoring information page and view various metrics.
     4.  Click **Time Range** quick selection button from the upper menu of the page or use the specific selection function. You can view the monitoring data for up to 14 consecutive days.
@@ -40,13 +40,13 @@ CloudMonitor provides service latency metrics of StreamCompute to help you monit
 
 
 -   Set an alarm rule
-    1.  Log on to the.[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
+    1.  Log on to the[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
     2.  Go to the **StreamCompute** instance list under **Cloud Service Monitoring**.
     3.  Click an instance name or click **Monitoring Chart** in the **Actions**column.
     4.  Click the bell icon in the upper-right corner of the monitoring chart or **New Alarm Rule** in the upper-right corner of the page to set an alarm rule for corresponding monitoring metrics of this instance.
 
 -   Set multiple alarm rules
-    1.  Log on to the.[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
+    1.  Log on to the[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
     2.  Go to the **StreamCompute** instance list under **Cloud Service Monitoring**.
     3.  Select the expected instances on the instance list page. Click **Set Alarm Rules** to add multiple alarm rules.
 
