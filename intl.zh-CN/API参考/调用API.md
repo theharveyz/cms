@@ -10,16 +10,10 @@
 
 其中：
 
--   `Endpoint`是调用的云服务的接入点，云监控的接入点是[metrics.aliyuncs.com](http://metrics.aliyuncs.com)。各地域的SLB服务地址，参见[云监控接入地址](#section_xf3_lbv_zdb)。
-
+-   `Endpoint`是调用的云服务的接入点，云监控的接入点是[metrics.aliyuncs.com](http://metrics.aliyuncs.com)。各地域的服务地址，参见[云监控接入地址](#section_xf3_lbv_zdb)。
 -   `Action`是要执行的操作，如使用QueryMetricList接口查询某一实例的监控数据。
-
 -   `Version`要使用的API版本，云监控的API版本是2017-03-01。
-
--   `Parameters`是请求参数，每个参数之间用 & 分隔。
-
-    请求参数由公共请求参数和API自定义参数组成。公共参数中包含API版本号、身份验证等信息。
-
+-   `Parameters`是请求参数，每个参数之间用 & 分隔。请求参数由公共请求参数和API自定义参数组成。公共参数中包含API版本号、身份验证等信息。
 
 下面是一个调用QueryMetricList接口查询某一实例的监控数据的示例。
 
@@ -53,8 +47,10 @@ http://metrics.cn-hangzhou.aliyuncs.com/?Action=QueryMetricList
 |中东东部 1（迪拜）|metrics.me-east-1.aliyuncs.com|
 |亚太东北 1（东京）|metrics.cn-hangzhou.aliyuncs.com|
 |亚太东南3（吉隆坡）|metrics.ap-southeast-3.aliyuncs.com|
-|华北 5 （呼和浩特）|metrics.cn-huhehaote.aliyuncs.com|
-|亚太东南 5 （雅加达）|metrics.ap-southeast-5.aliyuncs.com|
+|华北 5（呼和浩特）|metrics.cn-huhehaote.aliyuncs.com|
+|亚太东南 5（雅加达）|metrics.ap-southeast-5.aliyuncs.com|
+|亚太南部 1 \(孟买\)|metrics.ap-south-1.aliyuncs.com|
+|英国（伦敦）|metrics.eu-west-1.aliyuncs.com|
 
 **说明：** 查询亚太东北 1（东京）地域的监控数据时，请使用华东 1 \(杭州\)的服务地址。
 
