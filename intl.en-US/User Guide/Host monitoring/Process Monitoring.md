@@ -1,69 +1,63 @@
 # Process Monitoring {#concept_a31_ygc_5db .concept}
 
-Process monitoring by default, allows you to collect information regarding CPU and memory usage and the number of files opened by the active processes over a period of time.  If you include a process keyword, the number of processes containing that keyword are displayed.
+By default, process monitoring allows you to collect information about CPU usage, memory usage, and the number of files opened by the active processes in a period of time. If you include a process keyword, the number of processes containing the keyword is collected.
 
-## View the consumption status of an active process {#section_njq_fdd_xdb .section}
+## View the resource consumption of active processes {#section_njq_fdd_xdb .section}
 
--   Every minute the agent singles out the top 5 processes with maximum CPU consumption that happens during the last minute. It displays information like CPU usage, memory usage and the number of opened files.
-
--   For the CPU and memory usage process, see the Linux top command. Here, CPU means a multi-core CPU. CPU means a multi-core CPU.
-
+-   The agent filters out the top five processes with the maximum CPU usage every minute, showing their respective CPU usage, memory usage, and the number of files they opened.
+-   For the CPU usage and memory usage of the processes, see the Linux top command. CPU usage refers to the usage of a multi-core CPU.
 -   For the number of files opened by an active process, see the Linux lsof command.
-
 
 **Note:** 
 
--   If your process occupies multiple CPUs, there will be more than 100% CPU usage. Here the result of the acquisition is the total utilization of multi-core.
+-   If your process occupies multiple CPUs, the CPU usage will exceed 100%. The collection result indicates the total usage of multiple CPU cores.
+-   If the top five processes are changing over the time span specified for your query, the process list will show all processes that have ever ranked top five over the specified time span. The times in the list indicate when the processes last ranked top five.
+-   The CPU usage, memory usage, and number of opened files are collected only for the top five processes. Therefore, if an process has not ranked top five continuously over the time span specified for the query, its data points will appear discontinuous in the monitoring charts. The density of the data points for a process indicates its degree of activity on the server.
+    -   As shown in the following figure, the wrapper process has not continuously ranked top five processes with the maximum server CPU usage. Therefore, the data points in the monitoring charts are sparse and discontinuous. Those data points indicate that the process has ranked top five at exactly the points of time.
 
--   If the top 5 processes are changing over the time span specified for your query, the process list shows all the processes that are ranked in the top 5 list during the specified time period. The time displayed in the bar chart indicates the processes that were ranked last  among the top 5.Top5 time.
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6151/154088938621153_en-US.png)
 
--   Information regarding the CPU and memory usage and the number of files the processes open is collected only for the top 5 processes. If a process is not ranked among the top 5 continually for a longer time specified for any query,  its data points appear randomly in the monitoring charts. The density of the data points for the process shows its degree of activity on the server.
+    -   The following figure shows the monitoring charts of the java process. The data points in the monitoring charts are dense and continuous. This indicates that the process is continuously ranked top five with the maximum CPU usage.
 
-    -   The following charts display the HTTP process, which is not ranked continuously among the top 5  processes with maximum server CPU consumption, the data points in the metric charts appear sparse and not continuous. The data points here indicate that the process has ranked amongst the top 5 at exactly the points of time for the data points.
-
-        ![](images/3354_en-US.png)
-
-    -   The following charts display the mysql process. The data points in the metric charts are dense and appear to be consistent. This indicates that the process is ranked continuously among the top 5 with the maximum CPU consumption.
-
-        ![](images/3356_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6151/154088938621166_en-US.png)
 
 
-## Manage the number of specified processes {#section_xdd_t2d_xdb .section}
+## Monitor the number of specified processes {#section_xdd_t2d_xdb .section}
 
-You can get the number of key processes and the viability status, through the process count metric.
+You can know the number and viability status of key processes by monitoring the number of processes.
 
--   Add a specified process to the monitor
+-   Add process monitoring
 
-    Example
+    Examples
 
-    For example, the server is currently running the following processes.  `/usr/bin/java -Xmx2300m -Xms2300m org.apache.catalina.startup.Bootstrap` `/usr/bin/ruby` `nginx -c /ect/nginx/nginx.conf`Assume that the user configures 6 keywords, following is the output shown respectively: Keyword: ruby, number of processes returned: 1, hitting a process name. Keyword: nginx, number of processes returned: 1, hitting a process name and a parameter. Keyword: /usr/bin, number of processes returned: 2, hitting 2 paths \(two processes under the paths respectively\). Keyword: apache.catalina, number of processes returned: 1, hitting part of a parameter. Keyword: nginx.conf, number of processes returned: 1, hitting part of a parameter. Keyword: -c, number of processes returned: 1, hitting part of a parameter.
+    For example, the server is running the following processes: `/usr/bin/java -Xmx2300m -Xms2300m org.apache.catalina.startup.Bootstrap` `/usr/bin/ruby` `nginx -c /ect/nginx/nginx.conf` If the user configures six keywords, the output is as follows: Keyword: `ruby`, number of processes collected: 1, hitting a process name. Keyword: `nginx`, number of processes collected: 1, hitting a process name and a parameter. Keyword: `/usr/bin`, number of processes collected: 2, hitting a path \(the path is included in two processes\). Keyword: `apache.catalina`, number of processes collected: 1, hitting some parameters. Keyword: `nginx.conf`, number of processes collected: 1, hitting some parameters. Keyword: `-c`, number of processes collected: 1, hitting some parameters.
 
 
 **Procedure**
 
-1.   Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/hostmonitor/host).
-2.  Click **Host Monitoring**in the navigation pane.
-3.  Click the name of the instance you want to monitor. Or click **Monitoring Chart**from the Actions column to access the instance monitoring details page.
-4.  Click Process Monitoring at the top of the page to access process monitoring page.
-5.  To add the process you want to monitor, click Add Process button, and enter the Process Name in the search box.
+1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
+2.  In the left navigation pane, click **Host Monitoring**.
+3.  Click the name of the host you want to monitor, or click **Monitoring Charts** in the actions column to access the host monitoring details page.
+4.  Click the **Process Monitoring** tab on the page to switch to the process monitoring page.
+5.  On the process count monitoring chart, click **Add Process** to add the process you want to monitor.
 
 -   Delete a monitored process
-    1.   Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/hostmonitor/host).
-    2.  Click **Host Monitoring**in the navigation pane.
-    3.  Click the name of the instance you want to monitor. Or click **Monitoring Chart**from the Actions column to access the instance monitoring details page.
-    4.  Click **Process Monitoring** at the top of the page to access process monitoring page.
-    5.  When hovering over the process count monitoring chart, click **Add Process to Monitor** button to access the list of processes added to the page.
-    6.  If you want to delete any process, select the process and click Delete.
+    1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
+    2.  In the left navigation pane, click **Host Monitoring**.
+    3.  Click the name of the host you want to monitor, or click **Monitoring Charts** in the actions column to open the host monitoring details page.
+    4.  Click the **Process Monitoring** tab on the page to switch to the process monitoring page.
+    5.  On the process count monitoring chart, click **Add Process** to show the process list.
+    6.  Select the target process and click **Delete**.
 
 -   Set alarm rules
 
-    After you have configured monitoring for the specified process, you can configure the alarm rules for the process, you receive an alarm notification when the number of processes changes.
+    After you configure monitoring for the specified process, you can configure alarm rules for the process. After that, you can receive an alarm notification when the number of processes changes.
 
-    1.   Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/hostmonitor/host).
-    2.  Click **Host Monitoring**in the navigation pane.
-    3.  Select the machine that needs to add the alarm that the process monitors, and click the alarm rule in action, enter the alarm Rules Page.
-    4.  Click new alarm rule at the top of the page to enter the alarm rule creation page.
-    5.  Select the number of processes in the rule description, and then configure the appropriate alarm threshold. If multiple processes are configured on the machine, the number of processes varies, you can click Add alarm rule to configure alerts for multiple processes at once.
-    ![](images/3367_en-US.png)
+    1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
+    2.  In the left navigation pane, click **Host Monitoring**.
+    3.  Select the host for which you want to set process monitoring alarm rules, and then click **Alarm Rules** in the actions column. The Alarm Rules page is displayed.
+    4.  Click **Create Alarm Rule** in the upper-right corner of the page to open the alarm rule creating page.
+    5.  Select **Total Number of Processes** in the rule description field, and then set an appropriate alarm threshold. If multiple processes are configured on the host, the number of processes varies. You can click **Add Alarm Rule** to configure alarm rules for multiple processes at a time.
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6151/154088938621167_en-US.png)
 
 
