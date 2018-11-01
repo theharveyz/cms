@@ -126,16 +126,16 @@ The following examples explain how to use the event monitoring feature.
 
             Check the event after reporting:
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6166/154106067121440_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6166/154106113821440_en-US.png)
 
         -   Set alarms for queue message consumption exceptions:
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6166/154106067121441_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6166/154106113821441_en-US.png)
 
         -   Demo 3: Record important events
 
             Another use case of events is to record important actions for later check without sending alarms.  For example, operation logs for important business, password change/order change, remote logon, and so on.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6166/154106067121442_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6166/154106113821442_en-US.png)
 
 
