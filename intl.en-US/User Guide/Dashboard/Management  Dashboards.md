@@ -28,7 +28,7 @@ You can create a new monitoring dashboard and customize the display charts, when
 
 **Note:** Create up to 20 charts per monitor tray.
 
-操作步骤
+Procedure
 
 1.  Log on to the CloudMonitor console.
 2.  Click **Dashboard**in the navigation pane.
@@ -43,7 +43,7 @@ You can delete a monitoring dashboard if you do not need it as your business cha
 
 **Note:** When you delete a monitoring dashboard, all monitoring charts that are added to the dashboards are deleted.
 
-操作步骤
+Procedure
 
 1.  Log on to the CloudMonitor console.
 2.  Click the "Dashboard" option in the left menu to access the "Dashboard" page.
