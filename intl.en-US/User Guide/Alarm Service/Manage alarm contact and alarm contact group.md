@@ -4,15 +4,9 @@ Contact and contact group information is the basis for sending alarm notificatio
 
 ## Manage an alarm contact {#section_fcm_x4n_vdb .section}
 
-You can create, edit, or delete the contact information, such as the email address.
-
 -   Create an alarm contact
     1.  Log on to the [CloudMonitor console](https://cloudmonitor.console.aliyun.com).
     2.  Go to the [Alarm Contact Management](https://cms.console.aliyun.com/#/contact/list/) page.
-    3.  Click **Create Alarm Contact** in the upper-right corner of the page. In the displayed dialog box, enter your email address.
-
-        The email address will be verified when it is being added, in case you enter wrong information and cannot receive alarm notifications in a timely manner.
-
 -   Edit an alarm contact
     1.  Log on to the [CloudMonitor console](https://cloudmonitor.console.aliyun.com).
     2.  Go to the [Alarm Contact Management](https://cms.console.aliyun.com/#/contact/list/) page.
