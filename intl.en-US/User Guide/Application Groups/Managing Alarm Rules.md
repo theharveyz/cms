@@ -6,7 +6,7 @@ Alarm rules feature helps you to create, view, modify, enable, disable, and dele
 
 ## Create an alarm rule {#section_y1n_1gv_vdb .section}
 
-1.   Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/groups/).
+1.  Log on to the[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  Select **Application Groups** in the navigation pane.
 3.  Select the group for which you want to create an alarm rule, and click the group name or click **Manage** to go to the group details page.
 4.  Click **Create Alarm Rule** from the options available.
@@ -14,7 +14,7 @@ Alarm rules feature helps you to create, view, modify, enable, disable, and dele
 
 ## Delete alarm rules {#section_o5w_2gv_vdb .section}
 
-1.   Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/groups/).
+1.  Log on to the[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  Select **Application Groups** in the navigation pane.
 3.  Select the group for which you want to delete the alarm rule, and click the group name or click **Manage** to go to the group details page.
 4.  Click **Alarm Rules** from the options available to go to the alarm rules page of the group.
@@ -22,7 +22,7 @@ Alarm rules feature helps you to create, view, modify, enable, disable, and dele
 
 ## Modify an alarm rule {#section_qkb_brb_wdb .section}
 
-1.   Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/groups/).
+1.  Log on to the[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  Select **Application Groups** in the navigation pane.
 3.  Select the group for which you want to create an alarm rule, and click the group name or click **Manage**to go to the group details page.
 4.  Click **Create Alarm Rule** from the options available.
@@ -33,24 +33,24 @@ Alarm rules feature helps you to create, view, modify, enable, disable, and dele
 When you are required to stop a service or perform application maintenance, or an upgrade, you can disable all alarm rules of the group involved, to avoid reception of many unwanted alarm notifications due to manual changes.  Once the changes are completed, you can reinstate the alarm rules.
 
 -   Disable all alarm rules of a group
-    1.   Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/groups/).
+    1.  Log on to the[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
     2.  Click **Application Groups**in the navigation pane.
     3.  Select a group name and click **More** from the **Actions** column.
     4.  Select **Disable All Alarm Rules** to disable all alarm rules of the selected group.
 
 -   Enable all alarm rules of a group
-    1.  Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/groups/).
+    1.  Log on to the[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
     2.  Click **Application Groups**in the navigation pane.
     3.  Select a group name and click **More** from the **Actions** column.
     4.  Select **Enable All Alarm Rules**.
 -   Disable partial alarm rules of a group
-    1.  Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/groups/).
+    1.  Log on to the[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
     2.  Click **Application Groups**in the navigation pane.
     3.  Select a group with an alarm, and click the group name or click **Manage**to go to the group details page.
     4.  Click **Alarm Rules** from the options available.
     5.  Click**Disable** next to  Alarm Rules  under the **Actions**column. If you want to disable multiple alarm rules collectively, select the rules and click **Disable**from the options in the list.
 -   Enable partial alarm rules of an application group
-    1.  Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/groups/).
+    1.  Log on to the[CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
     2.  Click **Application Groups**in the navigation pane.
     3.  Select a group with an alarm, and click the group name or click **Manage**to go to the group details page.
     4.  Click **Alarm Rules** from the options available.
