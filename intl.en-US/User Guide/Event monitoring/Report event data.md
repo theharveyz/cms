@@ -12,7 +12,7 @@ CloudMonitor supports data reporting using open APIs, Java SDK, and AliCloudCLI.
 
 ## Report data using open APIs {#section_ktq_43j_zdb .section}
 
--   Service address: [https://metrichub-cms-cn-hangzhou.aliyuncs.com](https://metrichub-cms-cn-hangzhou.aliyuncs.com/)
+-   Service address: https://metrichub-cms-cn-hangzhou.aliyuncs.com
 
 -   Request syntax
 
@@ -41,9 +41,9 @@ CloudMonitor supports data reporting using open APIs, Java SDK, and AliCloudCLI.
     |time|String|Yes.|Event occurrence time|
     |content|String|Yes.|Event details|
 
-    [Request header definition](intl.en-US/User Guide/Event monitoring/Request header definition.md#)
+    [Request header definition](reseller.en-US/User Guide/Event monitoring/Request header definition.md#)
 
-    [Signature Algorithm](intl.en-US/User Guide/Event monitoring/Signature Algorithm.md#)
+    [Signature Algorithm](reseller.en-US/User Guide/Event monitoring/Signature Algorithm.md#)
 
 
 -   Response Element
@@ -135,15 +135,15 @@ With an Ali cloud account, and generate Sub-Account AK with cloud monitoring pri
 
 -   Create a sub-account.
 
-    ![](images/4830_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/154149048421800_en-US.png)
 
 -   Generate accesskeyid and accesskeysecret for the sub-account.
 
-    ![](images/4831_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/154149048421804_en-US.png)
 
 -   Assign CloudMonitor permissions for the sub-account.
 
-    ![](images/4832_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/154149048421812_en-US.png)
 
 
 ## Operation procedure {#section_wln_wlj_zdb .section}
@@ -199,7 +199,7 @@ With an Ali cloud account, and generate Sub-Account AK with cloud monitoring pri
             Successfully installed pip-8.1.2
             ```
 
-        1.  Run the following command to install the Alibaba Cloud command line tool:
+        2.  Run the following command to install the Alibaba Cloud command line tool:
 
             ```
             sudo pip install aliyuncli
@@ -285,14 +285,14 @@ With an Ali cloud account, and generate Sub-Account AK with cloud monitoring pri
 
 Subaccount authorization description When the AccessKey of a subaccount is used to report an event, the subaccount must be authorized to manage CloudMonitor. The "cannot upload event" prompt when reporting data if the sub-account is not authorized for cloud monitoring administration, Please use Ram to auth ".
 
-1.  Login access control Ram console.
+1.  Log on to the [access control Ram console](https://partners-intl.console.aliyun.com/#/ram).
 2.  Enter the user management menu.
-3.  Click \*\*Authorize\*\* next to the subaccount that is used to report data.
+3.  Click **Authorize** next to the subaccount that is used to report data.
 
-    ![](images/4851_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/154149048421813_en-US.png)
 
 4.  On the authorization page, select manage permissions for cloud monitoring, and click OK to save the authorization.
 
-    ![](images/4852_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/154149048521815_en-US.png)
 
 
