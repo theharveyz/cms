@@ -5,7 +5,7 @@ This document summarizes all of the CloudMonitor's callable APIs. Please refer t
 |API|Description|
 |---|-----------|
 |[ListAlarmHistory](intl.en-US/API Reference/ListAlarmHistory.md#)|Query historical alarms.|
-|[EN-US\_TP\_14257.md\#](intl.en-US/API Reference/NodeStatus.md#)|Query the agent running status on a specified instance.|
+|[NodeStatus](intl.en-US/API Reference/NodeStatus.md#)|Query the agent running status on a specified instance.|
 |[EN-US\_TP\_14258.md\#](intl.en-US/API Reference/CreateAlarm.md#)|Create alarm rules.|
 |[EN-US\_TP\_14259.md\#](intl.en-US/API Reference/DeleteAlarm.md#)|Delete an existing alarm rule.|
 |[EN-US\_TP\_14260.md\#](intl.en-US/API Reference/ListAlarm.md#)|Query specified or all alarm rule settings.|
