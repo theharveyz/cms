@@ -1,6 +1,6 @@
 # Install CloudMonitor agent {#concept_d5f_vhv_vdb .concept}
 
-The agent of the Go programming language version is now available. If you do not want the server to introduce Java processes or if you want the agent to consume less resources, you can install this agent manually. For details, see [CloudMonitor agent of the Go programming language version](https://yq.aliyun.com/articles/628229).
+The agent of the Go programming language version is now available. If you do not want the server to introduce Java processes or if you want the agent to consume less resources, you can install this agent manually.
 
 ## Install CloudMonitor agent on Linux {#section_vhm_3cf_xdb .section}
 
@@ -262,6 +262,7 @@ The following table lists the ports that the CloudMonitor agent uses to interact
 **Note:** Future updates and maintenance of the CloudMonitor version may add more IP addresses or change the IP addresses. To simplify the configuration of the firewall rules, you can directly allow the outbound direction of the 100.100 network segment, which is reserved for the intranet of Alibaba Cloud and used to provide official Alibaba Cloud services, with no security issues in general.
 
 |Port|IP address|Direction|Description|
+|----|----------|---------|-----------|
 |32000|127.0.0.1|Inbound, outbound|Bound to 127.0.0.1, used for CloudMonitor agent process Daemon|
 |3128, 8080| 100.100.19.43 cn-hangzhou
 
