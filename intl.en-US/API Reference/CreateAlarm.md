@@ -2,39 +2,40 @@
 
 ## Description {#section_fy4_33v_zdb .section}
 
-You can create alarm rule for one or more instances.
+Create alarm rules for one or more instances.
 
-## Request Parameters {#section_ljd_k3v_zdb .section}
+## Request parameters {#section_ljd_k3v_zdb .section}
 
 |Name|Type|Required|Description|
 |:---|:---|:-------|:----------|
-|Action|String|Yes|The parameter specified by the system. Value: CreateAlarm|
-|Name|String|Required|Alarm rule name|
-|Namespace|String|Required|Product name. For more information, see the projects for various products, such as acs\_ecs\_dashboard, acs\_rds\_dashboard|
-|MetricName|String|Required|The name of the monitoring item corresponding to the corresponding product, based on the metric definition of each product|
-|Dimensions|String|Required|List of instances associated with the alarm rule, which is a string corresponding to the JSON  array, for example, \[\{“instanceId”:”name1”\} and \{“iinstance”:”name2”\}\]|
-|Period|Integer|Optional|Index query cycle, which must be consistent with that defined for metrics; default value: 300, in seconds|
-|Statistics|String|Required|Statistical method, for example, Average, which must be consistent with that defined for metrics|
-|ComparisonOperator|String|Required|Alarm comparison operator, which must be <=,<,\>,\>=,==,! =|
-|Threshold|String|Required.|Alarm threshold value, which must be a numeric value currently|
-|EvaluationCount|Int|Optional|Number of consecutive times it has been detected that the values exceed the threshold; default value: three times|
-|ContactGroups|String|Required.|The contact group of the alarm rule, which must have been created on the console as a string corresponding to the JSON array,  for example, \[“Contact Group 1” and “Contact Group 2”\]|
-|StartTime|Int|Optional|Start time of the alarm effective period; default value: 0, which indicates the time 00:00|
-|EndTime|Int|Optional|End time of the alarm effective period; default value: 24, which indicates the time 24:00|
-|SilenceTime|Int|Optional|Notification silence period in the alarm state, in seconds; default value: 86,400; minimum value: 1 hour|
-|NotifyType|Int|Optional|Notification type. The value 0 indicates TradeManager+email, and the value 1 indicates that TradeManager+email+SMS|
+|Action|String|Yes|A parameter specified by the system. Value: CreateAlarm.|
+|Name|String|Yes|Alarm rule name|
+|Namespace|String|Yes|Product name. For details, see the projects for each product, for example, acs\_ecs\_dashboard and acs\_rds\_dashboard.|
+|MetricName|String|Yes|Metric name of a product. For details, see the metrics defined for each product.|
+|Dimensions|String|Yes|List of instances associated with an alarm rule. The list is a string corresponding to the JSON array, for example, \[\{“instanceId”:”name1”\},\{“iinstance”:”name2”\}\].|
+|Period|Integer|No|Index query period, which must be the same as that defined for metrics. Default value: 300, in seconds.|
+|Statistics|String|Yes|Statistical method, for example, Average. The statistical method must be the same as that defined for metrics.|
+|ComparisonOperator|String|Yes|Alarm comparison operator, which must be one of the following: <=,<,\>,\>=,==,! =|
+|Threshold|String|Yes|Alarm threshold, which must be a numeric value|
+|EvaluationCount|Int|No|Number of consecutive times that the threshold is exceeded. Default value: 3.|
+|ContactGroups|String|Yes|The contact group of an alarm rule. The group must already exist in the console as a string corresponding to the JSON array, for example, \[Contact Group 1, Contact Group 2\].|
+|StartTime|Int|No|Time when an alarm takes effect. Default value: 0, indicating that the alarm takes effect at 00:00.|
+|EndTime|Int|No|Time when an alarm expires. Default value: 24, indicating that the alarm expires at 24:00.|
+|SilenceTime|Int|No|Notification silence period in alarm state, in seconds. Default value: 86400. Minimum value: 3600.|
+|NotifyType|Int|No|Notification type. The value 0 indicates Ali WangWang + Email ID, and the value 1 indicates Ali WangWang + Email ID + Message.|
+|Webhook|String|No|A callback function that supports only Internet addresses. For details, see [Create an alarm callback](../../../../intl.en-US/User Guide/Alarm Service/Alarm callback.md#).|
 
-## Response parameter {#section_nr5_l3v_zdb .section}
+## Response parameters {#section_nr5_l3v_zdb .section}
 
 |Name|Type|Description|
 |:---|:---|:----------|
 |Data|String|Returned alarm rule ID|
-|Success|Boolean|Whether the request is successful|
-|RequestId|String|Requested UUID, which is used for log query|
-|Code|String|Request failure status code. The value 200 indicates that the request is successful, and a non-200 value indicates that the request is failed|
-|Message|String|Request failure prompt message|
+|Success|Boolean|Indicates whether a request is sent successfully.|
+|RequestId|String|Request UUID, which is used for querying logs|
+|Code|String|Request failure status code. The value 200 indicates that the request is sent successfully, and other values indicate that the request failed to be sent.|
+|Message|String|Request failure message|
 
-## Example {#section_vrl_s3v_zdb .section}
+## Examples {#section_vrl_s3v_zdb .section}
 
 **Request example**
 
@@ -45,18 +46,18 @@ Name: test_alarm
 Namespace: acs_ecs_dashboard
 MetricName: vm.MemoryUtilization
 Dimensions：[{"instanceId":"<your_ instanceId >","userId":"<your_ userId >"}]
-Period：900
-Statistics：Average
-ComparisonOperator：<=
-Threshold：35
-EvaluationCount：2
-ContactGroups：["testgroup"]
-StartTime：6
-EndTime：20
-NotifyType：1
+Period: 900
+Statistics: Average
+ComparisonOperator: <=
+Threshold: 35
+EvaluationCount: 2
+ContactGroups: ["testgroup"]
+StartTime: 6
+EndTime: 20
+NotifyType: 1
 ```
 
-**Response example**
+**Response examples**
 
 -   XML format
 
