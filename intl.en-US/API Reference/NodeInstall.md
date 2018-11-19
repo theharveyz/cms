@@ -7,7 +7,7 @@ Call APIs to install the CloudMonitor agent on a specified ECS instance. For det
 **Note:** 
 
 -   Before using the API, make sure that the [Server Guard \(Server Security\)](https://www.alibabacloud.com/help/doc-detail/28451.htm) agent has been installed on your instance. The Server Guard agent is currently integrated into security images. It is installed by default on purchased ECS instances. You can log on to the [Server Guard console](https://partners-intl.console.aliyun.com/#/aqs) to view the running status of each server.
--   The success rate of installing the CloudMonitor agent by using the APIs is about 95%. If installation fails, log on to the instance to install the agent manually. For details, see [Install CloudMonitor agent](../../../../dita-oss-bucket/SP_64/DNCMS11863785/EN-US_TP_6156.dita).
+-   The success rate of installing the CloudMonitor agent by using the APIs is about 95%. If installation fails, log on to the instance to install the agent manually. For details, see [Install CloudMonitor agent](../../../../reseller.en-US/User Guide/Host monitoring/Install CloudMonitor agent.md#).
 
 ## Request parameters {#section_rxf_qxy_zdb .section}
 
