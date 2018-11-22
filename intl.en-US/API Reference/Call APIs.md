@@ -10,7 +10,7 @@ The request structure is as follows:
 
 where:
 
--   `Endpoint` is the cloud service access point. The access point of CloudMonitor is [metrics.aliyuncs.com](http://metrics.aliyuncs.com). For details about the endpoints of each region, see [Endpoint](#section_xf3_lbv_zdb).
+-   `Endpoint` is the cloud service access point. The access point of CloudMonitor is `metrics.aliyuncs.com`. For details about the endpoints of each region, see [Endpoint](#).
 -   `Action` is an operation to be performed, for example, calling the QueryMetricList API to query the monitoring data of an instance.
 -   `Version` is the version of the API to be used. The current version is 2017-03-01.
 -   `Parameters` are the request parameters separated by ampersands \(&\). Request parameters consist of common parameters and API specific parameters. Common parameters include the API version number, authentication information, and other information.
