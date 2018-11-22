@@ -34,6 +34,5 @@ CloudMonitor provides three alarm rule management portals: application group pag
 -   [Manage alarm rules](reseller.en-US/User Guide/Application Groups/Managing Alarm Rules.md#)in application groups.
 -   [Manage alarm rules](reseller.en-US/User Guide/Host monitoring/Alarm rules service.md#) in host monitoring.
 -   Set alarm rules in cloud service monitoring.
--   [Set alarm rules](reseller.en-US/User Guide/Site Monitoring/Managing Site monitoring tasks.md#ol_chf_tqk_xdb) in site monitoring.
 -   [Set alarm rules](reseller.en-US/User Guide/Custom monitoring/Custom monitoring.md#ul_clm_pnk_zdb) in custom monitoring.
 
