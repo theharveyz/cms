@@ -60,7 +60,7 @@ For better security, we recommend that you use a RAM user account to call APIs. 
 
 ## API signature {#section_jzn_wbv_zdb .section}
 
-To ensure that the APIs are securely called, Alibaba Cloud authenticates each API request by using the API signature. When you manually initiate an API request, follow the definition of [RFC 2104](https://www.ietf.org/rfc/rfc2104.txt?spm=a2c4g.11186623.2.6.tstgdp&file=rfc2104.txt), and use AccessSecret to evaluate the HMAC values, and use these values as signatures for the encoded and sorted entire request string. For details, see [Sign RPC APIs](https://help.aliyun.com/document_detail/66384.html?spm=a2c4g.11186623.2.7.tstgdp).
+To ensure that the APIs are securely called, Alibaba Cloud authenticates each API request by using the API signature. When you manually initiate an API request, follow the definition of [RFC 2104](https://www.ietf.org/rfc/rfc2104.txt?spm=a2c4g.11186623.2.6.tstgdp&file=rfc2104.txt), and use AccessSecret to evaluate the HMAC values, and use these values as signatures for the encoded and sorted entire request string. For details, see [Sign RPC APIs](https://www.alibabacloud.com/help/doc-detail/66384.htm).
 
 When calling an RPC API, you need to add the signature to your API request using the following format:
 
