@@ -51,8 +51,8 @@ When you are required to stop a service or perform application maintenance, or a
     5.  Click**Disable** next to Alarm Rules under the **Actions**column. If you want to disable multiple alarm rules collectively, select the rules and click **Disable**from the options in the list.
 -   Enable partial alarm rules of an application group
     1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
-    2.  Click **Application Groups**in the navigation pane.
+    2.  Click **Application Groups** in the navigation pane.
     3.  Select a group with an alarm, and click the group name or click **Manage**to go to the group details page.
     4.  Click **Alarm Rules** from the options available.
-    5.  Click **Enable**next to Alarm Rules under the **Actions**column. If you want to enable multiple alarm rules all at the same time, select the rules and click **Enable**from the options in the list.
+    5.  Click **Enable** next to Alarm Rules under the **Actions**column. If you want to enable multiple alarm rules all at the same time, select the rules and click **Enable**from the options in the list.
 
