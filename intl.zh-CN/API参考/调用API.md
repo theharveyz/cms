@@ -10,7 +10,7 @@
 
 其中：
 
--   `Endpoint`是调用的云服务的接入点，云监控的接入点是[metrics.aliyuncs.com](http://metrics.aliyuncs.com)。各地域的服务地址，参见[云监控接入地址](#section_xf3_lbv_zdb)。
+-   `Endpoint`是调用的云服务的接入点，云监控的接入点是`metrics.aliyuncs.com`。各地域的服务地址，参见[云监控接入地址](#)。
 -   `Action`是要执行的操作，如使用QueryMetricList接口查询某一实例的监控数据。
 -   `Version`要使用的API版本，云监控的API版本是2017-03-01。
 -   `Parameters`是请求参数，每个参数之间用 & 分隔。请求参数由公共请求参数和API自定义参数组成。公共参数中包含API版本号、身份验证等信息。
@@ -60,7 +60,7 @@ http://metrics.cn-hangzhou.aliyuncs.com/?Action=QueryMetricList
 
 ## API签名 {#section_jzn_wbv_zdb .section}
 
-为保证API的安全调用，在调用API时阿里云会对每个API请求通过签名（Signature）进行身份验证。当您手动发起API请求时，需要按照[RFC 2104](https://www.ietf.org/rfc/rfc2104.txt?spm=a2c4g.11186623.2.6.tstgdp&file=rfc2104.txt)的定义，使用AccessSecret对编码、排序后的整个请求串计算HMAC值作为签名。更多详细信息，参见[RPC API签名](https://help.aliyun.com/document_detail/66384.html?spm=a2c4g.11186623.2.7.tstgdp)。
+为保证API的安全调用，在调用API时阿里云会对每个API请求通过签名（Signature）进行身份验证。当您手动发起API请求时，需要按照[RFC 2104](https://www.ietf.org/rfc/rfc2104.txt?spm=a2c4g.11186623.2.6.tstgdp&file=rfc2104.txt)的定义，使用AccessSecret对编码、排序后的整个请求串计算HMAC值作为签名。更多详细信息，参见[RPC API签名](https://www.alibabacloud.com/help/doc-detail/66384.htm)。
 
 RPC API要按如下格式在API请求的中增加签名（Signature）：
 
