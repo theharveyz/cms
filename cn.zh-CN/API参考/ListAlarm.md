@@ -12,7 +12,7 @@
 |Namespace|String|必选|产品名称，参考各产品对应的project,例如 acs\_ecs\_dashboard, acs\_rds\_dashboard等|
 |Id|String|可选|报警规则的id|
 |Name|String|可选|报警规则名称，支持模糊查询|
-|Dimensions|String|可选|规则关联的实例信息，为json object对应的字符串，例如\{“instacnce”:”name1”\}。可以查询用于查询关联该实例的所有规则，应用该字段时必须指定Namespace|
+|Dimension|String|可选|规则关联的实例信息，为json object对应的字符串，例如\{"instanceId":"name1"\}。可以查询用于查询关联该实例的所有规则，应用该字段时必须指定Namespace|
 |State|String|可选|报警规则状态, ALARM, INSUFFICIENT\_DATA，OK|
 |IsEnable|Boolean|可选|true为启用，false为禁用|
 |PageNumber|Int|可选|页码，默认值：1|
@@ -38,7 +38,7 @@
 |Name|String|报警规则名称|
 |Namespace|String|报警规则对应的产品|
 |MetricName|String|报警规则对应的监控项|
-|Dimensions|String|报警规则关联的实例列表，为json array对应的字符串，例如\[\{“instanceId”:”name1”\},\{“iinstance”:”name2”\}\]|
+|Dimension|String|报警规则关联的实例列表，为json array对应的字符串，例如\[\{"instanceId":"name1"\},\{"instanceId":"name2"\}\]|
 |Period|Int|查询指标的周期，单位秒|
 |Statistics|String|统计方法，例如Average、Maximum、Minimum|
 |ComparisonOperator|String|比较符|

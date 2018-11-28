@@ -12,7 +12,7 @@ Query specified or all alarm rule settings.
 |Namespace|String|Required|Product name. For more information, see the projects for various products, such as acs\_ecs\_dashboard and acs\_rds\_dashboard, acs\_rds\_dashboard|
 |Id|String|Optional|Alarm rule ID|
 |Name|String|Optional|Alarm rule name, with fuzzy search supported|
-|Dimensions|String|Optional|Instance information associated with the alarm rule, which is a JSON object string. for example, \{“instance”:”name1”\}.  This field is used to query all the rules associated with the instance, and Namespace must be specified when this field is used.|
+|Dimension|String|Optional|Instance information associated with the alarm rule, which is a JSON object string. for example, \{"instanceId":"name1"\}.  This field is used to query all the rules associated with the instance, and Namespace must be specified when this field is used.|
 |state|String|Optional|Alarm rule status, ALARM, INSUFFICIENT\_DATA，OK.|
 |IsEnable|Boolean|Optional|true indicates that the alarm rule is enabled, and false indicates that the rule is disabled.|
 |PageNumber|Int|Optional|Page number, default: 1.|
@@ -38,7 +38,7 @@ Query specified or all alarm rule settings.
 |Name|String|Alarm rule name|
 |namespace|String|Product corresponding to the alarm rule|
 |metricName|String|Monitoring metric corresponding to the alarm rule|
-|Dimensions|String|List of instances associated with the alarm rule, which is a string corresponding to the JSON array, for example, \[\{“instanceId”:”name1”\} and \{“instance”:”name2”\}\] array, for example, \[\{“instanceId”:”name1”\} and \{“instance”:”name2”\}\]|
+|Dimension|String|List of instances associated with the alarm rule, which is a string corresponding to the JSON array, for example, \[\{"instanceId":"name1"\} and \{"instanceId":"name2"\}\]|
 |Period|Int|Monitoring metric query cycle, in seconds|
 |Statistics|String|Statistical method, for example, Average, Maximum, or Minimum|
 |ComparisonOperator|String|Comparison operator|
