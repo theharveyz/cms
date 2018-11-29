@@ -38,17 +38,8 @@ Availability monitoring periodically detects whether a specified local or remote
 4.  Select **Availability Monitoring** from the left-side navigation pane to go to the Availability Monitoring page.
 5.  You can view monitoring results in the list.
     -   When the task probe does not have an alarm, the number of exception machines in the list is 0.
-
-        ![](images/1897_en-US.png)
-
     -   When an alarm occurs for a probe exception, the number of machines that have an alarm is displayed in the list, click exception numbers to view the exception machine details.
-
-        ![](images/1899_en-US.png)
-
     -   Exception details.
-
-        ![](images/1901_en-US.png)
-
 
 ## Modify availability monitoring tasks {#section_pzk_vsf_vdb .section}
 
