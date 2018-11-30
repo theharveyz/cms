@@ -10,15 +10,15 @@
 |:-|:-|:---|:-|
 |Action|String|是|系统规定参数，取值：CreateAlarm|
 |Name|String|必选|报警规则名称|
-|Namespace|String|必选|产品名称，参考各产品对应的project,例如acs\_ecs\_dashboard, acs\_rds\_dashboard等|
+|Namespace|String|必选|产品名称，参考各产品对应的project，例如acs\_ecs\_dashboard， acs\_rds\_dashboard等|
 |MetricName|String|必选|相应产品对应的监控项名称，参考各产品metric定义|
-|Dimensions|String|必选|报警规则对应实例列表，为json array对应的string，例如\[\{“instanceId”:”name1”\},\{“iinstance”:”name2”\}\]|
+|Dimension|String|必选|报警规则对应实例列表，为json array对应的string，例如\[\{“instanceId”:”name1”\},\{“instanceId”:”name2”\}\]|
 |Period|Integer|可选|查询指标的周期，必须与定义的metric一致，默认300，单位为秒|
 |Statistics|String|必选|统计方法，必须与定义的metric一致，例如Average|
-|ComparisonOperator|String|必选|报警比较符，只能为以下几种<=,<,\>,\>=,==,!=|
+|ComparisonOperator|String|必选|报警比较符，只能为以下几种<=，<，\>，\>=，==，!=|
 |Threshold|String|必选|报警阈值，目前只开放数值类型功能|
 |EvaluationCount|Int|可选|连续探测几次都满足阈值条件时报警，默认3次|
-|ContactGroups|String|必选|报警规则通知的联系组，必须在控制台上已创建，为json array对应的string，例如 \[“联系组1”,”联系组2”\]|
+|ContactGroups|String|必选|报警规则通知的联系组，必须在控制台上已创建，为json array对应的string，例如 \[“联系组1”，”联系组2”\]|
 |StartTime|Int|可选|报警生效时间的开始时间，默认0，代表0点|
 |EndTime|Int|可选|报警生效时间的结束时间，默认24，代表24点|
 |SilenceTime|Int|可选|一直处于报警状态的通知沉默周期，默认86400，单位s，最小1小时|

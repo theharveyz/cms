@@ -12,7 +12,7 @@ Create alarm rules for one or more instances.
 |Name|String|Yes|Alarm rule name|
 |Namespace|String|Yes|Product name. For details, see the projects for each product, for example, acs\_ecs\_dashboard and acs\_rds\_dashboard.|
 |MetricName|String|Yes|Metric name of a product. For details, see the metrics defined for each product.|
-|Dimensions|String|Yes|List of instances associated with an alarm rule. The list is a string corresponding to the JSON array, for example, \[\{“instanceId”:”name1”\},\{“iinstance”:”name2”\}\].|
+|Dimensions|String|Yes|List of instances associated with an alarm rule. The list is a string corresponding to the JSON array, for example, \[\{“instanceId”:”name1”\},\{“instanceId”:”name2”\}\].|
 |Period|Integer|No|Index query period, which must be the same as that defined for metrics. Default value: 300, in seconds.|
 |Statistics|String|Yes|Statistical method, for example, Average. The statistical method must be the same as that defined for metrics.|
 |ComparisonOperator|String|Yes|Alarm comparison operator, which must be one of the following: <=,<,\>,\>=,==,! =|
@@ -23,7 +23,7 @@ Create alarm rules for one or more instances.
 |EndTime|Int|No|Time when an alarm expires. Default value: 24, indicating that the alarm expires at 24:00.|
 |SilenceTime|Int|No|Notification silence period in alarm state, in seconds. Default value: 86400. Minimum value: 3600.|
 |NotifyType|Int|No|Notification type. The value 0 indicates Ali WangWang + Email ID, and the value 1 indicates Ali WangWang + Email ID + Message.|
-|Webhook|String|No|A callback function that supports only Internet addresses. For details, see [Create an alarm callback](../../../../intl.en-US/User Guide/Alarm Service/Alarm callback.md#).|
+|Webhook|String|No|A callback function that supports only Internet addresses. For details, see [Create an alarm callback](../../../../reseller.en-US/User Guide/Alarm Service/Create an alarm callback.md#).|
 
 ## Response parameters {#section_nr5_l3v_zdb .section}
 
