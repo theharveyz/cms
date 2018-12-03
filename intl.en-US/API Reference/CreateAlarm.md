@@ -12,7 +12,7 @@ Create alarm rules for one or more instances.
 |Name|String|Yes|Alarm rule name|
 |Namespace|String|Yes|Product name. For details, see the projects for each product, for example, acs\_ecs\_dashboard and acs\_rds\_dashboard.|
 |MetricName|String|Yes|Metric name of a product. For details, see the metrics defined for each product.|
-|Dimensions|String|Yes|List of instances associated with an alarm rule. The list is a string corresponding to the JSON array, for example, \[\{“instanceId”:”name1”\},\{“instanceId”:”name2”\}\].|
+|Dimension|String|Yes|List of instances associated with an alarm rule. The list is a string corresponding to the JSON array, for example, \[\{“instanceId”:”name1”\},\{“instanceId”:”name2”\}\].|
 |Period|Integer|No|Index query period, which must be the same as that defined for metrics. Default value: 300, in seconds.|
 |Statistics|String|Yes|Statistical method, for example, Average. The statistical method must be the same as that defined for metrics.|
 |ComparisonOperator|String|Yes|Alarm comparison operator, which must be one of the following: <=,<,\>,\>=,==,! =|
