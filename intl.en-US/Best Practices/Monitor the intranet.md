@@ -8,6 +8,8 @@ As more and more users migrate their instances from classic networks to VPCs \(f
 
 First, you need to install a CloudMonitor agent on your server. Then, you need to create monitoring tasks in the CloudMonitor console, select the server on which the agent is installed as the detection source, and configure the target URL or port. The detection source then sends an HTTP request or a Telnet request to the target URL or port every minute through the agent. The detection source also collects the response time and status codes and sends them to CloudMonitor for alarm and display.
 
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6244/15441764695495_en-US.png)
+
 ## Monitor the intranet {#section_mfp_lgt_zdb .section}
 
 -   Prerequisites
@@ -23,6 +25,15 @@ First, you need to install a CloudMonitor agent on your server. Then, you need t
         -   To monitor the responsiveness of a local ECS process in a VPC, select the target ECSs to be monitored as **Target Server** and enter the addresses in localhost:port/path format as **Detection Target**.
         -   To monitor the responsiveness of the SLB in a VPC, select an ECS that is located in the VPC as **Target Server** and enter the SLB address as **Detection Target**.
         -   To monitor the responsiveness of the RDS or Redis used in the ECS backend in a VPC, add the RDS or Redis in the VPC to the application group, select the corresponding ECS as **Target Server**, and select RDS or Redis instances as **Detection Target**.
+
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6244/15441764705496_en-US.png)
+
     6.  Click **OK**. Then, you can view the detection results in the corresponding monitoring chart of the task. If detection fails, you will receive an alarm notification.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6244/15441764705498_en-US.png)
+
     7.  Click **Monitoring Charts** of a task to view the monitoring details.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6244/15441764705499_en-US.png)
+
 
