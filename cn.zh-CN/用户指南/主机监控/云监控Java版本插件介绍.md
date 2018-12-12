@@ -5,8 +5,7 @@
 ## 安装位置 {#section_lct_qk2_xdb .section}
 
 -   Linux：/usr/local/cloudmonitor
--   Windows 64位： C:\\Program Files \(x86\)\\Alibaba\\cloudmonitor
--   Windows 32位： C:\\Program Files\\Alibaba\\cloudmonitor
+-   Windows： C:\\Program Files\\Alibaba\\cloudmonitor
 
 ## 进程信息 {#section_ow1_rq2_xdb .section}
 
