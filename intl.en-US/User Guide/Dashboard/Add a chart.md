@@ -19,10 +19,25 @@ CloudMonitor initializes the ECS monitor tray for your user dimension, if you ne
 
 -   Graph type
     -   Line diagram: displays monitoring data in a time series. Multiple metric items can be added.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6140/15446827351579_en-US.png)
+
     -   Area chart: It displays metric data by time sequence. Multiple metric items can be added.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6140/15446827351583_en-US.png)
+
     -   Topn table: real-time display of monitor data values sorted from large to small. Displays a maximum of 1000 entries in positive order or 1000 data in inverted order. For example, a table can display the CPU usage of all machines in an ECS group in a descending order. Only one monitoring item can be added.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6140/15446827351584_en-US.png)
+
     -   Heat map: It displays the real-time data of metric items. It is used to display distribution and comparison of real-time metric data of a specific metric item of multiple instances. For example, a heat map can display the distribution of the CPU usage of multiple instances. Only one metric item can be added.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6140/15446827351585_en-US.png)
+
     -   Pie chart: It displays the real-time data of metric items. Often used in the comparison of data. Only one monitoring item can be added.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6140/15446827351586_en-US.png)
+
 -   Cloud product monitoring: the monitoring of each cloud product in ALI cloud.
 
 -   Log monitoring: a monitor that is added by the user through log monitoring.
@@ -30,11 +45,14 @@ CloudMonitor initializes the ECS monitor tray for your user dimension, if you ne
 -   Statistical methods: the common statistical methods for monitoring items are maximum, minimum, and average. That is, how metric data is aggregated within the statistical period.
 -   Resources: monitoring data for which resources need to be viewed by applying grouping or instance filtering.
 
-## 操作步骤 {#section_fgw_ybz_5db .section}
+## Procedures {#section_fgw_ybz_5db .section}
 
 1.  Log on to the[CloudMonitor console](https://cms.console.aliyun.com/#/cloud/ecs).
 2.  Click **Dashboard**in the navigation pane.
 3.  Click on the Add chart in the upper right corner of the monitor tray To Go To The add page.
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6140/15446827351588_en-US.png)
+
 4.  Select the display type for the chart.
 5.  Select the cloud product you want to view and name the chart.
 6.  Select the monitoring metrics and statistics you want to view.
