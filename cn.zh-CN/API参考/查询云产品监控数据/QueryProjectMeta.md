@@ -1,0 +1,134 @@
+# QueryProjectMeta {#concept_otq_nys_zfb .concept}
+
+查询云监控支持的时序类监控项产品列表。通常配合查询监控项接口QueryMetricMeta和查询监控数据接口QueryMetricList/QueryMetricLast 一起使用。
+
+## 请求类型 {#section_xwc_qzs_zfb .section}
+
+POST|GET
+
+## 请求参数 {#section_xnn_szs_zfb .section}
+
+|名称|类型|必填|描述|
+|--|--|--|--|
+|Action|String|必选|系统规定参数，取值：QueryProjectMeta|
+|Labels|String|否| 根据标签过滤，格式为\[\{"name":"标签名","value":"标签值"\},\{"name":"标签名","value":"标签值"\}\]​
+
+ 支持的标签名包括product、groupFlag。product 标签值为产品英文名称。
+
+ groupFlag含义为该产品是否支持应用分组，标签值为true或false​
+
+ |
+|PageNumber|int|否|分页参数，默认1|
+|PageSize|int|否|每页最大数量，默认30|
+
+## 返回参数 { .section}
+
+|**名称**|**类型**|**描述**|
+|------|------|------|
+|RequestId|String|用于跟踪|
+|Success|Boolean|用于标识本次调用是否成功|
+|ErrorCode|String|错误码200成功|
+|ErrorMessage|String|错误码消息|
+|Resources|Array|ProjectMeta列表|
+
+## ProjectMeta各字段说明 { .section}
+
+|名称|类型|是否必填|描述|
+|--|--|----|--|
+|Labels|String|否| \[\{"name":"标签名","value":"标签值"\},\{"name":"标签名","value":"标签值"\}\]
+
+ 支持的标签名包括product、groupFlag。
+
+ product 标签值为产品英文名称。
+
+ groupFlag含义为该产品是否支持应用分组，标签值为true或false
+
+ |
+|Project|String|否|监控项的Project，用于查询监控数据|
+|Description|String|否|监控项的描述|
+
+## 错误编码 { .section}
+
+|HTTPStateCode|ErrorCode|ErrorMessage|
+|-------------|---------|------------|
+|403|AccessForbidden|User not authorized to operate on the specified resource.|
+|400|ParameterInvalid|Illegal parameters.|
+|404|ResourceNotFound|The specified resource is not found.|
+|500|InternalError|The request processing has failed due to some unknown error.|
+
+## 请求示例 { .section}
+
+```
+
+import com.aliyuncs.DefaultAcsClient;
+import com.aliyuncs.IAcsClient;
+import com.aliyuncs.cms.model.v20180308.QueryProjectMetaRequest;
+import com.aliyuncs.cms.model.v20180308.QueryProjectMetaResponse;
+import com.aliyuncs.profile.DefaultProfile;
+
+
+class Test {
+public static void main(String[] args) {
+
+
+// 初始化
+DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "", "");
+IAcsClient client = new DefaultAcsClient(profile);
+
+//设置参数
+QueryProjectMetaRequest request = new QueryProjectMetaRequest();
+
+// 发起请求
+try {
+QueryProjectMetaResponse response = client.getAcsResponse(request);
+System.out.println("Success:" + response.getSuccess());
+System.out.println("ErrorCode:" + response.getErrorCode());
+System.out.println("ErrorMessage:" + response.getErrorMessage());
+System.out.println("RequestId:" + response.getRequestId());
+} catch (Exception e) {
+e.printStackTrace();
+}
+}
+}
+```
+
+## 返回示例 {#section_g4d_kft_zfb .section}
+
+```
+
+{
+"RequestId": "D3DBF9F5-7C4D-4A67-B869-097C069C481D",
+"ErrorCode": 200,
+"Success": true,
+"Resources": {
+"Resource": [
+{
+"Description": "AnalyticDB",
+"Labels": "[{\"name\":\"product\",\"value\":\"ADS\"},{\"name\":\"groupFlag\",\"value\":\"true\"}]",
+"Project": "acs_ads"
+},
+{
+"Description": "API Gateway",
+"Labels": "[{\"name\":\"product\",\"value\":\"APIGateway\"},{\"name\":\"groupFlag\",\"value\":\"true\"}]",
+"Project": "acs_apigateway_dashboard"
+},
+{
+"Description": "Internet Shared Bandwidth",
+"Labels": "[{\"name\":\"product\",\"value\":\"InternetSharedBandwidth\"},{\"name\":\"groupFlag\",\"value\":\"true\"}]",
+"Project": "acs_bandwidth_package"
+},
+{
+"Description": "CDN",
+"Labels": "[{\"name\":\"product\",\"value\":\"CDN\"},{\"name\":\"groupFlag\",\"value\":\"true\"}]",
+"Project": "acs_cdn"
+},
+{
+"Description": "Cloud Enterprise Network",
+"Labels": "[{\"name\":\"product\",\"value\":\"CEN\"},{\"name\":\"groupFlag\",\"value\":\"false\"}]",
+"Project": "acs_cen"
+}
+]
+}
+}
+```
+
