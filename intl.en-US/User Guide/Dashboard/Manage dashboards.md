@@ -17,13 +17,13 @@ Procedure
 2.  In the left-side navigation pane, choose **Dashboard** \> **Custom Dashboard**.
 3.  By default, **ECS-global-dashboard** is displayed. You can select another dashboard from the drop-down list.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6139/15451017281553_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6139/15451055161553_en-US.png)
 
 4.  To view the dashboard in full screen, click **Full Screen** in the upper-right corner of the page.
 5.  Select a time range. Click the time range button at the top of the page. From there, you can quickly select the time range shown in the charts of the dashboard. The time range you select apply to all the charts on the dashboard.
 6.  Automatic refresh. After you turn on the **Auto Refresh** switch, whenever you select a query time span of 1 hour, 3 hours, or 6 hours, automatic refresh is performed every minute.
 7.  The units of the metrics measured are displayed in parentheses for the chart name.
-8.  When you rest the pointer over some point on a chart, the value of that time point is displayed and the same time point is also indicated on all the charts displayed on the dashboard.
+8.  When you rest the pointer over some point on a chart, values at that time point are displayed across all charts.
 
 ## Create a dashboard {#section_w1s_dxy_5db .section}
 
@@ -37,13 +37,13 @@ Procedure
 2.  In the left-side navigation pane, choose **Dashboard** \> **Custom Dashboard**.
 3.  In the upper-right corner of the page, click **Create Dashboard**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6139/15451017281565_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6139/15451055171565_en-US.png)
 
-4.  Enter the name of the dashboard, and click **Create**.
+4.  Enter the name of the dashboard.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6139/15451017281566_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6139/15451055171566_en-US.png)
 
-5.  The page is automatically redirected to the new dashboard page where you can add various metric charts as needed.
+5.  Click **Create**. The page is automatically redirected to the new dashboard page where you can add various metric charts as needed.
 6.  When you rest the pointer over the dashboard name, the **Edit** option appears on the right hand side. To modify the dashboard name, click **Edit**.
 
 ## Delete a dashboard {#section_l51_ryy_5db .section}
@@ -56,5 +56,6 @@ Procedure
 
 1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  In the left-side navigation pane, choose **Dashboard** \> **Custom Dashboard**.
-3.  In the upper-right corner of the page, click **Delete Dashboard** to delete the dashboard.
+3.  Select the target dashboard from the **Dashboards** drop-down list.
+4.  In the upper-right corner of the page, click **Delete Dashboard** to delete the dashboard.
 
