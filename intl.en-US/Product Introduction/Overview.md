@@ -1,8 +1,8 @@
 # Overview {#concept_n3h_2s4_tdb .concept}
 
-CloudMonitor provides you with an overview of your cloud services, cloud resource usage, alarms, and important events, allowing you to understand the utilization and retention of resources and the alarms for your cloud services in real time.
+CloudMonitor provides you with an overview of your cloud services, cloud resource usage, alarms, and important events, allowing you to understand the utilization and maintenance of resources and the alarms for your cloud services in real time.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6123/154511965234450_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6123/154512277934450_en-US.png)
 
 ## Cloud services overview {#section_sql_ss4_tdb .section}
 
@@ -25,7 +25,7 @@ The cloud services overview provides a summary of the resources that you use, he
 -   HybridDB for PostgreSQL
 -   Express Connect
 
-By clicking on the number of resources, you can view the list page for the corresponding services under Cloud Service Monitoring.
+By clicking the number of resources, you can view the list page for the corresponding services under Cloud Service Monitoring.
 
 **Note:** To monitor and view ECS data \(such as CPU, memory, and disk usage\), you need to install the CloudMonitor agent. For more information about how to install the CloudMonitor agent, see [Install CloudMonitor agent](../../../../reseller.en-US/User Guide/Host monitoring/Install CloudMonitor agent.md#).
 
@@ -33,7 +33,7 @@ By clicking on the number of resources, you can view the list page for the corre
 
 The alarm overview provides alarm statistics, including the total number of alarms for the past seven days, the number of currently triggered alarm rules, the number of alarm rules with insufficient data, and the alarm SMS usage for the current month.
 
-You can view more information by clicking on the number of alarms or alarm rules.
+You can view more information by clicking the number of alarms or alarm rules.
 
 ## Event overview {#section_t4b_gv4_tdb .section}
 
@@ -86,9 +86,9 @@ Resource usage shows the overall resource usage of each service under your accou
 |Container Service|CPU usage|95th percentile|Real-time|All instances|
 |Container Service|Memory usage |95th percentile|Real-time|All instances|
 |Container Service|Outbound Internet traffic|95th percentile|Real-time|All instances|
-|Log Service |Total inbound network traffic for current month|Sum|The cumulative value from 00:00 on the first day of the month to the current time|All projects|
-|Log Service |Total outbound network traffic for current month|Sum|The cumulative value from 00:00 on the first day of the month to the current time|All projects|
-|Log Service|Total requests for current month|Sum|The cumulative value from 00:00 on the first day of the month to the current time|All projects|
+|Log Service |Total inbound network traffic for current month|Sum|The cumulative value from 00:00 on the first day of the month to the current time|All Projects|
+|Log Service |Total outbound network traffic for current month|Sum|The cumulative value from 00:00 on the first day of the month to the current time|All Projects|
+|Log Service|Total requests for current month|Sum|The cumulative value from 00:00 on the first day of the month to the current time|All Projects|
 |ApsaraDB for HybridDB|CPU usage|95th percentile|Real-time|All instances|
 |ApsaraDB for HybridDB|Memory usage |95th percentile|Real-time|All instances|
 |ApsaraDB for HybridDB|IOPS usage|95th percentile|Real-time|All instances|
