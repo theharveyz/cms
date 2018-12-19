@@ -1,12 +1,12 @@
 # Overview {#concept_n3h_2s4_tdb .concept}
 
-CloudMonitor provides you with an overview of your cloud services, cloud resource usage, alarms, and important events, allowing you to understand the utilization and maintenance of resources and the alarms for your cloud services in real time.
+CloudMonitor provides you with an overview of your cloud services, cloud resource usage, alarms, and important events, allowing you to understand the utilization and maintenance of your resources and the alarms for your cloud services in real time.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6123/154512277934450_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6123/154518908634450_en-US.png)
 
-## Cloud services overview {#section_sql_ss4_tdb .section}
+## Cloud service overview {#section_sql_ss4_tdb .section}
 
-The cloud services overview provides a summary of the resources that you use, helping you quickly and easily understand the assets you have. The cloud services overview displays the following services:
+The cloud service overview provides a summary of the resources that you use, helping you quickly and easily understand the assets you have. The cloud service overview displays the following services:
 
 -   Hosts, including ECS hosts and the non-ECS hosts that are installed with the CloudMonitor agent
 -   Server Load Balancer
