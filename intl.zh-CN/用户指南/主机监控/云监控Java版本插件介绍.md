@@ -47,7 +47,7 @@
 
 ## 非阿里云主机安装方法 {#section_a12_cx2_xdb .section}
 
-1.  登录[云监控控制台](https://cloudmonitor.console.aliyun.com)。
+1.  登录[云监控控制台](https://cms-intl.console.aliyun.com)。
 2.  单击左侧导航栏中的**主机监控**，进入主机监控页面。
 3.  单击页面上方的**非阿里云主机安装**按钮，进入监控安装指引页面，选择监控类型、操作系统后，可查看与其对应的安装方法。
 
