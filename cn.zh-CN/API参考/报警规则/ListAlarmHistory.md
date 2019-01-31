@@ -1,4 +1,4 @@
-# ListAlarmHistory {#doc_api_987961 .reference}
+# ListAlarmHistory {#doc_api_988996 .reference}
 
 查询报警历史。
 
@@ -39,7 +39,7 @@
 |└AlarmTime|Long|1548926982000|报警发生的时间。
 
  |
-|└ContactGroups|String|\["DB组"\]|发出的报警通知的通知对象，json array对应的字符串，例如\\“联系组1”:”联系组2”，只有通知状态为0才有该字段。
+|└ContactGroups|String|\["DB组"\]|发出的报警通知的通知对象，json array对应的字符串，例如`[“联系组1”:”联系组2”]`，只有通知状态为0才有该字段。
 
  |
 |└Dimension|String|\{"instanceId":"XXX"\}|报警规则对应实例，为json object对应的字符串,例如\{“instance”:”name1”\}。
@@ -49,6 +49,9 @@
 
  |
 |└Id|String|1a775e37-dfba-430c-ab9f-7036475c8bfb\_2dbe619b-0483-402e-9437-7c7a38fba7ed|报警规则的id。
+
+ |
+|└InstanceName|String|test-demo|实例名称。
 
  |
 |└LastTime|Long|2851651669|报警持续时间，单位为毫秒。
