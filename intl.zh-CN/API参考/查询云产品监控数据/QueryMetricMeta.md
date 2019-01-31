@@ -1,4 +1,4 @@
-# QueryMetricMeta {#doc_api_987981 .reference}
+# QueryMetricMeta {#doc_api_988995 .reference}
 
 查询云监控开放的时序类监控项的监控项描述。
 
@@ -10,7 +10,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Project|String|是|acs\_ecs\_dashboard|指标所属的Project，按等于匹配
+|Project|String|是|acs\_ecs\_dashboard|指标所属的Project，按等于匹配。
 
  |
 |Action|String|否|QueryMetricMeta|系统规定参数，取值：QueryMetricMeta
@@ -28,13 +28,13 @@
 -   productCategory：产品类型分类
 
  |
-|Metric|String|否|CPUUtilization|指标名，按等于匹配
+|Metric|String|否|CPUUtilization|指标名，按等于匹配。
 
  |
-|PageNumber|Integer|否|1|分页参数，默认1
+|PageNumber|Integer|否|1|分页参数，默认1。
 
  |
-|PageSize|Integer|否|30|每页最大数量，默认30
+|PageSize|Integer|否|30|每页最大数量，默认30。
 
  |
 
@@ -42,43 +42,52 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|ErrorCode|String|200|状态码，200为成功，非200为失败
+|ErrorCode|String|200|状态码，200为成功，非200为失败。
 
  |
-|ErrorMessage|String|Success|错误码消息
+|ErrorMessage|String|Success|错误码消息。
 
  |
-|RequestId|String|0CCE0AF0-053C-4B13-A583-DC9A85785D49|用于跟踪
+|RequestId|String|0CCE0AF0-053C-4B13-A583-DC9A85785D49|用于跟踪。
 
  |
-|Resources| | |返回的metric meta列表
+|Resources| | |返回的metric meta列表。
 
  |
-|└Description|String|ECS.CPUUtilization|监控项的描述
+|└Description|String|ECS.CPUUtilization|监控项的描述。
 
  |
 |└Dimensions|String|instanceId|监控项的Dimensions，多级用英文逗号分隔，例如：userId,instanceId
 
  |
-|└Labels|String|\[\{\\"name\\":\\"alertUnit\\",\\"value\\":\\"%\\"\},\{\\"name\\":\\"alertDefault\\",\\"value\\":\\"80\\"\},\{\\"name\\":\\"minAlertPeriod\\",\\"value\\":\\"60\\"\},\{\\"name\\":\\"metricCategory\\",\\"value\\":\\"instanceId\\"\},\{\\"name\\":\\"is\_alarm\\",\\"value\\":\\"true\\"\}\]"|监控项的标签，是一个json的string\{"name":"标签名","value":"标签的值"\}，可以是多个，name可以重复 已有的标签name说明： metricCategory：指标分类 alertEnable：是否可以报警 alertUnit：报警单位 unitFactor：单位转换系数 minAlertPeriod：最小报警周期 productCategory：产品
+|└Labels|String|\[\{\\"name\\":\\"alertUnit\\",\\"value\\":\\"%\\"\},\{\\"name\\":\\"alertDefault\\",\\"value\\":\\"80\\"\},\{\\"name\\":\\"minAlertPeriod\\",\\"value\\":\\"60\\"\},\{\\"name\\":\\"metricCategory\\",\\"value\\":\\"instanceId\\"\},\{\\"name\\":\\"is\_alarm\\",\\"value\\":\\"true\\"\}\]"|监控项的标签，是一个json的string`[{"name":"标签名","value":"标签的值"}]`，可以是多个，name可以重复。
+
+ 已有的标签name说明：
+
+ -   metricCategory：指标分类
+-   alertEnable：是否可以报警
+-   alertUnit：报警单位
+-   unitFactor：单位转换系数
+-   minAlertPeriod：最小报警周期
+-   productCategory：产品
 
  |
-|└Metric|String|CPUUtilization|监控项名称
+|└Metric|String|CPUUtilization|监控项名称。
 
  |
 |└Periods|String|60,300|监控项的所有统计周期，多个用英文逗号分隔：15,60,900
 
  |
-|└Project|String|acs\_ecs\_dashboard|监控项的Project名称，用于查询监控数据
+|└Project|String|acs\_ecs\_dashboard|监控项的Project名称，用于查询监控数据。
 
  |
 |└Statistics|String|Average,Minimum,Maximum|统计方法，多个用英文逗号分隔，例如：Maximum,Minimum,Average
 
  |
-|└Unit|String|%|监控项的单位
+|└Unit|String|%|监控项的单位。
 
  |
-|Success|Boolean|true|用于标识本次调用是否成功
+|Success|Boolean|true|用于标识本次调用是否成功。
 
  |
 
