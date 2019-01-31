@@ -1,14 +1,14 @@
-# QueryMetricList {#doc_api_987962 .reference}
+# QueryMetricList {#doc_api_988976 .reference}
 
-查询一段时间内指定产品实例的监控数据
+查询一段时间内指定产品实例的监控数据。
 
-**\#** 参数说明
+## 参数说明 {#description .section}
 
 -   各云产品的Project、Metric、Period、Dimensions等入参如何赋值，请参考[预设监控项参考](~~28619~~)。
 -   开始和结束时间执行的是左开右闭的模式，startTime不能等于或者大于endTime。
 -   Cursor是分页模式下的参数，只要存在就说明还有下一页，返回为null则说明没有下一页。
 -   Period一般包含60（一分钟）、300（五分钟）、900（十五分钟）。请根据文档以及查询场景的需要考虑Period。比如查询一天范围使用Period为60，则返回1000条数据（实际存在1440，因为最大返回值不超过1000，则只返回前1000条）。如果使用Period为300，则返回288条数据。
--   本接口支持RAM子账号调用，授权时操作描述符为cms:QueryMetricList，资源描述符为\*。
+-   本接口支持RAM子账号调用，授权时操作描述符为`cms:QueryMetricList`，资源描述符为`*`。
 
 ## 调试 {#apiExplorer .section}
 
@@ -18,7 +18,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Metric|String|是|cpu\_idle|监控项名称
+|Metric|String|是|cpu\_idle|监控项名称。
 
  |
 |Project|String|是|acs\_ecs\_dashboard|名字空间，表明监控数据所属产品，如 “acs\_ecs\_dashboard”,“acs\_rds\_dashboard”等。
@@ -36,7 +36,7 @@
 |EndTime|String|否|2019-01-30 00:10:00|可以传入距离1970年1月1日 0点的毫秒数，也可以传入format时间格式数据，如2015-10-20 00:00:00。
 
  |
-|Express|String|否|“\{"groupby":\["userId","instanceId"\]\}”|对查出的现有结果进行时时计算的表达式，例如 \{"groupby":"instanceId"\}
+|Express|String|否|“\{"groupby":\["userId","instanceId"\]\}”|对查询出的现有结果进行时时计算的表达式，例如`{"groupby":["instanceId"]}`
 
  |
 |Length|String|否|1000|每次查询大小，用于分页查询，默认值为1000。
