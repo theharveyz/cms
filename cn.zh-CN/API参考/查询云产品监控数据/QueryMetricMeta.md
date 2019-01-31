@@ -1,4 +1,4 @@
-# QueryMetricMeta {#doc_api_984504 .reference}
+# QueryMetricMeta {#doc_api_987981 .reference}
 
 查询云监控开放的时序类监控项的监控项描述。
 
