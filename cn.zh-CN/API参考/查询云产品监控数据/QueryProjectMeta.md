@@ -1,4 +1,4 @@
-# QueryProjectMeta {#doc_api_984503 .reference}
+# QueryProjectMeta {#doc_api_988994 .reference}
 
 查询云监控支持的时序类监控项产品列表。
 
@@ -19,13 +19,13 @@
 
  product 标签值为产品英文名称。
 
- groupFlag含义为该产品是否支持应用分组，标签值为true或false​
+ groupFlag含义为该产品是否支持应用分组，标签值为true或false​ 。
 
  |
-|PageNumber|Integer|否|1|分页参数，默认1
+|PageNumber|Integer|否|1|分页参数，默认1。
 
  |
-|PageSize|Integer|否|30|每页最大数量，默认30
+|PageSize|Integer|否|30|每页最大数量，默认30。
 
  |
 
@@ -33,34 +33,32 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|ErrorCode|String|200|错误码200成功
+|ErrorCode|String|200|错误码200成功。
 
  |
-|ErrorMessage|String|Success|错误码消息
+|ErrorMessage|String|Success|错误码消息。
 
  |
-|RequestId|String|D3DBF9F5-7C4D-4A67-B869-097C069C481D|用于跟踪
+|RequestId|String|D3DBF9F5-7C4D-4A67-B869-097C069C481D|用于跟踪。
 
  |
-|Resources| | |ProjectMeta列表
+|Resources| | |ProjectMeta列表。
 
  |
-|└Description|String|ApsaraDB for MongoDB|监控项的描述
+|└Description|String|ApsaraDB for MongoDB|监控项的描述。
 
  |
-|└Labels|String|\[\{\\"name\\":\\"product\\",\\"value\\":\\"MongoDB\\"\]|\\\{"name":"标签名","value":"标签值"\},\{"name":"标签名","value":"标签值"\}
-
- 支持的标签名包括product、groupFlag。
+|└Labels|String|\[\{\\"name\\":\\"product\\",\\"value\\":\\"MongoDB\\"\]|`[{"name":"标签名","value":"标签值"},{"name":"标签名","value":"标签值"}]` 支持的标签名包括product、groupFlag。
 
  product 标签值为产品英文名称。
 
- groupFlag含义为该产品是否支持应用分组，标签值为true或false
+ groupFlag含义为该产品是否支持应用分组，标签值为true或false。
 
  |
-|└Project|String|acs\_mongodb|监控项的Project，用于查询监控数据
+|└Project|String|acs\_mongodb|监控项的Project，用于查询监控数据。
 
  |
-|Success|Boolean|true|用于标识本次调用是否成功
+|Success|Boolean|true|用于标识本次调用是否成功。
 
  |
 
