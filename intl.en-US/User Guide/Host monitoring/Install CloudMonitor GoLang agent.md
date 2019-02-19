@@ -14,9 +14,9 @@
 
 2.  Version
 
-    In this topic, the version 2.1.47 is used. We recommend that you use the latest version. You can find the number of the latest version on the host monitoring page in the CloudMonitor console.
+    In this topic, the version 2.1.55 is used. We recommend that you use the latest version. You can find the number of the latest version on the host monitoring page in the CloudMonitor console.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/154987673434123_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155055642734123_en-US.png)
 
 
 ## Frequently used commands {#section_u5x_qhx_wfb .section}
@@ -48,154 +48,154 @@ Copy the installation command of the region you require and then run the command
 **China North 1 \(Qingdao\) cn-qingdao**
 
 ```
-REGION_ID=cn-qingdao VERSION=2.1.47 \
+REGION_ID=cn-qingdao VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-qingdao.oss-cn-qingdao-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **China North 2 \(Beijing\) cn-beijing**
 
 ```
-REGION_ID=cn-beijing VERSION=2.1.47 \
+REGION_ID=cn-beijing VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **China North 3 \(Zhangjiakou\) cn-zhangjiakou**
 
 ```
-REGION_ID=cn-zhangjiakou VERSION=2.1.47 \
+REGION_ID=cn-zhangjiakou VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-zhangjiakou.oss-cn-zhangjiakou-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **China North 5 \(Hohhot\) cn-huhehaote**
 
 ```
-REGION_ID=cn-huhehaote VERSION=2.1.47 \
+REGION_ID=cn-huhehaote VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-huhehaote.oss-cn-huhehaote-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **China East 1 \(Hangzhou\) cn-hangzhou**
 
 ```
-REGION_ID=cn-hangzhou VERSION=2.1.47 \
+REGION_ID=cn-hangzhou VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **China East 2 \(Shanghai\) cn-shanghai**
 
 ```
-REGION_ID=cn-shanghai VERSION=2.1.47 \
+REGION_ID=cn-shanghai VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-shanghai.oss-cn-shanghai-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **China South 1 \(Shenzhen\) cn-shenzhen**
 
 ```
-REGION_ID=cn-shenzhen VERSION=2.1.47 \
+REGION_ID=cn-shenzhen VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-shenzhen.oss-cn-shenzhen-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **Hong Kong \(China\) cn-hongkong**
 
 ```
-REGION_ID=cn-hongkong VERSION=2.1.47 \
+REGION_ID=cn-hongkong VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-hongkong.oss-cn-hongkong-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **US West 1 \(Silicon Valley\) us-west-1**
 
 ```
-REGION_ID=us-west-1 VERSION=2.1.47 \
+REGION_ID=us-west-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-us-west-1.oss-us-west-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **US East 1 \(Virginia\) us-east-1**
 
 ```
-REGION_ID=us-east-1 VERSION=2.1.47 \
+REGION_ID=us-east-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-us-east-1.oss-us-east-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **Asia Pacific SE 1 \(Singapore\) ap-southeast-1**
 
 ```
-REGION_ID=ap-southeast-1 VERSION=2.1.47 \
+REGION_ID=ap-southeast-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-southeast-1.oss-ap-southeast-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **Asia Pacific SE 2 \(Sydney\) ap-southeast-2**
 
 ```
-REGION_ID=ap-southeast-2 VERSION=2.1.47 \
+REGION_ID=ap-southeast-2 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-southeast-2.oss-ap-southeast-2-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **Asia Pacific SE 3 \(Kuala Lumpur\) ap-southeast-3**
 
 ```
-REGION_ID=ap-southeast-3 VERSION=2.1.47 \
+REGION_ID=ap-southeast-3 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-southeast-3.oss-ap-southeast-3-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **Asia Pacific SE 5 \(Jakarta\) ap-southeast-5**
 
 ```
-REGION_ID=ap-southeast-5 VERSION=2.1.47 \
+REGION_ID=ap-southeast-5 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-southeast-5.oss-ap-southeast-5-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **Asia Pacific NE 1 \(Tokyo\) ap-northeast-1**
 
 ```
-REGION_ID=ap-northeast-1 VERSION=2.1.47 \
+REGION_ID=ap-northeast-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-northeast-1.oss-ap-northeast-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **Asia Pacific SOU 1 \(Mumbai\) ap-south-1**
 
 ```
-REGION_ID=ap-south-1 VERSION=2.1.47 \
+REGION_ID=ap-south-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-south-1.oss-ap-south-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **EU Central 1 \(Frankfurt\) eu-central-1**
 
 ```
-REGION_ID=eu-central-1 VERSION=2.1.47 \
+REGION_ID=eu-central-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-eu-central-1.oss-eu-central-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **UK \(London\) eu-west-1**
 
 ```
-REGION_ID=eu-west-1 VERSION=2.1.47 \
+REGION_ID=eu-west-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-eu-west-1.oss-eu-west-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **Middle East 1 \(Dubai\) me-east-1**
 
 ```
-REGION_ID=me-east-1 VERSION=2.1.47 \
+REGION_ID=me-east-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-me-east-1.oss-me-east-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **China East 1 Finance Cloud \(Hangzhou\) cn-hangzhou**
 
 ```
-REGION_ID=cn-hangzhou VERSION=2.1.47 \
+REGION_ID=cn-hangzhou VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **China East 2 Finance Cloud \(Shanghai\) cn-shanghai-finance-1**
 
 ```
-REGION_ID=cn-shanghai-finance-1 VERSION=2.1.47 \
+REGION_ID=cn-shanghai-finance-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-shanghai-finance-1.oss-cn-shanghai-finance-1-pub-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
 **China South 1 Finance Cloud \(Shenzhen\) cn-shenzen-finance-1**
 
 ```
-REGION_ID=cn-shenzhen-finance-1 VERSION=2.1.47 \
+REGION_ID=cn-shenzhen-finance-1 VERSION=2.1.55 \
 bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
@@ -205,7 +205,7 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 
 1.  Select your region and host type. Then, depending on your operating system version, download a [64-bit agent version](http://cms-download.aliyun.com/cms-go-agent/2.1.47/CmsGoAgent.windows-amd64.exe) or [32-bit agent version](http://cms-download.aliyun.com/cms-go-agent/2.1.47/CmsGoAgent.windows-386.exe) and save it in C:\\Program Files\\Alibaba\\cloudmonitor.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/154987673438125_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155055642738125_en-US.png)
 
 2.  Open the **Command Prompt** as an administrator.
 3.  Run the following command:
@@ -219,7 +219,7 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 
 4.  After the installation is complete, you can use **Windows Services** to view, start, and stop the agent.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/154987673434124_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155055642734124_en-US.png)
 
 
 **Uninstall procedure**
@@ -238,11 +238,11 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 
 **Download the agent with no Internet connection**
 
-If you do not have an Internet connection, you can download the installation package from the intranet. For example, if the region of your host is Qingdao and the host uses a 64-bit system, then the intranet download address is as follows: [http://cms-agent-cn-qingdao.oss-cn-qingdao.aliyuncs.com/cms-go-agent/2.1.47/CmsGoAgent.windows-amd64.exe](http://cms-agent-cn-qingdao.oss-cn-qingdao.aliyuncs.com/cms-go-agent/2.1.47/CmsGoAgent.windows-amd64.exe).
+If you do not have an Internet connection, you can download the installation package from the intranet. For example, if the region of your host is Qingdao and the host uses a 64-bit system, then the intranet download address is as follows: [http://cms-agent-cn-qingdao.oss-cn-qingdao.aliyuncs.com/cms-go-agent/2.1.55/CmsGoAgent.windows-amd64.exe](http://cms-agent-cn-qingdao.oss-cn-qingdao.aliyuncs.com/cms-go-agent/2.1.47/CmsGoAgent.windows-amd64.exe).
 
 -   For a host in another region, change "cn-qingdao" to the corresponding region ID.
 -   For a host that uses a 32-bit system, change "amd64" to "386".
--   For another version, change "2.1.47" to the corresponding version number.
+-   For another version, change "2.1.55" to the corresponding version number.
 
 ## Security configuration instructions {#section_ev5_r4x_wfb .section}
 
