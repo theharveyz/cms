@@ -1,6 +1,20 @@
 # 云监控Go语言版本插件安装 {#concept_hzh_l5w_wfb .concept}
 
-## **Linux插件安装说明** {#section_pf5_z5w_wfb .section}
+## 系统要求 {#section_efd_hyc_wgb .section}
+
+|操作系统|硬件架构|备注|
+|----|----|--|
+|Windows 7, Windows Server 2008 R2 or later|amd64, 386| |
+|Linux 2.6.23 or later with glibc|amd64, 386|CentOS/RHEL 5.x not supported.|
+
+**资源消耗**
+
+-   插件安装包大小： 10~15MB。
+-   内存：10~15MB，加上共享空间约为20MB（视您的系统内存的大小而有所不同）。
+-   CPU：1~2%。
+-   网络： 使用内网网络，不消耗公网流量。
+
+## Linux插件安装说明 {#section_pf5_z5w_wfb .section}
 
 **说明：** 
 
@@ -16,10 +30,10 @@
 
     本文使用的插件版本为：2.1.55，建议您使用最新版本。最新版本号可在云监控的主机监控页面查到。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155055642234123_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155074256534123_zh-CN.png)
 
 
-## 常用命令 {#section_u5x_qhx_wfb .section}
+**常用命令**
 
 ```
 # 注册为系统服务
@@ -38,160 +52,160 @@
 rm -rf /usr/local/cloudmonitor
 ```
 
-## 安装命令 {#section_jpz_whx_wfb .section}
+**安装命令**
 
 直接复制以下命令后在服务器上使用Root权限运行即可。
 
 **说明：** 以下安装命令已在监控安装指引页面自动生成，您也可以去该页面直接复制使用。
 
-**华北1 青岛 cn-qingdao**
+华北1 青岛 cn-qingdao
 
 ```
 REGION_ID=cn-qingdao VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-qingdao.oss-cn-qingdao-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**华北2 北京 cn-beijing**
+华北2 北京 cn-beijing
 
 ```
 REGION_ID=cn-beijing VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**华北3 张家口 cn-zhangjiakou**
+华北3 张家口 cn-zhangjiakou
 
 ```
 REGION_ID=cn-zhangjiakou VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-zhangjiakou.oss-cn-zhangjiakou-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**华北5 呼和浩特 cn-huhehaote**
+华北5 呼和浩特 cn-huhehaote
 
 ```
 REGION_ID=cn-huhehaote VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-huhehaote.oss-cn-huhehaote-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**华东1 杭州 cn-hangzhou**
+华东1 杭州 cn-hangzhou
 
 ```
 REGION_ID=cn-hangzhou VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**华东2 上海 cn-shanghai**
+华东2 上海 cn-shanghai
 
 ```
 REGION_ID=cn-shanghai VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-shanghai.oss-cn-shanghai-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**华南1 深圳 cn-shenzhen**
+华南1 深圳 cn-shenzhen
 
 ```
 REGION_ID=cn-shenzhen VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-shenzhen.oss-cn-shenzhen-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**香港 香港 cn-hongkong**
+香港 香港 cn-hongkong
 
 ```
 REGION_ID=cn-hongkong VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-hongkong.oss-cn-hongkong-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**美国西部1 硅谷 us-west-1**
+美国西部1 硅谷 us-west-1
 
 ```
 REGION_ID=us-west-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-us-west-1.oss-us-west-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**美国东部1 弗吉尼亚 us-east-1**
+美国东部1 弗吉尼亚 us-east-1
 
 ```
 REGION_ID=us-east-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-us-east-1.oss-us-east-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**亚太东南1 新加坡 ap-southeast-1**
+亚太东南1 新加坡 ap-southeast-1
 
 ```
 REGION_ID=ap-southeast-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-southeast-1.oss-ap-southeast-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**亚太东南2 悉尼 ap-southeast-2**
+亚太东南2 悉尼 ap-southeast-2
 
 ```
 REGION_ID=ap-southeast-2 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-southeast-2.oss-ap-southeast-2-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**亚太东南3 吉隆坡 ap-southeast-3**
+亚太东南3 吉隆坡 ap-southeast-3
 
 ```
 REGION_ID=ap-southeast-3 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-southeast-3.oss-ap-southeast-3-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**亚太东南5 雅加达 ap-southeast-5**
+亚太东南5 雅加达 ap-southeast-5
 
 ```
 REGION_ID=ap-southeast-5 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-southeast-5.oss-ap-southeast-5-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**亚太东北1 东京 ap-northeast-1**
+亚太东北1 东京 ap-northeast-1
 
 ```
 REGION_ID=ap-northeast-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-northeast-1.oss-ap-northeast-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**亚太南部1 孟买 ap-south-1**
+亚太南部1 孟买 ap-south-1
 
 ```
 REGION_ID=ap-south-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-ap-south-1.oss-ap-south-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**欧洲中部1 法兰克福 eu-central-1**
+欧洲中部1 法兰克福 eu-central-1
 
 ```
 REGION_ID=eu-central-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-eu-central-1.oss-eu-central-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**欧洲西部 英国伦敦 eu-west-1**
+欧洲西部 英国伦敦 eu-west-1
 
 ```
 REGION_ID=eu-west-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-eu-west-1.oss-eu-west-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**中东东部 迪拜 me-east-1**
+中东东部 迪拜 me-east-1
 
 ```
 REGION_ID=me-east-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-me-east-1.oss-me-east-1-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**华东1金融云 杭州 cn-hangzhou**
+华东1金融云 杭州 cn-hangzhou
 
 ```
 REGION_ID=cn-hangzhou VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**华东2金融云 上海 cn-shanghai-finance-1**
+华东2金融云 上海 cn-shanghai-finance-1
 
 ```
 REGION_ID=cn-shanghai-finance-1 VERSION=2.1.55 \
 bash -c "$(curl https://cms-agent-cn-shanghai-finance-1.oss-cn-shanghai-finance-1-pub-internal.aliyuncs.com/cms-go-agent/cms_go_agent_install.sh)"
 ```
 
-**华南1金融云 深圳 cn-shenzen-finance-1**
+华南1金融云 深圳 cn-shenzen-finance-1
 
 ```
 REGION_ID=cn-shenzhen-finance-1 VERSION=2.1.55 \
@@ -204,7 +218,7 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 
 1.  根据系统情况（所在Region，主机类型），下载云监控插件[64位版本插件](http://cms-download.aliyun.com/cms-go-agent/2.1.47/CmsGoAgent.windows-amd64.exe)或[32位版本插件](http://cms-download.aliyun.com/cms-go-agent/2.1.47/CmsGoAgent.windows-386.exe) 到C:\\Program Files\\Alibaba\\cloudmonitor目录下。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155055642238125_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155074256538125_zh-CN.png)
 
 2.  使用管理员权限启动**命令提示符**。
 3.  输入并执行以下命令：
@@ -217,7 +231,7 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 
 4.  安装完成后，可以通过Windows系统的**服务**来查看、启动、停止云监控服务。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155055642234124_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155074256534124_zh-CN.png)
 
 
 **卸载步骤**
@@ -305,23 +319,10 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 |ap-south-1 亚太南部 1 孟买|100.100.80.152:8080|出方向|监控配置管理等管控类操作|
 |100.100.80.66:80|出方向|收集监控数据到云监控服务端|
 
-**资源消耗**
+## 常见问题 {#section_akn_dzc_wgb .section}
 
--   插件安装包大小： 10~15MB。
--   内存：10~15MB，加上共享空间约为20MB（视您的系统内存的大小而有所不同）。
--   CPU：1~2%。
--   网络： 使用内网网络，不消耗公网流量。
+云监控日志位置：
 
-**系统要求**
-
-|操作系统|硬件架构|备注|
-|----|----|--|
-|Windows 7, Windows Server 2008 R2 or later|amd64, 386| |
-|Linux 2.6.23 or later with glibc|amd64, 386|CentOS/RHEL 5.x not supported.|
-
-**常见问题**
-
--   云监控日志位置：
-    -   Linux：/usr/local/cloudmonitor/logs
-    -   Windows：C:\\Program Files\\Alibaba\\cloudmonitor\\logs
+-   Linux：/usr/local/cloudmonitor/logs
+-   Windows：C:\\Program Files\\Alibaba\\cloudmonitor\\logs
 
