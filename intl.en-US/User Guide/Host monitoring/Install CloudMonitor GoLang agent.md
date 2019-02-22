@@ -1,6 +1,20 @@
 # Install CloudMonitor GoLang agent {#concept_hzh_l5w_wfb .concept}
 
-## **Install a CloudMonitor GoLang agent on Linux** {#section_pf5_z5w_wfb .section}
+## Requirements on systems {#section_plr_5l3_wgb .section}
+
+|Operating system|Hardware architecture|Note|
+|----------------|---------------------|----|
+|Windows 7, Windows Server 2008 R2, or later versions|amd64, 386|None|
+|Linux 2.6.23 or later with glibc|amd64, 386|CentOS/RHEL 5.x are not supported.|
+
+**Resource usage**
+
+-   Installation package size: 10–15 MB
+-   Memory: 10–15 MB, or 20 MB if you include shared space. Actual numbers vary depending on the size of your system memory.
+-   CPU: 1–2%
+-   Network: intranet. No Internet bandwidth is used.
+
+## Install a CloudMonitor GoLang agent on Linux {#section_pf5_z5w_wfb .section}
 
 **Note:** 
 
@@ -16,10 +30,10 @@
 
     In this topic, the version 2.1.55 is used. We recommend that you use the latest version. You can find the number of the latest version on the host monitoring page in the CloudMonitor console.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155055642734123_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155081609834123_en-US.png)
 
 
-## Frequently used commands {#section_u5x_qhx_wfb .section}
+**Frequently used commands**
 
 ```
 # Register the agent as a system service.
@@ -39,7 +53,7 @@ rm -rf /usr/local/cloudmonitor
 
 ```
 
-## Installation command {#section_jpz_whx_wfb .section}
+**Installation command**
 
 Copy the installation command of the region you require and then run the command on your server with root permissions.
 
@@ -205,7 +219,7 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 
 1.  Select your region and host type. Then, depending on your operating system version, download a [64-bit agent version](http://cms-download.aliyun.com/cms-go-agent/2.1.47/CmsGoAgent.windows-amd64.exe) or [32-bit agent version](http://cms-download.aliyun.com/cms-go-agent/2.1.47/CmsGoAgent.windows-386.exe) and save it in C:\\Program Files\\Alibaba\\cloudmonitor.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155055642738125_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155081609838125_en-US.png)
 
 2.  Open the **Command Prompt** as an administrator.
 3.  Run the following command:
@@ -219,7 +233,7 @@ bash -c "$(curl http://cms-agent-cn-shenzhen-finance-1.oss-cn-shenzhen-finance-1
 
 4.  After the installation is complete, you can use **Windows Services** to view, start, and stop the agent.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155055642734124_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64886/155081609834124_en-US.png)
 
 
 **Uninstall procedure**
@@ -307,20 +321,6 @@ The following table lists the ports that the CloudMonitor agent uses to interact
  |Egress|Used to collect monitoring data to CloudMonitor|
 |Asia Pacific SOU 1 \(Mumbai\) ap-south-1|100.100.80.152:8080|Egress|Used for monitoring configuration management, and other management and control operations|
 |100.100.80.66:80|Egress|Used to collect monitoring data to CloudMonitor|
-
-**Resource usage**
-
--   Installation package size: 10–15 MB
--   Memory: 10–15 MB, or 20 MB if you include shared space. Actual numbers vary depending on the size of your system memory.
--   CPU: 1–2%
--   Network: intranet. No Internet bandwidth is used.
-
-**Requirements on systems**
-
-|Operating system|Hardware architecture|Note|
-|----------------|---------------------|----|
-|Windows 7, Windows Server 2008 R2, or later versions|amd64, 386|None|
-|Linux 2.6.23 or later with glibc|amd64, 386|CentOS/RHEL 5.x are not supported.|
 
 **FAQ**
 
