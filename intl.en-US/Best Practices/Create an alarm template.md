@@ -1,39 +1,40 @@
 # Create an alarm template {#concept_znd_wpq_zdb .concept}
 
-## Purpose {#section_fwb_cqq_zdb .section}
+This topic illustrates how to use application groups and alarm templates to manage cloud resource alarm rules for various services more efficiently. These tactics are especially important for those who need to monitor and manage resources across several Alibaba Cloud products and regions and who need to modify alarm rules for these resources in a timely manner.
 
-When your Alibaba Cloud account has many cloud product resources, such as servers, it is necessary to know how to quickly create and modify alarm rules for them. This topic provides a case to describe how enterprise users can use application groups and alarm templates to manage cloud resource alarm rules for various services.
+## Purposes {#section_s35_kqq_zdb .section}
 
-## Use alarm templates to improve alarm rule configuration efficiency {#section_s35_kqq_zdb .section}
+-   Configuring alarm rules for application groups rather than for single instances can improve efficiency by greatly reducing the time required to configure alarm rules.
+    -   By setting the resource range of an alarm rule to application group, your alarm rule will be effective for all resources within the target application group, and the number of resources monitored can expand as your services are scaled outward. After initial configuration, you can move specific resources into or out of the application group easily. You can also modify the alarm rule directly so to make changes effective to all instances within an application group.
+    -   Conversely, setting the resource range to instance will make your alarm rule effective for only one instance. Modifications to your alarm rule will also be effective for only one instance. As a consequence, supposing that you set all your alarm rules this way, as the number of your instances increase, managing alarm rules for these instances will become increasingly time consuming and difficult.
+-   Using alarm templates can also reduce the time required to configure alarm rules.
 
--   Differences between alarm rules configured for an application group and those configured for a single instance
-    -   When creating an alarm rule, you can set the resource scope to "instance" or "application group". If you choose "application group", the alarm rule will be effective on all resources within the specified application group. If you want to scale your services, you only need to move resources into or remove resources from the application group without the need to add or delete alarm rules. If you modify an alarm rule, the rule will be effective on all instances within the application group after modification.
-    -   If you create an alarm rule for a single instance, the rule will be effective only on the instance. If the rule is modified, the modification is also effective only on the instance. As the number of instances increases, managing alarm rules will become increasingly difficult.
--   How alarm templates improve alarm rule configuration efficiency
-    -   The monitoring metrics and alarm thresholds of basic services, such as ECS, RDS, and SLB, are set to fixed values during alarm rule configuration. After creating a template for the metrics and thresholds, you only need to create an application group and apply the template to the group. By this means, you can create alarm rules with one click when your services grow.
-    -   If you want to add, modify, or delete alarm rules in batches, you can modify the template and apply the template to the application group. This greatly saves time.
+    The monitoring metrics and alarm thresholds of basic services, such as ECS, RDS, and SLB, are set to fixed values during alarm rule configuration. You can create alarm templates easily based on these configurations, and by creating alarm templates with your target metrics and condition thresholds, you can easily apply these templates to alarm rules you configure for an application group, making configuring rules easy even as your services scale outward. Using alarm templates also enables you to easily modify multiple alarm rules at the same time.
 
-## Case {#section_gwb_cqq_zdb .section}
 
-When there are many servers and other instances under your account, we recommended that you create different application groups for the resources by service, and then use the groups to manage the resources in batches.
+## Procedures {#section_gwb_cqq_zdb .section}
 
-The following uses the backend services of a common e-commerce company to shows how to create an application group and use an alarm template to quickly build a service monitoring and alarming system on the cloud.
-
-## Procedure {#section_kwb_cqq_zdb .section}
+The following case outlines the procedure that can be applied to the typical back-end services of an e-commerce company. This case serves to illustrate how you can create application groups and use alarm templates to easily build a service monitoring and alarming system on the cloud, even for growing service requirements.
 
 1.  Create an alarm template named "EcommerceBackendAlarmTemplate".
     1.  Log on to the [CloudMonitor Console](https://partners-intl.console.aliyun.com/#/cms).
     2.  From the left-side navigation pane, choose **Alarm Templates** \> **Alarms**.
     3.  On the Alarm Templates page, click **Create Alarm Template** in the upper-right corner.
     4.  In the displayed dialog box, set the parameters in the Basic Info area.
-    5.  In the View Alarm Rules area, click Add Alarm Rule to add the required alarm rules to the alarm template.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6235/15529805115167_en-US.png)
+
+    5.  In the View Alarm Rules area, click **Add Alarm Rule** to add the required alarm rules to the alarm template.
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6235/15529805115169_en-US.png)
+
     6.  Click **OK**.
 2.  Create an alarm contact and an alarm contact group.
     1.  Log on to the [CloudMonitor Console](https://partners-intl.console.aliyun.com/#/cms).
     2.  From the left-side navigation pane, choose **Alarms** \> **Alarm Contacts**.
-    3.  On the Alarm Contact Management page, click **Create Alarm Contact** in the upper-right corner. In the displayed dialog box, enter your mobile phone number and email.
+    3.  On the Alarm Contact Management page, click **Create Alarm Contact** in the upper-right corner. In the displayed dialog box, enter your phone number and email.
 
-        To ensure that you can receive and verify alarm notifications in a timely manner, the system will send verification codes to your mobile phone and email.
+        To ensure that you can receive and verify alarm notifications in a timely manner, the system will send verification codes to your phone and email.
 
     4.  Click the **Alarm Contact Group** tab.
     5.  In the upper-right corner, click **Create Alarm Contact Group**.
@@ -46,7 +47,7 @@ The following uses the backend services of a common e-commerce company to shows 
 
         The contact group is the alarm contact group for receiving alarm notifications.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6235/15441760105163_en-US.jpg)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6235/15529805115163_en-US.jpg)
 
     5.  In the **MonitorAlarm** area, set **Select Template** and **Notification Methods** and enable **Initialize Agent Installation**.
 
@@ -54,7 +55,7 @@ The following uses the backend services of a common e-commerce company to shows 
 
     6.  In the **Add Instance dynamically** area, add at most three dynamic rules with the relationship of AND or OR. Then, click **Add Product** to customize dynamic rules for RDS and SLB.
 
-        Generally, the cloud resources used for inventory management are in the combination of "server+database+SLB resource". You can customize dynamic rules to add ECS instances. An ECS instance name can be matched through the condition of **Contain**, **startwith**, or **endwith**. The instances conforming to the dynamic rules will be added to the current application group \(including instances to be created in the future.\)
+        Generally, the cloud resources used for inventory management are a server, database, and SLB resource. You can customize dynamic rules to add ECS instances. An ECS instance name can be matched through the condition of **Contain**, **start with**, or **end with**. The instances conforming to the dynamic rules will be added to the specified application group \(including instances to be created in the future\).
 
     7.  Click **Create Application Group**.
 
