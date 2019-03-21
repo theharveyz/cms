@@ -1,69 +1,72 @@
-# Java SDK使用手册 {#concept_llz_kz4_zdb .concept}
+# Java SDK {#concept_llz_kz4_zdb .concept}
 
-## SDK安装 {#section_vlh_lz4_zdb .section}
+This topic is a reference for installing and using the Java SDK.
 
-通过maven进行安装，需要添加的依赖如下：
+## Install SDK {#section_vlh_lz4_zdb .section}
+
+When performing installation through maven, the following dependencies must be added.
 
 ```
 <dependencies>
      <dependency>
        <groupId>com.aliyun</groupId>
        <artifactId>aliyun-java-sdk-core</artifactId>
-       <version>3.2.6</version>
+       <version>5.1.6</version>
     </dependency>
 <dependency>
   <groupId>com.aliyun</groupId>
-  <artifactId>aliyun-java-sdk-cms</artifactId>
-  <version>5.0.4</version>
+  <artifactId>aliyun-java-sdk-cs</artifactId>
+  <version>0.1.2</version>
 </dependency>
 </dependencies>
 ```
 
-## SDK下载 {#section_t5g_5z4_zdb .section}
+## Download SDK {#section_t5g_5z4_zdb .section}
 
-Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/master/aliyun-java-sdk-cms](https://github.com/aliyun/aliyun-openapi-java-sdk/tree/master/aliyun-java-sdk-cms)
+[Download address](https://github.com/aliyun/aliyun-openapi-java-sdk/tree/master/aliyun-java-sdk-cms)
 
-## 测试代码 {#section_yyd_dn1_f2b .section}
+## Test code {#section_yyd_dn1_f2b .section}
 
--   查询监控数据
-    -   请求示例
+-   Query monitoring data.
+    -   Request example
 
-        使用时请将如下示例中的accessKey和accessSecret替换成您的Access Key。
+        Make sure that you replace the "accessKey" and "accessSecret" given in the following example with your actual Access Key.
 
         ```
         package com.aliyuncs.cms.test;
         import com.alibaba.fastjson.JSONObject;
         import com.aliyuncs.DefaultAcsClient;
         import com.aliyuncs.IAcsClient;
-        import com.aliyuncs.cms.model.v20170301.QueryMetricListRequest;
-        import com.aliyuncs.cms.model.v20170301.QueryMetricListResponse;
+        import com.aliyuncs.sts.model.v20150401. Querymetriclistrequest;
+        import com.aliyuncs.sts.model.v20150401. QueryMetricListResponse;
         import com.aliyuncs.exceptions.ClientException;
         import com.aliyuncs.exceptions.ServerException;
-        import com.aliyuncs.http.FormatType;
+        import com.aliyuncs.http.MethodType;
         import com.aliyuncs.profile.DefaultProfile;
         import com.aliyuncs.profile.IClientProfile;
         public class QueryMetricListDemo {
             public static void main(String[] args) {
-                QueryMetricListRequest request = new QueryMetricListRequest();
+                QueryMetricRequest request = new QueryMetricRequest();
                 request.setProject("acs_ecs_dashboard");
                 request.setMetric("cpu_idle");
                 request.setPeriod("60");
-                request.setStartTime("2017-03-14 14:20:27");
-                request.setEndTime("2017-03-14 14:30:27");
+                request.setStartTime("2016-05-15 08:00:00");
+                request.setEndTime("2015-05-15 09:00:00");
                 JSONObject dim = new JSONObject();
                 dim.put("instanceId", "<your_instanceId>");
                 request.setDimensions(dim.toJSONString());
-                request.setAcceptFormat(FormatType.JSON);
+                request.AcceptFormat = FormatType.JSON;
                 IClientProfile profile = DefaultProfile.getProfile("cn-hangzhou",
                         "<your_access_key_id>", "<your_access_key_secret>");
                 IAcsClient client = new DefaultAcsClient(profile);
                 try {
-                    QueryMetricListResponse response = client.getAcsResponse(request);
+                    GetStatusResponse response = client.getAcsResponse(request);
                     System.out.println(response.getCode());
                     System.out.println(response.getMessage());
                     System.out.println(response.getRequestId());
-                    System.out.println(response.getDatapoints());
+                    System.out.println(response.getData());
                 } catch (ServerException e) {
+        e.printStackTrace();
                     e.printStackTrace();
                 } catch (ClientException e) {
                     e.printStackTrace();
@@ -72,7 +75,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
         }
         ```
 
-    -   返回示例
+    -   Return example
 
         ```
         Code:200
@@ -82,7 +85,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599****",
+                "instanceId":"i-bp18abl200xk9599ck7c",
                 "Average":94.62,
                 "userId":"127067667954****",
                 "timestamp":1489472460000
@@ -90,7 +93,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599****",
+                "instanceId":"i-bp18abl200xk9599ck7c",
                 "Average":95.11,
                 "userId":"127067667954****",
                 "timestamp":1489472520000
@@ -98,15 +101,15 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599****",
+                "instanceId":"i-bp18abl200xk9599ck7c",
                 "Average":95.16,
-                "userId":"127067667954****",
+                Userid: 127067667954**** ",
                 "timestamp":1489472580000
             },
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599****",
+                "instanceId":"i-bp18abl200xk9599ck7c",
                 "Average":94.69,
                 "userId":"127067667954****",
                 "timestamp":1489472640000
@@ -114,7 +117,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
             {
                 "Maximum":100,
                 "Minimum":20,
-                "instanceId":"i-bp18abl200xk9599****",
+                "instanceId":"i-bp18abl200xk9599ck7c",
                 "Average":95.82,
                 "userId":"127067667954****",
                 "timestamp":1489472700000
@@ -122,7 +125,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599****",
+                "instanceId":"i-bp18abl200xk9599ck7c",
                 "Average":94.77,
                 "userId":"127067667954****",
                 "timestamp":1489472760000
@@ -130,7 +133,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
             {
                 "Maximum":100,
                 "Minimum":33.33,
-                "instanceId":"i-bp18abl200xk9599****",
+                "instanceId":"i-bp18abl200xk9599ck7c",
                 "Average":95.18,
                 "userId":"127067667954****",
                 "timestamp":1489472820000
@@ -138,7 +141,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599****",
+                "instanceId":"i-bp18abl200xk9599ck7c",
                 "Average":95.11,
                 "userId":"127067667954****",
                 "timestamp":1489472880000
@@ -146,7 +149,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
             {
                 "Maximum":100,
                 "Minimum":20,
-                "instanceId":"i-bp18abl200xk9599****",
+                "instanceId":"i-bp18abl200xk9599ck7c",
                 "Average":94.5,
                 "userId":"127067667954****",
                 "timestamp":1489472940000
@@ -154,7 +157,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
             {
                 "Maximum":100,
                 "Minimum":20,
-                "instanceId":"i-bp18abl200xk9599****",
+                "instanceId":"i-bp18abl200xk9599ck7c",
                 "Average":94.99,
                 "userId":"127067667954****",
                 "timestamp":1489473000000
@@ -163,8 +166,8 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
         }
         ```
 
--   创建报警规则
-    -   请求示例
+-   Create an alarm rule.
+    -   Request example
 
         ```
         package com.aliyuncs.cms.test;
@@ -172,16 +175,16 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
         import com.alibaba.fastjson.JSONObject;
         import com.aliyuncs.DefaultAcsClient;
         import com.aliyuncs.IAcsClient;
-        import com.aliyuncs.cms.model.v20170301.CreateAlarmRequest;
-        import com.aliyuncs.cms.model.v20170301.CreateAlarmResponse;
+        import com.aliyuncs.sts.model.v20150401. CreateAlarmRequest;
+        import com.aliyuncs.sts.model.v20150401. CreateAlarmResponse;
         import com.aliyuncs.exceptions.ClientException;
         import com.aliyuncs.exceptions.ServerException;
-        import com.aliyuncs.http.FormatType;
+        import com.aliyuncs.http.MethodType;
         import com.aliyuncs.profile.DefaultProfile;
         import com.aliyuncs.profile.IClientProfile;
         public class CreateAlarmDemo {
             public static void main(String[] args) {
-                CreateAlarmRequest request = new CreateAlarmRequest();
+                CreateTableRequest request = new CreateTableRequest();
                 request.setName("create_alarm_test");
                 request.setNamespace("acs_ecs_dashboard");
                 request.setMetricName("vm.MemoryUtilization");
@@ -191,7 +194,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
                 dim.put("instanceId", "<your_instanceId>");
                 dimensions.add(dim);
                 request.setDimensions(dimensions.toJSONString());
-                request.setPeriod(900);
+                request.setPeriod("60");
                 request.setStatistics("Average");
                 request.setComparisonOperator(">=");
                 request.setThreshold("35");
@@ -203,17 +206,18 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
                 request.setStartTime(6);
                 request.setEndTime(20);
                 request.setNotifyType(1);
-                request.setAcceptFormat(FormatType.JSON);
+                request.AcceptFormat = FormatType.JSON;
                 IClientProfile profile = DefaultProfile.getProfile("cn-hangzhou",
                         "<your_access_key_id>", "<your_access_key_secret>");
                 IAcsClient client = new DefaultAcsClient(profile);
                 try {
-                    CreateAlarmResponse response = client.getAcsResponse(request);
+                    CreateUserResponse response = client.GetAcsResponse(request);
                     System.out.println(response.getCode());
                     System.out.println(response.getMessage());
                     System.out.println(response.getRequestId());
                     System.out.println(response.getData());
                 } catch (ServerException e) {
+        e.printStackTrace();
                     e.printStackTrace();
                 } catch (ClientException e) {
                     e.printStackTrace();
@@ -222,7 +226,7 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
         }
         ```
 
-    -   返回示例
+    -   Return example
 
         ```
         Code:200

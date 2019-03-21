@@ -82,81 +82,81 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":94.62,
-                "userId":"1270676679546704",
+                "userId":"127067667954****",
                 "timestamp":1489472460000
             },
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":95.11,
-                "userId":"1270676679546704",
+                "userId":"127067667954****",
                 "timestamp":1489472520000
             },
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":95.16,
-                "userId":"1270676679546704",
+                "userId":"127067667954****",
                 "timestamp":1489472580000
             },
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":94.69,
-                "userId":"1270676679546704",
+                "userId":"127067667954****",
                 "timestamp":1489472640000
             },
             {
                 "Maximum":100,
                 "Minimum":20,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":95.82,
-                "userId":"1270676679546704",
+                "userId":"127067667954****",
                 "timestamp":1489472700000
             },
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":94.77,
-                "userId":"1270676679546704",
+                "userId":"127067667954****",
                 "timestamp":1489472760000
             },
             {
                 "Maximum":100,
                 "Minimum":33.33,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":95.18,
-                "userId":"1270676679546704",
+                "userId":"127067667954****",
                 "timestamp":1489472820000
             },
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":95.11,
-                "userId":"1270676679546704",
+                "userId":"127067667954****",
                 "timestamp":1489472880000
             },
             {
                 "Maximum":100,
                 "Minimum":20,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":94.5,
-                "userId":"1270676679546704",
+                "userId":"127067667954****",
                 "timestamp":1489472940000
             },
             {
                 "Maximum":100,
                 "Minimum":20,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":94.99,
-                "userId":"1270676679546704",
+                "userId":"127067667954****",
                 "timestamp":1489473000000
             }
         ]
