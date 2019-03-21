@@ -85,7 +85,7 @@ When performing installation through maven, the following dependencies must be a
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":94.62,
                 "userId":"127067667954****",
                 "timestamp":1489472460000
@@ -93,7 +93,7 @@ When performing installation through maven, the following dependencies must be a
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":95.11,
                 "userId":"127067667954****",
                 "timestamp":1489472520000
@@ -101,7 +101,7 @@ When performing installation through maven, the following dependencies must be a
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":95.16,
                 Userid: 127067667954**** ",
                 "timestamp":1489472580000
@@ -109,7 +109,7 @@ When performing installation through maven, the following dependencies must be a
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":94.69,
                 "userId":"127067667954****",
                 "timestamp":1489472640000
@@ -117,7 +117,7 @@ When performing installation through maven, the following dependencies must be a
             {
                 "Maximum":100,
                 "Minimum":20,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":95.82,
                 "userId":"127067667954****",
                 "timestamp":1489472700000
@@ -125,7 +125,7 @@ When performing installation through maven, the following dependencies must be a
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":94.77,
                 "userId":"127067667954****",
                 "timestamp":1489472760000
@@ -133,7 +133,7 @@ When performing installation through maven, the following dependencies must be a
             {
                 "Maximum":100,
                 "Minimum":33.33,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":95.18,
                 "userId":"127067667954****",
                 "timestamp":1489472820000
@@ -141,7 +141,7 @@ When performing installation through maven, the following dependencies must be a
             {
                 "Maximum":100,
                 "Minimum":25,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":95.11,
                 "userId":"127067667954****",
                 "timestamp":1489472880000
@@ -149,7 +149,7 @@ When performing installation through maven, the following dependencies must be a
             {
                 "Maximum":100,
                 "Minimum":20,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":94.5,
                 "userId":"127067667954****",
                 "timestamp":1489472940000
@@ -157,7 +157,7 @@ When performing installation through maven, the following dependencies must be a
             {
                 "Maximum":100,
                 "Minimum":20,
-                "instanceId":"i-bp18abl200xk9599ck7c",
+                "instanceId":"i-bp18abl200xk9599****",
                 "Average":94.99,
                 "userId":"127067667954****",
                 "timestamp":1489473000000
