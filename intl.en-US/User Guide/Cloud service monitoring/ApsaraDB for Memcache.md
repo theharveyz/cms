@@ -22,7 +22,7 @@ By monitoring multiple metrics of ApsaraDB for Memcache, such as the cache used 
     -   You can view metric data for up to 14 consecutive days.
 
 -   **View monitoring data.**
-    1.  Log on to the [CloudMonitor Console](https://cms-intl.console.aliyun.com).
+    1.  Log on to the [CloudMonitor Console](https://partners-intl.console.aliyun.com/#/cms).
     2.  In the left-side navigation pane, choose **Cloud Service Monitoring** \> **ApsaraDB for Memcache**.
     3.  Click an instance name or click **Monitoring Charts** in the **Actions** column to access the instance monitoring details page and view various metrics.
     4.  Click the **Time Range** toggle button at the top of the page or use the specific selection function.
@@ -33,12 +33,12 @@ By monitoring multiple metrics of ApsaraDB for Memcache, such as the cache used 
 CloudMonitor provides alarm services for all Memcache monitoring metrics. After setting an alarm rule for an important monitoring metric, you can receive an alarm notification once the monitoring data exceeds the set threshold value, so that you can handle the problem rapidly to avoid malfunction.
 
 -   **Set an alarm rule.**
-    1.  Log on to the [CloudMonitor Console](https://cms-intl.console.aliyun.com).
+    1.  Log on to the [CloudMonitor Console](https://partners-intl.console.aliyun.com/#/cms).
     2.  In the left-side navigation pane, choose **Cloud Service Monitoring** \> **ApsaraDB for Memcache**.
     3.  Click an instance name or click **Monitoring Charts** in the **Actions** column to access the instance monitoring details page.
     4.  Click the bell icon in the upper-right corner of the monitoring chart to set an alarm rule for corresponding monitoring metrics of this instance.
 -   **Set batch alarm rules.**
-    1.  Log on to the [CloudMonitor Console](https://cms-intl.console.aliyun.com).
+    1.  Log on to the [CloudMonitor Console](https://partners-intl.console.aliyun.com/#/cms).
     2.  In the left-side navigation pane, choose **Cloud Service Monitoring** \> **ApsaraDB for Memcache**.
     3.  Select the appropriate instance on the instance list page. Click **Set Alarm Rules** at the bottom of the page to add alarm rules in batches.
 -   **Parameters**
