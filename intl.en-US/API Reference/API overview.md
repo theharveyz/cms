@@ -1,20 +1,20 @@
 # API overview {#reference_krt_xkt_zdb .reference}
 
-This document summarizes all of the CloudMonitor's callable APIs. Please refer to the documentation for specific interface information.
+This topic is an overview of all API operations used in CloudMonitor.
 
-|API|Description|
-|---|-----------|
-|[ListAlarmHistory](intl.en-US/API Reference/ListAlarmHistory.md#)|Query historical alarms.|
-|[NodeStatus](intl.en-US/API Reference/NodeStatus.md#)|Query the agent running status on a specified instance.|
-|[EN-US\_TP\_14258.md\#](intl.en-US/API Reference/CreateAlarm.md#)|Create alarm rules.|
-|[EN-US\_TP\_14259.md\#](intl.en-US/API Reference/DeleteAlarm.md#)|Delete an existing alarm rule.|
-|[EN-US\_TP\_14260.md\#](intl.en-US/API Reference/ListAlarm.md#)|Query specified or all alarm rule settings.|
-|[EN-US\_TP\_14261.md\#](intl.en-US/API Reference/DisableAlarm.md#)|Disable an alarm rule.|
-|[EN-US\_TP\_14262.md\#](intl.en-US/API Reference/ListContactGroup.md#)|Query the contact group associated with an alarm rule under an Alibaba Cloud account.|
-|[EN-US\_TP\_14263.md\#](intl.en-US/API Reference/EnableAlarm.md#)|Enable an alarm rule.|
-|[EN-US\_TP\_14264.md\#](intl.en-US/API Reference/NodeInstall.md#)|Call interfaces to install the CloudMonitor agent on a specified ECS instance.|
-|[EN-US\_TP\_14265.md\#](intl.en-US/API Reference/NodeStatusList.md#)|Query the status of the CloudMonitor agent in batches.|
-|[EN-US\_TP\_14267.md\#](intl.en-US/API Reference/QueryMetricLast.md#)|Query the latest monitoring data of a specified monitored object.|
-|[EN-US\_TP\_14268.md\#](intl.en-US/API Reference/QueryMetricList.md#)|Query the monitoring data of a specified product instance during a period of time.|
-|[EN-US\_TP\_14269.md\#](intl.en-US/API Reference/UpdateAlarm.md#)|Modify an existing alarm rule.|
+|API operation|Description|
+|-------------|-----------|
+|[ListAlarmHistory](intl.en-US/API Reference/Alarm rules/ListAlarmHistory.md#)|Query alarm history.|
+|[NodeStatus](intl.en-US/API Reference/Host monitoring/NodeStatus.md#)|Query the running status of a agent on a specified instance.|
+|[CreateAlarm](intl.en-US/API Reference/Alarm rules/CreateAlarm.md#)|Create an alarm rule.|
+|[DeleteAlarm](intl.en-US/API Reference/Alarm rules/DeleteAlarm.md#)|Delete an existing alarm rule.|
+|[ListAlarmHistory](intl.en-US/API Reference/Alarm rules/ListAlarm.md#)|Query specified or all alarm rule settings.|
+|[DisableAlarm](intl.en-US/API Reference/Alarm rules/DisableAlarm.md#)|Disable an alarm rule.|
+|[ListContactGroup](intl.en-US/API Reference/Alarm rules/ListContactGroup.md#)|Query the alarm contact group associated with an alarm rule under an Alibaba Cloud account.|
+|[EnableAlarm](intl.en-US/API Reference/Alarm rules/EnableAlarm.md#)|Enable an alarm rule.|
+|[NodeInstall](intl.en-US/API Reference/Host monitoring/NodeInstall.md#)|Call interfaces to install a CloudMonitor agent on a specified ECS instance.|
+|[NodeStatusList](intl.en-US/API Reference/Host monitoring/NodeStatusList.md#)|Query the status of a CloudMonitor agent for multiple instances.|
+|[QueryMetricLast](intl.en-US/API Reference/Query monitoring data/QueryMetricLast.md#)|Query the latest monitoring data of a specified monitored object.|
+|[QueryMetricList](intl.en-US/API Reference/Query monitoring data/QueryMetricList.md#)|Query the monitoring data of a specified product instance within a specified period of time.|
+|[UpdateAlarm](intl.en-US/API Reference/Alarm rules/UpdateAlarm.md#)|Modify an existing alarm rule.|
 
