@@ -2,27 +2,6 @@
 
 Availability monitoring conducts periodical detection tasks to check whether specified local or remote paths or ports respond properly and sends alarm notifications if response timeouts occur or status codes indicate errors based on the conditions specified in your alarm rules. This function can help you to quickly learn if local or remote services are unresponsive or abnormal, improving overall O&M and management efficiency.
 
-**Note:** 
-
--   The CloudMonitor agent must be installed before you can use the availability monitoring function. Check that you have installed the CloudMonitor agent on your specified instances before using this function.
--   Once working, monitoring tasks are performed once a minute.
-
-## Create availability monitoring tasks {#section_lyf_x4f_vdb .section}
-
-1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
-2.  In the left-side navigation pane, click **Application Groups**.
-3.  Find the target application group and click the group name.
-4.  In the left-side navigation pane, select **Availability Monitoring**.
-5.  In the upper-right corner of the page, click **Create Configuration** to open the Create Availability Monitoring page.
-6.  Enter the task name and select the target server. You can select all servers in the application group to configure the same availability monitoring rules for them, or select some severs in the application group.
-7.  Select the detection type and the detection target: **URL or IP address**, **ApsaraDB for RDS**, and **ApsaraDB for Redis** are supported.
-    -   If you selecting **ApsaraDB for RDS** or **ApsaraDB for Redis**, relevant instances in the application group and access addresses are displayed.
-    -   If you select **HTTP\(S\)** for the **Detection Target**, you can configure matching content for HEAD, GET, and POST requests and return values.
-8.  Set the alarm rules. Status code and response time rules are supported for alarms. Any configuration that meets a condition specified in an alarm rule will trigger an alarm. An triggered alarm is sent as a notification to the alarm contact group that is associated to the application group.
-    -   Status code alarm: An alarm that is triggered when the probe status code meets the specified alarm rules.
-    -   Notification method: The means by which alarm notifications are sent, such as email or SMS message.
-    -   Advanced configuration: Both effective and mute period configurations are supported. Effective period refers to a period in which an alarm rule is effective with alarms possibly triggered in the case that the conditions specified in your alarm rules are met. Mute period refers to a period in which your alarm rules are muted so that alarm notifications will be silenced even if conditions specified in your alarm rules are met.
-
 ## Viewing availability monitoring tasks {#section_ig1_xpf_vdb .section}
 
 1.  Log on to the [CloudMonitor Console](https://partners-intl.console.aliyun.com/#/cms).
