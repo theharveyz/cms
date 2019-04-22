@@ -10,16 +10,6 @@
 
 [如何安装pip](http://pip-cn.readthedocs.org/en/latest/installing.html)
 
-## 命令行工具 CLI（如果已安装，请略过）： {#section_ym1_z1p_zdb .section}
-
-```
-pip install aliyuncli
-pip install -Iv aliyun-python-sdk-cms==5.0.0
-aliyuncli configure
-```
-
-[命令行工具 CLI 安装说明](https://www.alibabacloud.com/help/doc-detail/43008.htm?spm=a2c63.l28256.a3.5.520d7bd4habdyE)
-
 ## 安装cms-python-sdk的依赖 {#section_agq_3bp_zdb .section}
 
 ```
@@ -29,16 +19,16 @@ pip install aliyun-python-sdk-cms
 
 [最新版Python SDK](https://github.com/aliyun/aliyun-openapi-python-sdk/blob/master/aliyun-python-sdk-cms/aliyunsdkcms/request/v20180308/PutCustomMetricRequest.py)
 
-**code示例**
+## code示例 {#section_h0p_jc4_0ug .section}
 
 ```
 from aliyunsdkcore import client
-from aliyunsdkcms.request.v20190101 import QueryMetricListRequest
+from aliyunsdkcms.request.v20190101 import DescribeMetricListRequest
 import time
 clt = client.AcsClient('your_access_key','your_access_secret','your_region_id')
-request = QueryMetricListRequest.QueryMetricListRequest()
+request = DescribeMetricListRequest.DescribeMetricListRequest()
 request.set_accept_format('json')
-request.set_Project('acs_ecs_dashboard')
+request.set_Namespace('acs_ecs_dashboard')
 request.set_Metric('CPUUtilization')
 start_time = "2016-10-25 10:00:00"
 timestamp_start = int(time.mktime(time.strptime(start_time, "%Y-%m-%d %H:%M:%S"))) * 1000
