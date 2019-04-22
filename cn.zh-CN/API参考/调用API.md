@@ -11,20 +11,20 @@
 其中：
 
 -   `Endpoint`是调用的云服务的接入点，云监控的接入点是`metrics.aliyuncs.com`。各地域的服务地址，参见[云监控接入地址](#)。
--   `Action`是要执行的操作，如使用QueryMetricList接口查询某一实例的监控数据。
+-   `Action`是要执行的操作，如使用DescribeMetricList接口查询某一实例的监控数据。
 -   `Version`要使用的API版本，云监控的API版本是2019-01-01。
 -   `Parameters`是请求参数，每个参数之间用 & 分隔。请求参数由公共请求参数和API自定义参数组成。公共参数中包含API版本号、身份验证等信息。
 
-下面是一个调用QueryMetricList接口查询某一实例的监控数据的示例。
+下面是一个调用DescribeMetricList接口查询某一实例的监控数据的示例。
 
 ```
-http://metrics.cn-hangzhou.aliyuncs.com/?Action=QueryMetricList
+http://metrics.cn-hangzhou.aliyuncs.com/?Action=DescribeMetricList
 &EndTime=2017-05-17+11%3A30%3A27
 &StartTime=2017-05-17+11%3A20%3A27
 &Period=60
 &Dimensions=%7B%22instanceId%22%3A%22i-abcdefgh123456%22%7D
 &Timestamp=2017-03-22T09%3A30%3A57Z
-&Project=acs_ecs_dashboard
+&Namespace=acs_ecs_dashboard
 &Metric=cpu_idle
 ```
 
@@ -66,16 +66,16 @@ RPC API要按如下格式在API请求的中增加签名（Signature）：
 
 `https://endpoint/?SignatureVersion=1.0&SignatureMethod=HMAC-SHA1&Signature=CT9X0VtwR86fNWSnsc6v8YGOjuE%3D&SignatureNonce=3ee8c1b8-83d3-44af-a94f-4e0ad82fd6cf`
 
-以QueryMetricList为例，假设使用的AccessKey ID是`testid`， AccessKey Secret是 `testsecret`。那么签名前的请求URL为：
+以DescribeMetricList为例，假设使用的AccessKey ID是`testid`， AccessKey Secret是 `testsecret`。那么签名前的请求URL为：
 
 ```
-http://metrics.aliyuncs.com/?Action=QueryMetricList&period=60&StartTime=2016-03-22T11:30:27Z&Dimensions={instanceId:'i-abcdefgh123456'}&Timestamp=2017-03-23T06:59:55Z&Project=acs_ecs_dashboard&SignatureVersion=1.0&Format=JSON&SignatureNonce=aeb03861-611f-43c6-9c07-b752fad3dc06&Version=2015-10-20&AccessKeyId=TestId&Metric=cpu_idle&SignatureMethod=HMAC-SHA1
+http://metrics.aliyuncs.com/?Action=DescribeMetricList&period=60&StartTime=2016-03-22T11:30:27Z&Dimensions={instanceId:'i-abcdefgh123456'}&Timestamp=2017-03-23T06:59:55Z&Namespace=acs_ecs_dashboard&SignatureVersion=1.0&Format=JSON&SignatureNonce=aeb03861-611f-43c6-9c07-b752fad3dc06&Version=2015-10-20&AccessKeyId=TestId&MetricName=cpu_idle&SignatureMethod=HMAC-SHA1
 ```
 
 计算得到的待签名字符串StringToSign为：
 
 ```
-GET&%2F&AccessKeyId%3DTestId&Action%3DQueryMetricList&Dimensions%3D%257B%2522instanceId%2522%253A%2522i-abcdefgh123456%2522%257D&Format%3DJSON&Metric%3Dcpu_idle&Period%3D60&Project%3Dacs_ecs_dashboard&SignatureMethod%3DHMAC-SHA1&SignatureNonce%3Daeb03861-611f-43c6-9c07-b752fad3dc06&SignatureVersion%3D1.0&StartTime%3D2016-03-22T11%253A30%253A27Z&Timestamp%3D2017-03-23T06%253A59%253A55Z&Version%3D2015-10-20
+GET&%2F&AccessKeyId%3DTestId&Action%3DDescribeMetricList&Dimensions%3D%257B%2522instanceId%2522%253A%2522i-abcdefgh123456%2522%257D&Format%3DJSON&Metric%3Dcpu_idle&Period%3D60&Namespace%3Dacs_ecs_dashboard&SignatureMethod%3DHMAC-SHA1&SignatureNonce%3Daeb03861-611f-43c6-9c07-b752fad3dc06&SignatureVersion%3D1.0&StartTime%3D2016-03-22T11%253A30%253A27Z&Timestamp%3D2017-03-23T06%253A59%253A55Z&Version%3D2015-10-20
 ```
 
 因为AccessKey Secret是`testsecret`，所以用于计算HMAC的Key为`testsecret&`，计算得到的签名值是：
@@ -87,6 +87,6 @@ TLj49H/wqBWGJ7RK0r84SN5IDfM=
 将签名作为Signature参数加入到URL请求中，得到最后的URL为：
 
 ```
-http://metrics.cn-hangzhou.aliyuncs.com/?Action=QueryMetricList&StartTime=2016-03-22T11%3A30%3A27Z&Period=60&Dimensions=%7B%22instanceId%22%3A%22i-abcdefgh123456%22%7D&Timestamp=2017-03-23T06%3A59%3A55Z&Project=acs_ecs_dashboard&SignatureVersion=1.0&Format=JSON&SignatureNonce=aeb03861-611f-43c6-9c07-b752fad3dc06&Version=2015-10-20&AccessKeyId=TestId&Metric=cpu_idle&SignatureMethod=HMAC-SHA1&Signature=TLj49H%2FwqBWGJ7RK0r84SN5IDfM%3D
+http://metrics.cn-hangzhou.aliyuncs.com/?Action=DescribeMetricList&StartTime=2016-03-22T11%3A30%3A27Z&Period=60&Dimensions=%7B%22instanceId%22%3A%22i-abcdefgh123456%22%7D&Timestamp=2017-03-23T06%3A59%3A55Z&Namespace=acs_ecs_dashboard&SignatureVersion=1.0&Format=JSON&SignatureNonce=aeb03861-611f-43c6-9c07-b752fad3dc06&Version=2015-10-20&AccessKeyId=TestId&Metric=cpu_idle&SignatureMethod=HMAC-SHA1&Signature=TLj49H%2FwqBWGJ7RK0r84SN5IDfM%3D
 ```
 
