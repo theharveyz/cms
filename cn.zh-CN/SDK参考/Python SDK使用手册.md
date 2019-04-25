@@ -17,9 +17,9 @@ pip install aliyun-python-sdk-core
 pip install aliyun-python-sdk-cms
 ```
 
-[最新版Python SDK](https://github.com/aliyun/aliyun-openapi-python-sdk/blob/master/aliyun-python-sdk-cms/aliyunsdkcms/request/v20180308/PutCustomMetricRequest.py)
+[最新版Python SDK](https://github.com/aliyun/aliyun-openapi-python-sdk/blob/master/aliyun-python-sdk-cms/aliyunsdkcms/request/v20190101/PutCustomMetricRequest.py)
 
-## code示例 {#section_h0p_jc4_0ug .section}
+## Code示例 {#section_h0p_jc4_0ug .section}
 
 ```
 from aliyunsdkcore import client
