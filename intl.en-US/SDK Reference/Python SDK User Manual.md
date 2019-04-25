@@ -14,7 +14,7 @@ pip install aliyun-python-sdk-core
 pip install aliyun-python-sdk-cms
 ```
 
-[Latest version of Python SDK](https://github.com/aliyun/aliyun-openapi-python-sdk/blob/master/aliyun-python-sdk-cms/aliyunsdkcms/request/v20180308/PutCustomMetricRequest.py)
+[Latest version of Python SDK](https://github.com/aliyun/aliyun-openapi-python-sdk/blob/master/aliyun-python-sdk-cms/aliyunsdkcms/request/v20190101/PutCustomMetricRequest.py)
 
 ## Code example {#section_low_jf4_4b7 .section}
 
