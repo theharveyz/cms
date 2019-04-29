@@ -211,15 +211,15 @@ CloudMonitor provides three methods to report data: APIs, Java SDK, and Alibaba 
 
     1.  Create a RAM user.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/15565291354830_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/15565293374830_en-US.png)
 
     2.  Generate an AccessKey ID and an AccessKey Secret for the RAM user.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/15565291354831_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/15565293374831_en-US.png)
 
     3.  Grant CloudMonitor permissions to the RAM user.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/15565291384832_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/15565293384832_en-US.png)
 
 2.  **Install CMS SDK**
     -   The installation method for a Windows system is as follows:
@@ -285,14 +285,14 @@ CloudMonitor provides three methods to report data: APIs, Java SDK, and Alibaba 
 
 You must grant CloudMonitor permissions to the corresponding RAM user before event data can be reported with the RAM user AK. If you do not grant the permissions, when you report data, the prompt "cannot upload event, please use ram to auth" is displayed.
 
-1.  Log on to the [RAM console](https://ram.console.aliyun.com/#/overview).
+1.  Log on to the [RAM console](https://partners-intl.console.aliyun.com/#/ram).
 2.  In the left-side navigation pane, click **Users**.
 3.  On the Users page that appears, click **Authorize** in the Actions column corresponding to the RAM user.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/15565291414851_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/15565293384851_en-US.png)
 
 4.  On the authorization page, select **AliyunCloudMonitorFullAccess** and click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/15565291414852_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6163/15565293384852_en-US.png)
 
 
