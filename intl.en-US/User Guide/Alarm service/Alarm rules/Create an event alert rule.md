@@ -29,7 +29,7 @@ Events are classified into system events and custom events. The alert rule and n
 2.  In the left-side navigation pane, choose **Alarms** \> **Alarm Rules**. On the Alarm Rules page that appears, the **Threshold Value Alarm** tab is displayed by default.
 3.  Click the **Event Alarm** tab. On the Event Alarm tab that appears, click **Create Event Alarms** in the upper-right corner. The **Create/Modify Event Alarms** dialog box is displayed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115255/155659446037773_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115255/155659494037773_en-US.png)
 
 4.  In the **Basic Information** section, enter the alert rule name.
 5.  Set **Event Alarm Rule**:
@@ -49,7 +49,7 @@ After creating an event alert rule, you can use system event testing to simulate
 3.  Click the **Event Alarm** tab. The Event Alarm tab that appears shows an alert rule list.
 4.  Click **Test** in the Actions column corresponding to an alert rule. The **Create Event Test** page is displayed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115255/155659446137781_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115255/155659494037781_en-US.png)
 
 5.  Select an event that you want to test. The event content is displayed. You can modify the fields such as instance ID in the content as needed.
 6.  Click **OK**. The system will send an event based on the content, triggering alert notification, MNS queue, Function Compute, or URL callback that you configure in the alert rule.
