@@ -22,31 +22,31 @@ You must verify the email address to ensure that it can receive alert notificati
 
  **Create an alert contact** 
 
-1.  Log on to the [CloudMonitor console](https://cms-intl.console.aliyun.com).
+1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  In the left-side navigation pane, choose **Alarms** \> **Alarm Contact**. The Alarm Contact Management page is displayed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/116866/155660851737869_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/116866/155660872037869_en-US.png)
 
 3.  Click **Create Alarm Contact** in the upper-right corner. In the dialog box that appears, enter your name and email address.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/116866/155660851737870_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/116866/155660872037870_en-US.png)
 
 4.  After the information is verified, click **Save**.
 
  **Create an alert contact group** 
 
-1.  Log on to the [CloudMonitor console](https://cms-intl.console.aliyun.com).
+1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  In the left-side navigation pane, choose **Alarms** \> **Alarm Contact**. The Alarm Contact Management page is displayed.
 3.  Click the **Alarm Contact Group** tab.
 4.  On the tab that appears, click **Create Alarm Contact Group** in the upper-right corner. The Create Alarm Contact Group dialog box is displayed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/116866/155660851737871_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/116866/155660872037871_en-US.png)
 
 5.  Enter the group name, select the contacts to be added to the group, and click **OK**.
 
  **Add multiple contacts to a contact group** 
 
-1.  Log on to the [CloudMonitor console](https://cms-intl.console.aliyun.com).
+1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  In the left-side navigation pane, choose **Alarms** \> **Alarm Contact**. The Alarm Contact Management page is displayed.
 3.  Select the contacts that you want to add from the alert contact list.
 4.  Click **Add to a Contact Group** at the bottom of the list.
