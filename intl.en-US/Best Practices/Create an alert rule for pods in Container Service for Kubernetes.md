@@ -12,29 +12,29 @@ We recommend that you perform the following operations before you create an aler
 
 ## Procedure {#section_ehp_vqx_bgb .section}
 
-**Precautions**
+ **Precautions** 
 
 -   Monitoring data is stored for up to 31 days.
 -   You can view the monitoring data for up to 14 consecutive days.
 
-**Create an alert template for Container Service for Kubernetes**
+ **Create an alert template for Container Service for Kubernetes** 
 
 1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  In the left-side navigation pane, choose **Alarms** \> **Alarm Templates**. The **Alarm Templates** page is displayed.
 3.  Click **Create Alarm Templates** in the upper-right corner. The Create Alarm Template page is displayed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/78698/155661433434067_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/78698/155661440034067_en-US.png)
 
 4.  Configure template information: Set the service name to **Kubernetes** and configure related metrics.
 5.  Click **Add**.
 
-**Apply the template to a Kubernetes application group**
+ **Apply the template to a Kubernetes application group** 
 
 1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  In the left-side navigation pane, choose **Alarms** \> **Alarm Templates**. The **Alarm Templates** page is displayed.
 3.  Click **Apply to Group** in the Actions column corresponding to the just-created alert template for Container Service for Kubernetes.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/78698/155661433434071_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/78698/155661440034071_en-US.png)
 
 4.  Select the group for which you want to create an alert rule, and click **OK**.
 
@@ -42,31 +42,31 @@ We recommend that you perform the following operations before you create an aler
 
 Alert notification for the Kubernetes application group is automatically sent to Default Contact Group. If you want all alerts for the Kubernetes application group to be sent to the same contact group, directly change the contacts in Default Contact Group.
 
-**Directly modify a contact group** 
+ **Directly modify a contact group** 
 
 1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  In the left navigation pane, choose **Alarms** \> **Alarm Contacts**. The **Alarm Contacts** page is displayed.
 3.  Click the **Alarm Contact Group** tab. The Alarm Contact Group tab is displayed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/78698/155661433534072_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/78698/155661440034072_en-US.png)
 
 4.  Click the modification icon. On the Edit Group page that appears, change the contacts and click **OK**.
 
 If you want alerts for different Kubernetes applications to be sent to different contact groups, you must modify the associated alert contact groups for each Kubernetes application group.
 
-**Modify the associated contact group of an application group** 
+ **Modify the associated contact group of an application group** 
 
 1.  Log on to the [CloudMonitor console](https://partners-intl.console.aliyun.com/#/cms).
 2.  In the left-side navigation pane, click **Application Groups**. The **Application Groups** page is displayed.
-3.  Find the Kubernetes application group and click the group name. The group details page is displayed.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/78698/155661433534079_en-US.png)
+3.  Find the Kubernetes application group and click the group name. The group details page is displayed.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/78698/155661440034079_en-US.png)
 4.  Click the modification icon. On the page that appears, change the contact group and click **OK**. All alerts for the Kubernetes application group will be sent to the new alert contact group.
 
 You can use OpenAPI to modify the contact groups of multiple Kubernetes application groups.
 
-**Modify contact groups through OpenAPI** 
+ **Modify contact groups through OpenAPI** 
 
 1.  Log on to [OpenAPI Explorer](https://api.aliyun.com).
-2.  In the left-side cloud service list, click **CloudMonitor**. In the search box, enter UpdateMyGroups. Click the API in the search result. The API call page is displayed.![](images/34114_en-US.png)
+2.  In the left-side cloud service list, click **CloudMonitor**. In the search box, enter UpdateMyGroups. Click the API in the search result. The API call page is displayed.
 3.  Set GroupId to the group ID to be modified.
 4.  Set ContactGroups to the contact group to which alert notification is to be sent.
 5.  Click **Initiate a Call**.
