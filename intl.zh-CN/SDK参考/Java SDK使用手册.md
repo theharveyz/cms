@@ -14,7 +14,7 @@
 <dependency>
   <groupId>com.aliyun</groupId>
   <artifactId>aliyun-java-sdk-cms</artifactId>
-  <version>5.0.4</version>
+  <version>7.0.3</version>
 </dependency>
 </dependencies>
 ```
@@ -31,45 +31,43 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
         使用时请将如下示例中的accessKey和accessSecret替换成您的Access Key。
 
         ```
-        package com.aliyuncs.cms.test;
-        import com.alibaba.fastjson.JSONObject;
         import com.aliyuncs.DefaultAcsClient;
         import com.aliyuncs.IAcsClient;
-        import com.aliyuncs.cms.model.v20170301.QueryMetricListRequest;
-        import com.aliyuncs.cms.model.v20170301.QueryMetricListResponse;
         import com.aliyuncs.exceptions.ClientException;
         import com.aliyuncs.exceptions.ServerException;
-        import com.aliyuncs.http.FormatType;
         import com.aliyuncs.profile.DefaultProfile;
-        import com.aliyuncs.profile.IClientProfile;
-        public class QueryMetricListDemo {
+        import com.google.gson.Gson;
+        import java.util.*;
+        import com.aliyuncs.cms.model.v20190101.*;
+        
+        public class DescribeMetricListDemo {
+        
             public static void main(String[] args) {
-                QueryMetricListRequest request = new QueryMetricListRequest();
-                request.setProject("acs_ecs_dashboard");
-                request.setMetric("cpu_idle");
-                request.setPeriod("60");
-                request.setStartTime("2017-03-14 14:20:27");
-                request.setEndTime("2017-03-14 14:30:27");
-                JSONObject dim = new JSONObject();
-                dim.put("instanceId", "<your_instanceId>");
-                request.setDimensions(dim.toJSONString());
-                request.setAcceptFormat(FormatType.JSON);
-                IClientProfile profile = DefaultProfile.getProfile("cn-hangzhou",
-                        "<your_access_key_id>", "<your_access_key_secret>");
+                DefaultProfile profile = DefaultProfile.getProfile("cn-beijing", "<accessKeyId>", "<accessSecret>");
                 IAcsClient client = new DefaultAcsClient(profile);
+        
+                DescribeMetricListRequest request = new DescribeMetricListRequest();
+                request.setDimensions("{"instanceId":<instanceId_as_example>}");
+                request.setEndTime("2019-05-13 11:06:27");
+                request.setStartTime("2019-05-13 10:20:27");
+                request.setPeriod("60");
+                request.setNamespace("acs_ecs_dashboard");
+                request.setMetricName("cpu_total");
+        
                 try {
-                    QueryMetricListResponse response = client.getAcsResponse(request);
-                    System.out.println(response.getCode());
-                    System.out.println(response.getMessage());
-                    System.out.println(response.getRequestId());
-                    System.out.println(response.getDatapoints());
+                    DescribeMetricListResponse response = client.getAcsResponse(request);
+                    System.out.println(new Gson().toJson(response));
                 } catch (ServerException e) {
                     e.printStackTrace();
                 } catch (ClientException e) {
-                    e.printStackTrace();
+                    System.out.println("ErrCode:" + e.getErrCode());
+                    System.out.println("ErrMsg:" + e.getErrMsg());
+                    System.out.println("RequestId:" + e.getRequestId());
                 }
+        
             }
         }
+        							
         ```
 
     -   返回示例
@@ -167,57 +165,52 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
     -   请求示例
 
         ```
-        package com.aliyuncs.cms.test;
-        import com.alibaba.fastjson.JSONArray;
-        import com.alibaba.fastjson.JSONObject;
         import com.aliyuncs.DefaultAcsClient;
         import com.aliyuncs.IAcsClient;
-        import com.aliyuncs.cms.model.v20170301.CreateAlarmRequest;
-        import com.aliyuncs.cms.model.v20170301.CreateAlarmResponse;
         import com.aliyuncs.exceptions.ClientException;
         import com.aliyuncs.exceptions.ServerException;
-        import com.aliyuncs.http.FormatType;
         import com.aliyuncs.profile.DefaultProfile;
-        import com.aliyuncs.profile.IClientProfile;
-        public class CreateAlarmDemo {
+        import com.google.gson.Gson;
+        import java.util.*;
+        import com.aliyuncs.cms.model.v20190101.*;
+        
+        public class CmsDemo {
+        
             public static void main(String[] args) {
-                CreateAlarmRequest request = new CreateAlarmRequest();
-                request.setName("create_alarm_test");
-                request.setNamespace("acs_ecs_dashboard");
-                request.setMetricName("vm.MemoryUtilization");
-                JSONArray dimensions = new JSONArray();
-                JSONObject dim = new JSONObject();
-                dim.put("userId", "<your_userId>");
-                dim.put("instanceId", "<your_instanceId>");
-                dimensions.add(dim);
-                request.setDimensions(dimensions.toJSONString());
-                request.setPeriod(900);
-                request.setStatistics("Average");
-                request.setComparisonOperator(">=");
-                request.setThreshold("35");
-                request.setEvaluationCount(2);
-                JSONArray contactGroups = new JSONArray();
-                contactGroups.add("<your_group1>");
-                contactGroups.add("<your_group2>");
-                request.setContactGroups(contactGroups.toJSONString());
-                request.setStartTime(6);
-                request.setEndTime(20);
-                request.setNotifyType(1);
-                request.setAcceptFormat(FormatType.JSON);
-                IClientProfile profile = DefaultProfile.getProfile("cn-hangzhou",
-                        "<your_access_key_id>", "<your_access_key_secret>");
+                DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "<accessKeyId>", "<accessSecret>");
                 IAcsClient client = new DefaultAcsClient(profile);
+        
+                PutResourceMetricRuleRequest request = new PutResourceMetricRuleRequest();
+                request.setNamespace("acs_ecs_dashboard");
+                request.setRuleId("aabbcccdddxxx001");
+                request.setInterval("60");
+                request.setPeriod("60");
+                request.setRuleName("aaabbbcc");
+                request.setContactGroups("测试报警联系人");
+                request.setResources("[{"instanceId":"i-8vb6p16*******"}]");
+                request.setMetricName("cpu_total");
+        
+                List<PutResourceMetricRuleRequest.Escalations> escalationsList = new ArrayList<PutResourceMetricRuleRequest.Escalations>();
+        
+                PutResourceMetricRuleRequest.Escalations escalations1 = new PutResourceMetricRuleRequest.Escalations();
+                escalations1.setStatistics("Average");
+                escalations1.setComparisonOperator("GreaterThanOrEqualToThreshold");
+                escalations1.setThreshold("90");
+                escalations1.setTimes(2);
+                escalationsList.add(escalations1);
+                request.setEscalationss(escalationsList);
+        
                 try {
-                    CreateAlarmResponse response = client.getAcsResponse(request);
-                    System.out.println(response.getCode());
-                    System.out.println(response.getMessage());
-                    System.out.println(response.getRequestId());
-                    System.out.println(response.getData());
+                    PutResourceMetricRuleResponse response = client.getAcsResponse(request);
+                    System.out.println(new Gson().toJson(response));
                 } catch (ServerException e) {
                     e.printStackTrace();
                 } catch (ClientException e) {
-                    e.printStackTrace();
+                    System.out.println("ErrCode:" + e.getErrCode());
+                    System.out.println("ErrMsg:" + e.getErrMsg());
+                    System.out.println("RequestId:" + e.getRequestId());
                 }
+        
             }
         }
         ```
@@ -225,10 +218,12 @@ Github下载地址：[https://github.com/aliyun/aliyun-openapi-java-sdk/tree/mas
     -   返回示例
 
         ```
-        Code:200
-        Message:null
-        RequestId:B8E6E26A-9435-4D52-8796-68793935CA74
-        Data:81b412bf-fbbb-4a40-8d74-b68ec849a091
+        {
+        	"Message": "",
+        	"RequestId": "7aa25dfa-3bb9-4ed3-9704-a2d41bf67649",
+        	"Success": true,
+        	"Code": 200
+        }
         ```
 
 
