@@ -1,13 +1,15 @@
-# PHP SDK使用手册 {#concept_qhh_zbp_zdb .concept}
+# PHP SDK {#concept_qhh_zbp_zdb .concept}
 
-## SDK下载 {#section_fb2_1cp_zdb .section}
+This topic is a reference for installing and using the PHP SDK.
 
-Github下载地址：
+## Download SDK {#section_fb2_1cp_zdb .section}
+
+Download addresses:
 
 -   [https://github.com/aliyun/aliyun-openapi-php-sdk/tree/master/aliyun-php-sdk-cms/](https://github.com/aliyun/aliyun-openapi-php-sdk/tree/master/aliyun-php-sdk-cms/)
 -   [https://github.com/aliyun/aliyun-openapi-php-sdk/tree/master/aliyun-php-sdk-core](https://github.com/aliyun/aliyun-openapi-php-sdk/tree/master/aliyun-php-sdk-core)
 
-## 测试代码 {#section_qtx_1cp_zdb .section}
+## Test code {#section_qtx_1cp_zdb .section}
 
 ```
 <?php
