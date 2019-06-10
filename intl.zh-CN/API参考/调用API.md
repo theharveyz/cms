@@ -1,5 +1,7 @@
 # 调用API {#concept_hzl_jz5_zdb .concept}
 
+云监控接口调用是向云监控API的服务端地址发送HTTP GET请求，并按照接口说明在请求中加入相应请求参数，调用后系统会返回处理结果。请求及返回结果都使用UTF-8字符集进行编码。
+
 ## 请求结构 {#section_abs_kz5_zdb .section}
 
 云监控的API是RPC风格，您可以通过发送HTTP请求调用云监控API。
@@ -17,7 +19,7 @@
 
 下面是一个调用DescribeMetricList接口查询某一实例的监控数据的示例。
 
-```
+``` {#codeblock_7ck_adr_l67}
 http://metrics.cn-hangzhou.aliyuncs.com/?Action=DescribeMetricList
 &EndTime=2017-05-17+11%3A30%3A27
 &StartTime=2017-05-17+11%3A20%3A27
@@ -56,7 +58,7 @@ http://metrics.cn-hangzhou.aliyuncs.com/?Action=DescribeMetricList
 
 ## API授权 {#section_izn_wbv_zdb .section}
 
-为了确保您的账号安全，建议您使用子账号的身份凭证调用API。如果您使用RAM账号调用负载均衡API，您需要为该RAM账号创建、附加相应的授权策略。
+为了确保您的账号安全，建议您使用子账号的身份凭证调用API。如果您使用RAM账号调用云监控API，您需要为该RAM账号创建、附加相应的授权策略。
 
 ## API签名 {#section_jzn_wbv_zdb .section}
 
@@ -68,25 +70,25 @@ RPC API要按如下格式在API请求的中增加签名（Signature）：
 
 以DescribeMetricList为例，假设使用的AccessKey ID是`testid`， AccessKey Secret是 `testsecret`。那么签名前的请求URL为：
 
-```
+``` {#codeblock_vtx_6vo_9ef}
 http://metrics.aliyuncs.com/?Action=DescribeMetricList&period=60&StartTime=2016-03-22T11:30:27Z&Dimensions={instanceId:'i-abcdefgh123456'}&Timestamp=2017-03-23T06:59:55Z&Namespace=acs_ecs_dashboard&SignatureVersion=1.0&Format=JSON&SignatureNonce=aeb03861-611f-43c6-9c07-b752fad3dc06&Version=2015-10-20&AccessKeyId=TestId&MetricName=cpu_idle&SignatureMethod=HMAC-SHA1
 ```
 
 计算得到的待签名字符串StringToSign为：
 
-```
+``` {#codeblock_38j_bp1_18w}
 GET&%2F&AccessKeyId%3DTestId&Action%3DDescribeMetricList&Dimensions%3D%257B%2522instanceId%2522%253A%2522i-abcdefgh123456%2522%257D&Format%3DJSON&Metric%3Dcpu_idle&Period%3D60&Namespace%3Dacs_ecs_dashboard&SignatureMethod%3DHMAC-SHA1&SignatureNonce%3Daeb03861-611f-43c6-9c07-b752fad3dc06&SignatureVersion%3D1.0&StartTime%3D2016-03-22T11%253A30%253A27Z&Timestamp%3D2017-03-23T06%253A59%253A55Z&Version%3D2015-10-20
 ```
 
 因为AccessKey Secret是`testsecret`，所以用于计算HMAC的Key为`testsecret&`，计算得到的签名值是：
 
-```
+``` {#codeblock_5zp_sf1_39i}
 TLj49H/wqBWGJ7RK0r84SN5IDfM=
 ```
 
 将签名作为Signature参数加入到URL请求中，得到最后的URL为：
 
-```
+``` {#codeblock_92f_rgx_79k}
 http://metrics.cn-hangzhou.aliyuncs.com/?Action=DescribeMetricList&StartTime=2016-03-22T11%3A30%3A27Z&Period=60&Dimensions=%7B%22instanceId%22%3A%22i-abcdefgh123456%22%7D&Timestamp=2017-03-23T06%3A59%3A55Z&Namespace=acs_ecs_dashboard&SignatureVersion=1.0&Format=JSON&SignatureNonce=aeb03861-611f-43c6-9c07-b752fad3dc06&Version=2015-10-20&AccessKeyId=TestId&Metric=cpu_idle&SignatureMethod=HMAC-SHA1&Signature=TLj49H%2FwqBWGJ7RK0r84SN5IDfM%3D
 ```
 
