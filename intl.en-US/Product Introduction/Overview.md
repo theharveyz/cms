@@ -8,7 +8,7 @@ CloudMonitor collects data on Alibaba Cloud resource metrics and custom metrics.
 
 ## Architecture {#section_zm2_cxf_xgb .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6120/15604102926442_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6120/15604105786442_en-US.png)
 
 ## Features {#section_vph_mxf_xgb .section}
 
@@ -18,6 +18,7 @@ CloudMonitor provides the following features:
 -   **Application group**: allows you to group regions and services together to manage their resources. With this feature, you can manage service-related resources such as servers, databases, Server Load Balancer \(SLB\) instances, and storage. You can manage alert rules and view the monitoring data related to each service to streamline O&M.
 -   **Host monitoring**: installs plug-ins on servers to monitor and provide alert functions for over 30 metrics such as CPUs, memory, disks, and networks. You can configure alert rules based on instances, application groups, or resources. You can customize rules for different services based on different metrics. Currently, host monitoring is supported on both Linux and Windows.
 -   **Custom monitoring**: allows you to monitor custom metrics that are of concern to your business requirements. The collected monitoring data is reported to CloudMonitor. CloudMonitor processes data and generates alerts based on processing results.
+-   **Site monitoring**: simulates and sends user requests to your site from nationwide terminal nodes to test and monitor the network quality provided by network operators all over China.
 -   **Cloud service monitoring**: allows you to query the performance indicators of the purchased cloud service instances. This information helps you analyze the resource usage, collect statistics about the business trend, and identify and diagnose system faults in a timely manner.
 -   **Event monitoring**: provides report, query, and alarm functions for events. Event monitoring reports exceptions and important changes in your business to CloudMonitor and sends alerts when exceptions occur.
 -   **Alert service**: sends alerts when the metric values exceed the preconfigured thresholds. You can configure alert rules to specify how the alert system checks the monitoring data and when it sends alerts. By configuring alert rules on important metrics, you can receive notification immediately after any metric data exceptions occur. Then, you will be able to handle the exceptions in time.
