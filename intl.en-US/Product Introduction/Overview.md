@@ -1,12 +1,14 @@
 # Overview {#concept_awy_bh4_tdb .concept}
 
+CloudMonitor is a service provided by Alibaba cloud to monitor Alibaba Cloud resources and Internet applications.
+
 CloudMonitor provides one-stop, ready-to-go, and enterprise-class monitoring solutions for cloud users. CloudMonitor is able to monitor IT facilities, external network quality, events, custom metrics, and service logs. CloudMonitor provides you with efficient, comprehensive, and cost-effective monitoring services. CloudMonitor utilizes cross-service and cross-region application group management models and alert templates. CloudMonitor allows you to build an efficient management system to monitor and send alert notification for dozens of cloud services and tens of thousands of instances. With CloudMonitor, you can build and customize a monitoring dashboard for your services. CloudMonitor helps you increase system service availability and reduce the O&M costs of IT systems.
 
 CloudMonitor collects data on Alibaba Cloud resource metrics and custom metrics. CloudMonitor can be used to detect the availability of your service and allows you to configure alerts on specific metrics. CloudMonitor provides a real-time overview of cloud services, resource usage, and alerts. With this information, you can promptly react to exceptions and ensure the availability of your applications.
 
 ## Architecture {#section_zm2_cxf_xgb .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6120/15565312396442_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6120/15604102926442_en-US.png)
 
 ## Features {#section_vph_mxf_xgb .section}
 
