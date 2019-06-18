@@ -1,6 +1,6 @@
 # DeleteHostAvailability {#doc_api_Cms_DeleteHostAvailability .reference}
 
-You can call this operation to delete an availability monitoring task.
+You can call this operation to delete one or more availability monitoring tasks.
 
 ## Debugging {#apiExplorer .section}
 
@@ -10,10 +10,10 @@ You can use [API Explorer](https://api.aliyun.com/#product=Cms&api=DeleteHostAva
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|DeleteHostAvailability|The operation that you want to perform. Set the value to DeleteHostAvailability.
+|Action|String|Yes|DeleteHostAvailability| The operation that you want to perform. Set the value to DeleteHostAvailability.
 
  |
-|Id.N|RepeatList|Yes|12345|The ID of the task. Valid values of N: 1 to 20.
+|Id.N|RepeatList|Yes|12345| The ID of the task. Valid values of N: 1 to 20.
 
  |
 
@@ -21,16 +21,16 @@ You can use [API Explorer](https://api.aliyun.com/#product=Cms&api=DeleteHostAva
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|Code|String|200|The status code. A value of 200 indicates that the call is successful.
+|Code|String|200| The status code. A value of 200 indicates that the call is successful.
 
  |
-|Message|String|success|The error message.
+|Message|String|success| The error message.
 
  |
-|RequestId|String|57C782E6-B235-4842-AD2B-DB94961761EB|The request ID for troubleshooting.
+|RequestId|String|57C782E6-B235-4842-AD2B-DB94961761EB| The request ID for troubleshooting.
 
  |
-|Success|Boolean|true|Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call has failed.
+|Success|Boolean|true| Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call has failed.
 
  |
 
@@ -69,7 +69,7 @@ Successful response examples
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_5xu_dnl_mi0 .section}
 
 [View error codes](https://error-center.aliyun.com/status/product/Cms)
 
