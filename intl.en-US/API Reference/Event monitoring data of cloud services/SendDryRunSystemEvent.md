@@ -8,38 +8,38 @@ You can use [API Explorer](https://api.aliyun.com/#product=Cms&api=SendDryRunSys
 
 ## Request parameters {#parameters .section}
 
-|Parameter|Type|Required|Example|Description |
-|---------|----|--------|-------|------------|
-|Action|String|Yes|SendDryRunSystemEvent|The operation that you want to perform. Set the value to SendDryRunSystemEvent.
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|SendDryRunSystemEvent| The operation that you want to perform. Set the value to SendDryRunSystemEvent.
 
  |
-|EventName|String|Yes|Agent\_Status\_Stopped|The name of the event.
+|EventName|String|Yes|Agent\_Status\_Stopped| The name of the event.
 
  |
-|Product|String|Yes|CloudMonitor|The name of the service.
+|Product|String|Yes|CloudMonitor| The name of the service.
 
  |
-|EventContent|String|No|\{"product":"CloudMonitor","resourceId":"acs:ecs:cn-hongkong:1736511134389110:instance/\{instanceId\}","level":"CRITICAL","instanceName":"instanceName","regionId":"cn-hangzhou","name":"Agent\_Status\_Stopped","content":\{"ipGroup":"0.0.0.0,0.0.0.1","tianjimonVersion":"1.2.11"\},"status":"stopped"\}|The content of the event.
+|EventContent|String|No|\{"product":"CloudMonitor","resourceId":"acs:ecs:cn-hongkong:173651113438\*\*\*\*:instance/\{instanceId\}","level":"CRITICAL","instanceName":"instanceName","regionId":"cn-hangzhou","name":"Agent\_Status\_Stopped","content":\{"ipGroup":"0.0.0.0,0.0.0.1","tianjimonVersion":"1.2.11"\},"status":"stopped"\}| The content of the event.
 
  |
-|GroupId|String|No|12345|The ID of the application group.
+|GroupId|String|No|12345| The ID of the application group.
 
  |
 
 ## Response parameters {#resultMapping .section}
 
-|Parameter|Type|Example|Description |
-|---------|----|-------|------------|
-|Code|String|200|The status code. A value of 200 indicates that the call is successful.
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|Code|String|200| The status code. A value of 200 indicates that the call is successful.
 
  |
-|Message|String|success|The error message.
+|Message|String|success| The error message.
 
  |
-|RequestId|String|486029C9-53E1-44B4-85A8-16A571A043FD|The request ID for troubleshooting.
+|RequestId|String|486029C9-53E1-44B4-85A8-16A571A043FD| The request ID for troubleshooting.
 
  |
-|Success|String|true|Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call has failed.
+|Success|String|true| Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call has failed.
 
  |
 
@@ -81,7 +81,7 @@ Successful response examples
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_6ks_dly_kyi .section}
 
 [View error codes](https://error-center.aliyun.com/status/product/Cms)
 
