@@ -1,5 +1,7 @@
 # 云监控自定义监控SDK {#concept_rtp_cvk_zdb .concept}
 
+本文为您介绍如何获取云监控自定义监控SDK。
+
 ## 问题场景 {#section_nry_l2s_gfb .section}
 
 客户希望通过SDK使用云监控--自定义监控功能，如何获取？
