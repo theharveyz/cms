@@ -1,6 +1,6 @@
 # DescribeAlertHistoryList {#doc_api_Cms_DescribeAlertHistoryList .reference}
 
-取得报警历史。
+查询报警历史详情。
 
 ## 调试 {#apiExplorer .section}
 
