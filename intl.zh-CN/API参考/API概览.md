@@ -2,7 +2,7 @@
 
 云监控提供以下相关API接口。
 
-## 云产品时序指标类监控数据 {#section_h7p_phf_owp .section}
+## 云产品时序指标类监控数据 {#section_qmx_snn_ewc .section}
 
 |API|描述|
 |---|--|
@@ -13,7 +13,7 @@
 |[DescribeMetricData](intl.zh-CN/API参考/云产品时序指标类监控数据/DescribeMetricData.md)|查询指定时间段内的云产品时序指标监控数据。|
 |[DescribeMetricTop](intl.zh-CN/API参考/云产品时序指标类监控数据/DescribeMetricTop.md)|查询指定时间段内排序后的云产品时序指标监控数据。|
 
-## 报警联系人组 {#section_t4w_dld_oil .section}
+## 报警联系人组 {#section_rdi_ww1_l9n .section}
 
 |API|描述|
 |---|--|
@@ -25,7 +25,7 @@
 |[DescribeContactList](intl.zh-CN/API参考/报警联系人组/DescribeContactList.md)|查询报警联系人列表。|
 |[PutContactGroup](intl.zh-CN/API参考/报警联系人组/PutContactGroup.md)|创建或者修改报警联系人组。|
 
-## 时序指标报警规则 {#section_ve5_ueo_ixs .section}
+## 时序指标报警规则 {#section_rxo_oho_xl9 .section}
 
 |API|描述|
 |---|--|
@@ -50,7 +50,7 @@
 |[CreateMetricRuleResources](intl.zh-CN/API参考/时序指标报警规则/CreateMetricRuleResources.md)|创建一个报警规则关联的资源。|
 |[DeleteMetricRuleResources](intl.zh-CN/API参考/时序指标报警规则/DeleteMetricRuleResources.md)|删除报警规则关联的资源。|
 
-## 主机监控 {#section_yff_b2e_ovz .section}
+## 主机监控 {#section_dno_zbq_b6x .section}
 
 |API|描述|
 |---|--|
@@ -64,7 +64,7 @@
 |[DescribeMonitoringAgentConfig](intl.zh-CN/API参考/主机监控/DescribeMonitoringAgentConfig.md)|查询云监控插件的配置信息。|
 |[CreateMonitorAgentProcess](intl.zh-CN/API参考/主机监控/CreateMonitorAgentProcess.md)|创建进程监控。|
 
-## 应用分组 {#section_pce_irz_urq .section}
+## 应用分组 {#section_yot_lvf_gfx .section}
 
 |API|描述|
 |---|--|
@@ -85,7 +85,7 @@
 |[DescribeMonitorGroupInstances](intl.zh-CN/API参考/应用分组/DescribeMonitorGroupInstances.md)|查询指定应用分组内包含的资源列表。|
 |[DeleteMonitorGroup](intl.zh-CN/API参考/应用分组/DeleteMonitorGroup.md)|删除指定的应用分组。|
 
-## 可用性监控 {#section_hl2_p6d_kgn .section}
+## 可用性监控 {#section_ump_jbt_5pj .section}
 
 |API|描述|
 |---|--|
@@ -97,14 +97,14 @@
 |[DescribeUnhealthyHostAvailability](intl.zh-CN/API参考/可用性监控/DescribeUnhealthyHostAvailability.md)|查询探测结果异常的服务器列表。|
 |[DisableHostAvailability](intl.zh-CN/API参考/可用性监控/DisableHostAvailability.md)|禁用一个可用性监控任务。|
 
-## 全局配置 {#section_btp_fdm_f2t .section}
+## 全局配置 {#section_ufl_nhl_nve .section}
 
 |API|描述|
 |---|--|
 |[DescribeMonitoringConfig](intl.zh-CN/API参考/全局配置/DescribeMonitoringConfig.md)|查询云监控全局配置，例如开启自动安装云监控插件以及一键告警等。|
 |[PutMonitoringConfig](intl.zh-CN/API参考/全局配置/PutMonitoringConfig.md)|设置云监控插件全局配置，例如开始自动安装插件以及一键报警等。|
 
-## 云产品事件类监控数据 {#section_kbv_jho_3ox .section}
+## 云产品事件类监控数据 {#section_f8i_3rp_7vp .section}
 
 |API|描述|
 |---|--|
@@ -114,7 +114,7 @@
 |[DescribeSystemEventCount](intl.zh-CN/API参考/云产品事件类监控数据/DescribeSystemEventCount.md)|查询各个产品指定时间段内事件的数量。|
 |[DescribeSystemEventAttribute](intl.zh-CN/API参考/云产品事件类监控数据/DescribeSystemEventAttribute.md)|查询系统事件详情。|
 
-## 时序指标报警模板 {#section_cfm_efy_m9p .section}
+## 时序指标报警模板 {#section_r6j_xc8_ucr .section}
 
 |API|描述|
 |---|--|
@@ -125,7 +125,7 @@
 |[CreateMetricRuleTemplate](intl.zh-CN/API参考/时序指标报警模板/CreateMetricRuleTemplate.md)|创建报警规则模板。|
 |[DeleteMetricRuleTemplate](intl.zh-CN/API参考/时序指标报警模板/DeleteMetricRuleTemplate.md)|删除报警规则模板。|
 
-## 事件报警规则 {#section_bko_avd_r8p .section}
+## 事件报警规则 {#section_cfj_zax_xnu .section}
 
 |API|描述|
 |---|--|
@@ -139,7 +139,7 @@
 |[PutEventRule](intl.zh-CN/API参考/事件报警规则/PutEventRule.md)|创建或者修改事件的报警规则。|
 |[DescribeEventRuleTargetList](intl.zh-CN/API参考/事件报警规则/DescribeEventRuleTargetList.md)|查询指定事件报警规则的报警目标。|
 
-## 自定义监控 {#section_25o_fig_udd .section}
+## 自定义监控 {#section_h6b_xra_7db .section}
 
 |API|描述|
 |---|--|
@@ -147,7 +147,7 @@
 |[DescribeCustomMetricList](intl.zh-CN/API参考/自定义监控/DescribeCustomMetricList.md)|查询上报的自定义监控数据。|
 |[DeleteCustomMetric](intl.zh-CN/API参考/自定义监控/DeleteCustomMetric.md)|删除自定义监控上报数据。|
 
-## 自定义事件 {#section_7ky_rgi_k8d .section}
+## 自定义事件 {#section_z7n_2ug_gy3 .section}
 
 |API|描述|
 |---|--|
@@ -156,7 +156,7 @@
 |[DescribeCustomEventHistogram](intl.zh-CN/API参考/自定义事件/DescribeCustomEventHistogram.md)|查询自定义上报的事件的分时段数量分布图。|
 |[PutCustomEvent](intl.zh-CN/API参考/自定义事件/PutCustomEvent.md)|上报自定义事件数据监控数据。|
 
-## 站点监控 {#section_suw_wlh_dqf .section}
+## 站点监控 {#section_pzk_6fh_l8u .section}
 
 |API|描述|
 |---|--|
