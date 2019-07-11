@@ -2,60 +2,60 @@
 
 This topic describes how to report custom monitoring data.
 
-Custom monitoring allows you to customize metrics and alarm rules to meet your own business needs. Custom monitoring provides APIs for reporting monitoring data. You can use the APIs to report collected time series data to CloudMonitor. You can also configure alarm rules to receive notification when an exception occurs.
+Custom monitoring allows you to customize metrics and alarm rules to meet your business requirements. Custom monitoring provides API operations for reporting monitoring data. You can use the API operations to report collected time series data to CloudMonitor \(CMS\). You can also configure alarm rules to receive notifications of corresponding exceptions.
 
-CloudMonitor provides APIs, Java SDK, and Alibaba Cloud command line interface \(CLI\) for reporting data.
+CloudMonitor provides API operations, Java SDKs, and Alibaba Cloud command line interface \(CLI\) for reporting data.
 
 ## Limits {#section_q4b_znk_zdb .section}
 
--   The number of queries per second \(QPS\) is limited to 200 in China \(Beijing\), China \(Shanghai\), and China \(Hangzhou\), 100 in China \(Zhangjiakou\) and China \(Shenzhen\), and 50 in the other regions.
--   A maximum of 100 data entries can be reported at a time. The body size cannot exceed 256 KB.
--   The `metricName` field can contain letters, digits, and underscores \(\_\). This field must start with a letter. If the starting character is not a letter, it is replaced with an uppercase A. Invalid characters are replaced with underscores \(\_\).
+-   The upper limit of queries per second \(QPS\) is 200 QPS in China \(Beijing\), China \(Shanghai\), and China \(Hangzhou\), 100 QPS in China \(Zhangjiakou-Beijing Winter Olympics\) and China \(Shenzhen\), and 50 QPS in all other regions.
+-   The system reports a maximum of 100 data entries at one time. The body size is 256 KB or less.
+-   The `metricName` field can only contain letters, digits, and underscores \(\_\). This field must start with a letter. If the starting character is not a letter, this character is replaced with an uppercase A. Invalid characters are replaced with underscores \(\_\).
 -   The `dimensions` field cannot contain equal signs \(=\), ampersands \(&\), or commas \(,\). Invalid characters are replaced with underscores \(\_\).
--   The string length of the key or value of both `metricName` and `dimensions` cannot exceed 64 bytes. Otherwise, the key or value string is truncated.
--   Reporting raw data is a paid function. The free edition allows you to aggregate data. When you report data, you must enter "1" for the type field in the request parameter.
+-   The string length of the key or value of both `metricName` and `dimensions` is 64 bytes or less. Otherwise, the key or value string is truncated.
+-   You have to pay for reporting raw data. You can obtain aggregated data free of charge. To obtain the free data, set the Type field to 1 in the request parameters.
 
-## Report data through APIs {#section_zym_l4k_zdb .section}
+## Report data by using API operations {#section_zym_l4k_zdb .section}
 
-After you report the raw data through APIs, CloudMonitor uses the following statistical methods to calculate the statistics at 1-minute and 5-minute intervals:
+After you report the raw data by using API operations, CloudMonitor uses the following statistical methods to calculate the statistics at 1-minute and 5-minute intervals:
 
--   Average: The average value.
--   Maximum: The maximum value.
--   Minimum: The minimum value.
--   Sum: The sum value.
--   SampleCount: The count.
--   SumPerSecond: The sum divided by the total number of seconds of the corresponding aggregation period. You can also calculate the value by using moving average.
--   CountPerSecond: The count divided by the total number of seconds of the corresponding aggregation period. You can also calculate the value by using moving average.
--   LastValue: The last sampled value in the aggregation period. It is similar to gauge.
--   P10: The value of the 10th percentile. It is greater than 10% of all data in the aggregation period.
--   P20: The value of the 20th percentile. It is greater than 20% of all data in the aggregation period.
--   P30: The value of the 30th percentile. It is greater than 30% of all data in the aggregation period.
--   P40: The value of the 40th percentile. It is greater than 40% of all data in the aggregation period.
--   P50: The value of the 50th percentile. It is the median and greater than 50% of all data in the aggregation period.
--   P60: The value of the 60th percentile. It is greater than 60% of all data in the aggregation period.
--   P70: The value of the 70th percentile. It is greater than 70% of all data in the aggregation period.
--   P75: The value of the 75th percentile. It is greater than 75% of all data in the aggregation period.
--   P80: The value of the 80th percentile. It is greater than 80% of all data in the aggregation period.
--   P90: The value of the 90th percentile. It is greater than 90% of all data in the aggregation period.
--   P95: The value of the 95th percentile. It is greater than 95% of all data in the aggregation period.
--   P98: The value of the 98th percentile. It is greater than 98% of all data in the aggregation period.
--   P99: The value of the 99th percentile. It is greater than 99% of all data in the aggregation period.
+-   Average: the average value.
+-   Maximum: the maximum value.
+-   Minimum: the minimum value.
+-   Sum: the sum value.
+-   SampleCount: the count.
+-   SumPerSecond: the sum divided by the total number of seconds of the corresponding aggregation period. You can also use the moving average calculation.
+-   CountPerSecond: the count divided by the total number of seconds of the corresponding aggregation period. You can also use the moving average calculation.
+-   LastValue: the last sampled value in the aggregation period.
+-   P10: the value of the 10th percentile. This value is greater than 10% of all data in the aggregation period.
+-   P20: the value of the 20th percentile. This value is greater than 20% of all data in the aggregation period.
+-   P30: the value of the 30th percentile. This value is greater than 30% of all data in the aggregation period.
+-   P40: the value of the 40th percentile. This value is greater than 40% of all data in the aggregation period.
+-   P50: the value of the 50th percentile. This value is a median value and greater than 50% of all data in the aggregation period.
+-   P60: the value of the 60th percentile. This value is greater than 60% of all data in the aggregation period.
+-   P70: the value of the 70th percentile. This value is greater than 70% of all data in the aggregation period.
+-   P75: the value of the 75th percentile. This value is greater than 75% of all data in the aggregation period.
+-   P80: the value of the 80th percentile. This value is greater than 80% of all data in the aggregation period.
+-   P90: the value of the 90th percentile. This value is greater than 90% of all data in the aggregation period.
+-   P95: the value of the 95th percentile. This value is greater than 95% of all data in the aggregation period.
+-   P98: the value of the 98th percentile. This value is greater than 98% of all data in the aggregation period.
+-   P99: the value of the 99th percentile. This value is greater than 99% of all data in the aggregation period.
 
 -   **Endpoints** 
 
-    Internet endpoint: `https://metrichub-cms-cn-hangzhou.aliyuncs.com`
+    Internet endpoint: `https://metrichub-cms-cn-hangzhou.aliyuncs.com`.
 
     The following table lists the intranet endpoints.
 
     |Region|Region ID|Endpoint|
     |:-----|:--------|:-------|
     |China \(Hangzhou\)|cn-hangzhou|http://metrichub-cn-hangzhou.aliyun.com|
-    |China \(Zhangjiakou\)|cn-zhangjiakou|http://metrichub-cn-zhangjiakou.aliyun.com|
+    |China \(Zhangjiakou-Beijing Winter Olympics\)|cn-zhangjiakou|http://metrichub-cn-zhangjiakou.aliyun.com|
     |China \(Shanghai\)|cn-shanghai|http://metrichub-cn-shanghai.aliyun.com|
     |China \(Beijing\)|cn-beijing|http://metrichub-cn-beijing.aliyun.com|
     |China \(Qingdao\)|cn-qingdao|http://metrichub-cn-qingdao.aliyun.com|
     |China \(Shenzhen\)|cn-shenzhen|http://metrichub-cn-shenzhen.aliyun.com|
-    |Hong Kong|cn-hongkong|http://metrichub-cn-hongkong.aliyun.com|
+    |China \(Hong Kong\)|cn-hongkong|http://metrichub-cn-hongkong.aliyun.com|
     |China \(Hohhot\)|cn-huhehaote|http://metrichub-cn-huhehaote.aliyun.com|
     |UAE \(Dubai\)|me-east-1|http://metrichub-me-east-1.aliyun.com|
     |US \(Silicon Valley\)|us-west-1|http://metrichub-us-west-1.aliyun.com|
@@ -69,13 +69,13 @@ After you report the raw data through APIs, CloudMonitor uses the following stat
 
 -   **Request syntax** 
 
-    ```
+    ``` {#codeblock_vvl_wxz_iig}
     POST /metric/custom/upload HTTP/1.1 
     Authorization:<AuthorizationString> 
     Content-Length:<Content Length> 
     Content-MD5:<Content MD5> 
     Content-Type:application/json
-    Date:<GMT Date>
+    Date:<GMT Date> 
     Host: metrichub-cms-cn-hangzhou.aliyuncs.com
     x-cms-signature:hmac-sha1
     x-cms-api-version:1.0
@@ -87,17 +87,17 @@ After you report the raw data through APIs, CloudMonitor uses the following stat
 
 -   **Signature algorithm** 
 
-    Currently, only the HMAC-SHA1 signature algorithm is supported.
+    CloudMonitor only supports the HMAC-SHA1 signature algorithm.
 
     1.  Prepare an Alibaba Cloud AccessKey pair.
 
-        To generate a digital signature for an API request, you must use an AccessKey pair that is composed of an AccessKey ID and an AccessKey Secret. You can use an existing AccessKey pair or create a new one. The AccessKey pair must be in the **Active** state.
+        To generate a digital signature for an API request, you must use an AccessKey pair that consists of the AccessKey ID and AccessKey Secret. You can use an existing AccessKey pair or create a new one. The AccessKey pair must be in **Active** status.
 
     2.  Generate a signature string for the request.
 
-        An API signature string consists of the Method, Header, and Body fields of an HTTP request.
+        An API signature string consists of the Method, Header, and Body fields of the HTTP request.
 
-        ```
+        ``` {#codeblock_lk9_0p2_umf}
         SignString = VERB + "\n"
                      + CONTENT-MD5 + "\n"
                      + CONTENT-TYPE + "\n"
@@ -106,71 +106,71 @@ After you report the raw data through APIs, CloudMonitor uses the following stat
                      + CanonicalizedResource
         ```
 
-        In the preceding formula, `\n` indicates the newline escape character and the plus sign \(`+`\) indicates the string concatenation operator. The other parts are defined as follows.
+        In this formula, `\n` indicates the newline escape character and the plus sign \(`+`\) indicates the string concatenation operator. The other parts are defined as follows:
 
-        |Name|Definition|Examples|
-        |:---|:---------|:-------|
+        |Parameter|Description|Example|
+        |:--------|:----------|:------|
         |VERB|The method name of the HTTP request.|PUT, GET, and POST|
-        |CONTENT-MD5|The MD5 value of the Body field in the HTTP request. The value must be an uppercase string.|875264590688CA6171F6228AF5BBB3D2|
+        |CONTENT-MD5|The MD5 value of the Body field in the HTTP request. This value must be an uppercase string.|875264590688CA6171F6228AF5BBB3D2|
         |CONTENT-TYPE|The type of the Body field in the request.|application/json|
-        |DATE|The standard timestamp header of the HTTP request, which follows the RFC 1123 format and uses GMT standard time.|Mon, 3 Jan 2010 08:33:47 GMT|
-        |CanonicalizedHeaders|The string constructed by the custom headers prefixed with x-cms and x-acs in the HTTP request.|x-cms-api-version:0.1.0\\nx-cms-signature|
+        |DATE|The standard timestamp header of the HTTP request. This timestamp header follows the RFC 1123 specification and uses GMT standard time.|Mon, 3 Jan 2010 08:33:47 GMT|
+        |CanonicalizedHeaders|The string constructed by the custom headers that are prefixed with x-cms and x-acs of the HTTP request.|x-cms-api-version:0.1.0\\nx-cms-signature|
         |CanonicalizedResource|The string constructed by the HTTP request resources, as described in the following section.|/event/custom/upload|
 
-        CanonicalizedHeaders in the preceding table is constructed as follows:
+        The CanonicalizedHeaders string in the preceding table is constructed as follows:
 
-        1.  Convert the names of all HTTP request headers prefixed with `x-cms` and `x-acs` to lowercase letters.
-        2.  Sort the CMS custom request headers obtained in the preceding step in ascending lexicographical order.
-        3.  Delete any spaces on either side of a delimiter between the request header and content.
-        4.  Separate all headers and content with separators `\n` to form the final CanonicalizedHeaders.
-        CanonicalizedResource in the preceding table is constructed as follows:
+        1.  Convert the names of all HTTP request headers that are prefixed with `x-cms` and `x-acs` to lowercase letters.
+        2.  Sort the CMS custom request headers generated in the preceding step in lexicographic order.
+        3.  Delete any space on either side of a delimiter between a request header and the corresponding content.
+        4.  Separate all headers and content with separators \(`\n`\) to form the final CanonicalizedHeaders string.
+        The CanonicalizedResource string in the preceding table is constructed as follows:
 
         1.  Set CanonicalizedResource as an empty string \(""\).
         2.  Place the URI that you want to access, such as `/event/custom/upload`, between the quotation marks.
-        3.  If the request contains a query string \(`QUERY_STRING`\), add a question mark \(`?`\) and the query string to the end of the CanonicalizedResource string.
+        3.  If the request contains a query string in `QUERY_STRING`, add a question mark \(`?`\) and the query string to the end of the CanonicalizedResource string.
 
-            `QUERY_STRING` is the lexicographic string of request parameters included in the URL. Equal signs \(`=`\) are placed between the names and values of parameters to form a string. The key-value pairs are then sorted in ascending lexicographical order and connected with ampersands \(`&`\) to form a string. The formula is as follows:
+            In the request, `QUERY_STRING` is the lexicographically sorted string of the request parameters included in the URL. Equal signs \(`=`\) are used between the names and values of parameters to form a string. The parameter name-parameter value pairs are then sorted in lexicographic order and connected with ampersands \(`&`\) to form a string. The formula is as follows:
 
-            ```
+            ``` {#codeblock_vvg_kdn_0bs}
             QUERY_STRING = "KEY1=VALUE1" + "&" + "KEY2=VALUE2"
             ```
 
     3.  Generate a digital signature for the request.
 
-        Currently, only HMAC-SHA1 signature algorithm is supported. The following formula is used to generate a signature:
+        The default signature algorithm is HMAC-SHA1. You can use the following formula to generate a signature:
 
-        ```
+        ``` {#codeblock_1ik_e52_zzi}
         Signature = base16(hmac-sha1(UTF8-Encoding-Of(SignString), AccessKeySecret))
         ```
 
 -   **Request parameters** 
 
-    |Parameter|Type|Required?|Description|
-    |:--------|:---|:--------|:----------|
-    |groupId|long|Yes|The ID of an application group.|
-    |metricName|string|Yes|The name of a metric. A metric name can contain letters, digits, and connectors such as underscores \(\_\), hyphens \(-\), periods \(.\), forward slashes \(/\), and backslashes \(\\\). Other characters are invalid. The maximum length is 64 bytes. Excess characters will be truncated from the string.|
-    |dimensions|object|Yes|The dimension map. All key-value pairs are strings. A string can contain letters, digits, and connectors such as underscores \(\_\), hyphens \(-\), periods \(.\), forward slashes \(/\), and backslashes \(\\\). The maximum number of key-value pairs is 10. The maximum length of a key is 64 bytes. The maximum length of a value is 64 bytes. Excess characters will be truncated from the string.|
-    |time|string|Yes|The time at which the metric value is generated. It supports timestamps in the "yyyyMMdd'T'HHmmss.SSSZ" format or long format, such as 20171012T132456.888+0800 or 1508136760000.|
-    |type|int|Yes| The data type of the reported value. 0 indicates raw data and 1 indicates aggregate data.
+    |Parameter|Type|Required|Description|
+    |:--------|:---|:-------|:----------|
+    |groupId|Long|Yes|The ID of your application group.|
+    |metricName|String|Yes|The name of a metric that you want to monitor. A metric name can contain letters, digits, and connectors such as underscores \(\_\), hyphens \(-\), periods \(.\), forward slashes \(/\), and backslashes \(\\\). Other characters are invalid. The maximum length is 64 bytes. Excess characters are truncated from the string.|
+    |dimensions|Object|Yes|The dimension map. All key-value pairs are strings. A string can contain letters, digits, and connectors such as underscores \(\_\), hyphens \(-\), periods \(.\), forward slashes \(/\), and backslashes \(\\\). The maximum number of key-value pairs is 10. The maximum length of a key is 64 bytes. The maximum length of a value is 64 bytes. Excess characters are truncated from the string.|
+    |time|String|Yes|The time when the metric value was generated. The time supports timestamps in the yyyyMMdd’T’HHmmss.SSSZ format or long format, such as 20171012T132456.888+0800 or 1508136760000.|
+    |type|Integer|Yes| The data type of the reported value. A value of 0 specifies raw data and a value of 1 specifies aggregate data.
 
- When you report aggregate data, we recommend that you report data for both 60s and 300s aggregation periods. Otherwise, you will not be able to query monitoring data that is older than seven days.
-
- |
-    |period|string|No| The aggregation cycle, in seconds.
-
- If the value of type is 1, this field is required. The value can be 60 or 300.
+ When you report aggregate data, we recommend that you report data for both 60s and 300s aggregation periods. Otherwise, you cannot query monitoring data in a time span that is more than seven days.
 
  |
-    |values|object|Yes|The collection of metric values. If the value of type is 0, the key must be "value" and raw data is reported. CloudMonitor aggregates raw data over the aggregation period into several data types, such as maximum, count, and sum.|
+    |period|String|No| The aggregation period. Unit: seconds.
+
+ If the type parameter is set to 1, this field is required. Valid values: 60 and 300.
+
+ |
+    |values|Object|Yes|The collection of metric values. If the type parameter is set to 0, the key of this parameter must be set to value, so raw data is reported. CloudMonitor aggregates raw data over the aggregation period into several data types, such as maximum, count, and sum.|
 
 
-## Report data through the Java SDK {#section_ecw_2h5_xfb .section}
+## Report data by using the Java SDK {#section_ecw_2h5_xfb .section}
 
--   **Install Java SDK** 
+-   **Install the Java SDK** 
 
-    When you install Java SDK through Maven, add the following dependencies:
+    When you install the Java SDK based on Maven, add the following dependency:
 
-    ```
+    ``` {#codeblock_938_pi6_ts1}
     <dependency>
                 <groupId>com.aliyun.openservices</groupId>
                 <artifactId>aliyun-cms</artifactId>
@@ -182,10 +182,10 @@ After you report the raw data through APIs, CloudMonitor uses the following stat
 
     The system returns the HTTP status code 200.
 
--   **Samples** 
+-   **Examples** 
     -   Sample request
 
-        ```
+        ``` {#codeblock_2bc_snk_e6y}
         POST /metric/custom/upload HTTP/1.1 
         Host: metrichub-cms-cn-hangzhou.aliyuncs.com
         x-cms-api-version:1.0
@@ -203,26 +203,26 @@ After you report the raw data through APIs, CloudMonitor uses the following stat
 
     -   Sample response
 
-        ```
+        ``` {#codeblock_o6h_bed_2pe}
         {
            "code":"200",
            "msg":""//The returned msg is null when the reporting is normal.
         }
         ```
 
--   **Sample code** 
+-   **Code examples** 
 
     -   **Report raw data**
-    ```
-    CMSClientInit.groupId = 101L;//Set the common group ID.
+    ``` {#codeblock_jbi_19v_xsu}
+    CMSClientInit.groupId = 101L;//Set a common group ID.
             CMSClient cmsClient = new CMSClient(endpoint, accKey, secret);//Initialize the client.
             CustomMetricUploadRequest request = CustomMetricUploadRequest.builder()
                     .append(CustomMetric.builder()
-                            .setMetricName("testMetric")//The metric name
-                            .setGroupId(102L)//Set the custom group ID.
+                            .setMetricName("testMetric")//The metric name.
+                            .setGroupId(102L)//Set a custom group ID.
                             .setTime(new Date())
                             .setType(CustomMetric.TYPE_VALUE)//The type is raw data.
-                            .appendValue(MetricAttribute.VALUE, 1f)//The original value. Key must be an original value.
+                            .appendValue(MetricAttribute.VALUE, 1f)//The raw data. The key must be MetricAttribute.VALUE.
                             .appendDimension("key", "value")//Add a dimension.
                             .appendDimension("ip", "127.0.0.1")//Add a dimension.
                             .build())
@@ -232,25 +232,25 @@ After you report the raw data through APIs, CloudMonitor uses the following stat
     ```
 
     -   **Automatically report aggregate data for multiple aggregation periods**
-    SDK supports data reporting after local aggregation. Data can be aggregated in periods of 1 minute or 5 minutes.
+    The Java SDK supports data reporting after local aggregation. Aggregation periods can be 1 minute and 5 minutes.
 
     |Data type|Description|Aggregate value|Memory consumption \(excluding the name, dimension, individual time series, and individual aggregation periods\)|
     |:--------|:----------|:--------------|:---------------------------------------------------------------------------------------------------------------|
-    |value|Typical value type|All properties except LastValue|About 4 KB|
+    |value|Typical value type|All attributes except LastValue|Approximately 4 KB|
     |gauge|Sample value|LastValue|4 bytes|
-    |meter|Sum and speed|Sum, SumPerSecond|50 bytes|
+    |meter|Sum and rate|Sum, SumPerSecond|50 bytes|
     |counter|Count|SampleCount|10 bytes|
-    |timer|Computing time|SampleCount, CountPerSecond, Average, Maximum, Minimum, PXX\(P10-P99\)|About 4 KB|
-    |histogram|Distribution|SampleCount, Average, Maximum, Minimum, PXX\(P10-P99\)|About 4 KB|
+    |timer|Computing time|SampleCount, CountPerSecond, Average, Maximum, Minimum, and PXX\(P10-P99\)|Approximately 4 KB|
+    |histogram|Distribution|SampleCount, Average, Maximum, Minimum, and PXX\(P10-P99\)|Approximately 4 KB|
 
-    ```
+    ``` {#codeblock_f8c_coi_yjq}
     //Initialization
             CMSClientInit.groupId = 0L;
             CMSClient cmsClient = new CMSClient(accKey, secret, endpoint);//Create a client.
             CMSMetricRegistryBuilder builder = new CMSMetricRegistryBuilder();
             builder.setCmsClient(cmsClient);
-            final MetricRegistry registry = builder.build();//Create a registry, which includes two aggregation periods.
-            //Or final MetricRegistry registry = builder.build(RecordLevel. _60S);//Create a registry that only includes aggregate data with an aggregation period of 1 minute.
+            final MetricRegistry registry = builder.build();//Create a registry that includes two aggregation periods.
+            //Or final MetricRegistry registry = builder.build(RecordLevel. _60S);//Create a registry that only includes aggregate data in a 1-minute aggregation period.
     //Use value.
     ValueWrapper value = registry.value(MetricName.build("value"));
     value.update(6.5);
@@ -278,52 +278,52 @@ After you report the raw data through APIs, CloudMonitor uses the following stat
     ```
 
 
-## Report data through Alibaba Cloud CLI {#section_ggy_bqk_zdb .section}
+## Report data by using Alibaba Cloud CLI {#section_ggy_bqk_zdb .section}
 
  **Prepare an Alibaba Cloud account** 
 
-Ensure that you have created an Alibaba Cloud account, created a RAM user for your account, and generated a RAM user AccessKey with CloudMonitor permissions.
+Make sure that you have created an Alibaba Cloud account, created a RAM user for your account, and generated an AccessKey pair for the RAM user to grant CloudMonitor permissions.
 
 -   **Create a RAM user.**
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6219/155840525647465_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6219/156281993847465_en-US.png)
 
 -   **Generate an AccessKey ID and an AccessKey Secret for the RAM user.**
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6219/155840525647466_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6219/156281993847466_en-US.png)
 
 -   **Grant CloudMonitor permissions to the RAM user.**
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6219/155840525647474_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6219/156281993947474_en-US.png)
 
 
  **Install Alibaba Cloud CLI** 
 
-System requirement: Linux, Unix, or macOS.
+Required operation systems: Linux, Unix, or MacOS.
 
--   Method 1: Download the installation package.
+-   Method 1: download the installation package
 
-    You can download the latest CLI from Alibaba Cloud CLI GitHub. The CLI can work with MacOS, Linux, and Windows \(x64\). After decompressing the package, you can move the file to the/usr/local/bin directory or add it to the $PATH environment variables.
+    You can download the installation package of the latest CLI tool from Alibaba Cloud CLI GitHub, and decompress the package to use the CLI. The CLI supports Mac, Linux, and Windows \(x64\) terminals. After decompression, you can move the aliyun file to the /usr/local/bin directory or add the file to the $PATH environment variable.
 
--   Method 2: Compile source code.
+-   Method 2: compile source code
 
-    Install and configure the Golang environment, and follow the steps to download and compile the source code.
+    Install and configure the Golang environment, and follow these steps to download and compile the source code:
 
     ``` {#codeblock_7zi_2ns_6p1}
-    ...
+    ```
     $ mkdir -p $GOPATH/src/github.com/aliyun
     $ cd $GOPATH/src/github.com/aliyun
     $ git clone http://github.com/aliyun/aliyun-cli.git
     $ git clone http://github.com/aliyun/aliyun-openapi-meta.git
     $ cd aliyun-cli
     $ make install
-    ...
+    ```
     ```
 
 
- **Configure Alibaba Cloud CLI** 
+ **Configure the CLI** 
 
-Before using Alibaba Cloud CLI, you must run the aliyun configure command to configure the AccessKey, region, and language for calling Alibaba Cloud resources. You can create and view your AccessKey on the AccessKey page of the Alibaba Cloud console, or obtain the AccessKey form your system administrator.
+Before using Alibaba Cloud CLI, you must run the aliyun configure command to configure the AccessKey pair, region, and language. You use the configured data to call Alibaba cloud resources. You can create and view your AccessKey pair on the AccessKey page in the Alibaba Cloud console, or contact your system administrator to obtain the AccessKey pair.
 
 ``` {#codeblock_p1q_xwi_969}
 $ aliyun configure
@@ -335,7 +335,7 @@ Default output format [json]: json
 Default Language [zh]: zh
 ```
 
-Alibaba Cloud CLI supports multi-user configuration. You can run the $ aliyun configure --profile user1 command to specify the RAM user that can call Alibaba Cloud APIs. You can run the `$ aliyun configure list` command to view the RAM user configurations as described in the following table. The asterisk \(\*\) in the Profile column indicates that the configuration is used.
+Multi-user configuration: Alibaba Cloud CLI supports multi-user configuration. You can run the $ aliyun configure --profile user1 command to specify the account used to call API operations of cloud services. Run the `$ aliyun configure list` command to view the current user configuration, as shown in the following table. The asterisk \(\*\) next to the Profile field value indicates the default user configuration.
 
 |Profile|Credential|Valid|Region|Language|
 |-------|----------|-----|------|--------|
@@ -344,24 +344,24 @@ Alibaba Cloud CLI supports multi-user configuration. You can run the $ aliyun co
 |test|AK:\*\*\*456|Valid| |en|
 |ecs|EcsRamRole:EcsTest|Valid|cn-beijing|en|
 
-Alibaba Cloud CLI can use different authentication methods by adding the --mode <authenticationMethod\> parameter after the configure command. Currently, the following authentication methods are supported.
+To specify the authentication method, you can add the --mode <authenticationMethod\> parameter to the end of the configure command in the CLI. Supported authentication methods are listed as follows:
 
 |Authentication method|Description|
 |---------------------|-----------|
-|AK|Includes an AccessKey ID and an Access Key Secret.|
-|StsToken|The STS token.|
-|RamRoleArn|Calls the AssumeRole action of the RAM user.|
-|EcsRamRole|Calls the EcsRamRole action on an ECS instance.|
+|AK|Use the AccessKey ID and AccessKey Secret to authorize access permissions.|
+|StsToken|Use the Security Token Service \(STS\) token to authorize access permissions.|
+|RamRoleArn|Use AssumeRole of the RAM user to authorize access permissions.|
+|EcsRamRole|Use EcsRamRole on an ECS instance to access the instance with no password.|
 
  **Report monitoring data** 
 
-Use the PutCustomMetric API to report the monitoring data.
+Call the PutCustomMetric API operation to report the monitoring data.
 
 ``` {#codeblock_mby_6op_2wl}
 aliyun cms PutCustomMetric  --MetricList. 1.MetricName cpu_total --MetricList. 1.Dimensions '{"sampleName1":"value1","sampleName2":"value2"}' --MetricList. 1.Time 1555390981421 --MetricList. 1.Type 0 --MetricList. 1.Period 60 --MetricList. 1.Values '{"value":10.5}' --MetricList. 1.GroupId "0"
 ```
 
-If the data is reported successfully, status code 200 is returned.
+The system returns Status code 200 to indicate successful reporting.
 
 ``` {#codeblock_f46_e4v_gbz}
 {
@@ -375,32 +375,32 @@ If the data is reported successfully, status code 200 is returned.
 
 |Error code|Description|
 |:---------|:----------|
-|200|Normal.|
-|206| Partially successful.
+|200|The error message returned because you reported data successfully.|
+|206| The error message returned because some data failed to be reported.
 
- If "reach Max time series num" is returned, you have reached the maximum amount of time series. We recommend that you purchase a higher quota or remove unnecessary time series.
+ If the system returns "reach Max time series num", you have used up the time series quota. We recommend that you purchase a higher quota or remove unnecessary time series.
 
- If "not allowed original value, please upgrade service" is returned, you are using the free edition, which cannot support raw data.
+ If the system returns "not allowed original value, please upgrade service", you have used a free edition. You cannot use this edition to report raw data.
 
- If "type is invalid" is returned, the value of the type parameter is invalid. Ensure that the value of this parameter is 0 or 1.
+ If the system returns "type is invalid", the value of the type parameter was invalid. Make sure that the value of this parameter is 0 or 1.
 
  |
-|400|Syntax error in a client request.|
-|403|Verification failure, speed limit, or not authorized.|
-|500|Internal server error.|
+|400|The error message returned because a syntax error has occurred in the client request.|
+|403|The error message returned because the verification failed, the target rate reached the upper limit, or the target permission was not authorized.|
+|500|The error message returned because an internal server error has occurred.|
 
- **RAM user authorization** 
+ **Create a RAM user** 
 
-You must grant CloudMonitor permissions to the corresponding RAM user before event data can be reported with the RAM user AccessKey. If these permissions are not granted, the prompt "cannot upload, please use ram to auth" will be displayed when you report data.
+To use the AccessKey pair of the corresponding RAM user to report event data, you must grant CloudMonitor permissions to the RAM user. If you have not granted the permissions, the system returns the error "cannot upload data, please use ram to auth" when you report data.
 
 1.  Log on to the [RAM console](https://partners-intl.console.aliyun.com/#/ram).
-2.  In the left-side navigation pane, select **Users**. The Users page is displayed.
-3.  Select the target RAM user and click **Add Permissions**.
+2.  In the left-side navigation pane, click **Users** to go to the Users page.
+3.  On the Users page that appears, select the RAM user that you use to report data, and click **Add Permissions** in the Actions column next to the target RAM user.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6219/155840525647475_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6219/156281993947475_en-US.png)
 
-4.  On the displayed page, select **AliyunCloudMonitorFullAccess** and click **OK**.
+4.  On the Add Permissions page, select **AliyunCloudMonitorFullAccess** and click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6219/155840525647476_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6219/156281993947476_en-US.png)
 
 
