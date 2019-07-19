@@ -38,10 +38,13 @@
 |Length|String|否|1000|每次查询大小，用于分页查询，默认值为1000。
 
  |
-|OrderDesc|String|否|Average|倒序排列的字段。Orderby和OrderDesc二选一，不能为空。
+|OrderDesc|String|否|False|排序方式，可选值：
+
+ -   False，由大到小排序。
+-   True，由小到大排序。
 
  |
-|Orderby|String|否|Average|排序的字段。Orderby和OrderDesc二选一，不能为空。
+|Orderby|String|否|Average|排序字段，即按所填字段进行排序，必填项。
 
  |
 |Period|String|否|60|时间间隔，统一用秒数来计算，例如 60, 300, 900。 如果不填写,则按照注册监控项时申明的上报周期来查询原始数据。如果填写统计周期，则查询对应的统计数据 。
@@ -51,7 +54,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -151,5 +154,5 @@ http(s)://[Endpoint]/?Action=DescribeMetricTop
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cms)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Cms)查看更多错误码。
 
