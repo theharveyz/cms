@@ -2,9 +2,9 @@
 
 查询指定应用分组内包含的资源列表。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cms&api=DescribeMonitorGroupInstances)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cms&api=DescribeMonitorGroupInstances&type=RPC&version=2019-01-01)
 
 ## 请求参数 {#parameters .section}
 
@@ -60,7 +60,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -82,7 +82,7 @@
 |Resources| | |应用分组资源的描述信息。
 
  |
-|└Category|String|ecs|产品名称缩写，目前支持的产品有：
+|Category|String|ecs|产品名称缩写，目前支持的产品有：
 
  -   ECS\(包括阿里云和非阿里云主机\),
 -   RDS（云数据库RDS版\),
@@ -113,16 +113,16 @@
 -   VPN\(VPN网关\)。
 
  |
-|└Id|Long|12345|资源ID。
+|Id|Long|12345|资源ID。
 
  |
-|└InstanceId|String|i-2ze3w55tr2r\*\*\*\*|实例ID，实例的唯一标识。
+|InstanceId|String|i-2ze3w55tr2r\*\*\*\*|实例ID，实例的唯一标识。
 
  |
-|└InstanceName|String|hostIP|实例名称。
+|InstanceName|String|hostIP|实例名称。
 
  |
-|└RegionId|String|cn-hangzhou|实例对应的地域（RegionId）。
+|RegionId|String|cn-hangzhou|实例对应的地域（RegionId）。
 
  |
 |Success|Boolean|true|是否成功。
@@ -150,22 +150,21 @@ http(s)://[Endpoint]/?Action=DescribeMonitorGroupInstances
 
 ``` {#xml_return_success_demo}
 <DescribeMonitorGroupInstancesResponse>
-  <PageNumber>1</PageNumber>
-  <PageSize>30</PageSize>
-  <RequestId>7670220A-0725-42EE-9252-8200C4F810D9</RequestId>
-  <Success>true</Success>
-  <Code>200</Code>
-  <Total>1</Total>
-  <Resources>
-    <Resource>
-      <Category>ECS</Category>
-      <InstanceId>i-2ze3w55tr2rcpejp****</InstanceId>
-      <RegionId>cn-beijing</RegionId>
-      <InstanceName>dynamic_group_1</InstanceName>
-    </Resource>
-  </Resources>
+      <PageNumber>1</PageNumber>
+      <PageSize>30</PageSize>
+      <RequestId>7670220A-0725-42EE-9252-8200C4F810D9</RequestId>
+      <Success>true</Success>
+      <Code>200</Code>
+      <Total>1</Total>
+      <Resources>
+            <Resource>
+                  <Category>ECS</Category>
+                  <InstanceId>i-2ze3w55tr2rcpejp****</InstanceId>
+                  <RegionId>cn-beijing</RegionId>
+                  <InstanceName>dynamic_group_1</InstanceName>
+            </Resource>
+      </Resources>
 </DescribeMonitorGroupInstancesResponse>
-
 ```
 
 `JSON` 格式
@@ -193,5 +192,5 @@ http(s)://[Endpoint]/?Action=DescribeMonitorGroupInstances
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cms)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cms)查看更多错误码。
 
