@@ -4,9 +4,9 @@
 
 获取接入的云产品信息，包括产品的描述信息、 Namespace和标签。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cms&api=DescribeProjectMeta)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cms&api=DescribeProjectMeta&type=RPC&version=2019-01-01)
 
 ## 请求参数 {#parameters .section}
 
@@ -31,7 +31,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -53,13 +53,13 @@
 |Resources| | |具体的配置信息。
 
  |
-|└Description|String|CDN|描述信息。
+|Description|String|CDN|描述信息。
 
  |
-|└Labels|String|\[\{"groupFlag":true\}\]|标签。
+|Labels|String|\[\{"groupFlag":true\}\]|标签。
 
  |
-|└Namespace|String|acs\_cdn|命名空间，用于区分产品，通常为acs\_产品缩写。
+|Namespace|String|acs\_cdn|命名空间，用于区分产品，通常为acs\_产品缩写。
 
  |
 |Success|Boolean|true|是否成功。
@@ -86,41 +86,41 @@ http(s)://[Endpoint]/?Action=DescribeProjectMeta
 
 ``` {#xml_return_success_demo}
 <DescribeProjectMetaResponse>
-  <PageNumber>1</PageNumber>
-  <PageSize>5</PageSize>
-  <RequestId>4C2061B2-3B1B-43BF-A4A4-C53426F479C0</RequestId>
-  <Success>true</Success>
-  <Code>200</Code>
-  <Total>62</Total>
-  <Resources>
-    <Resource>
-      <Description>分析型数据库</Description>
-      <Labels>[{"name":"product","value":"ADS"},{"name":"productCategory","value":"ads"},{"name":"groupFlag","value":"true"}]</Labels>
-      <Namespace>acs_ads</Namespace>
-    </Resource>
-    <Resource>
-      <Description>智能推荐</Description>
-      <Labels>[{"name":"product","value":"AIRec"},{"name":"productCategory","value":"airec"},{"name":"groupFlag","value":"true"}]</Labels>
-      <Namespace>acs_airec</Namespace>
-    </Resource>
-    <Resource>
-      <Description>API网关</Description>
-      <Labels>[{"name":"product","value":"APIGateway"},{"name":"productCategory","value":"apigateway"},{"name":"groupFlag","value":"true"}]</Labels>
-      <Namespace>acs_apigateway_dashboard</Namespace>
-    </Resource>
-    <Resource>
-      <Description>CDN</Description>
-      <Labels>[{"name":"product","value":"CDN"},{"name":"productCategory","value":"cdn"},{"name":"groupFlag","value":"true"}]</Labels>
-      <Namespace>acs_cdn</Namespace>
-    </Resource>
-    <Resource>
-      <Description>云企业网</Description>
-      <Labels>[{"name":"product","value":"CEN"},{"name":"productCategory","value":"cen,cen_flow,cen_vbr"},{"name":"groupFlag","value":"true"}]</Labels>
-      <Namespace>acs_cen</Namespace>
-    </Resource>
-  </Resources>
-</DescribeProjectMetaResponse>
+   <PageNumber>1</PageNumber>
+      <PageSize>5</PageSize>
+      <RequestId>4C2061B2-3B1B-43BF-A4A4-C53426F479C0</RequestId>
+      <Success>true</Success>
+      <Code>200</Code>
+      <Total>62</Total>
+      <Resources>
+            <Resource>
+                  <Description>分析型数据库</Description>
+                  <Labels>[{"name":"product","value":"ADS"},{"name":"productCategory","value":"ads"},{"name":"groupFlag","value":"true"}]</Labels>
+                  <Namespace>acs_ads</Namespace>
+            </Resource>
+            <Resource>
+                  <Description>智能推荐</Description>
+                  <Labels>[{"name":"product","value":"AIRec"},{"name":"productCategory","value":"airec"},{"name":"groupFlag","value":"true"}]</Labels>
+                  <Namespace>acs_airec</Namespace>
+            </Resource>
+            <Resource>
+                  <Description>API网关</Description>
+                  <Labels>[{"name":"product","value":"APIGateway"},{"name":"productCategory","value":"apigateway"},{"name":"groupFlag","value":"true"}]</Labels>
+                  <Namespace>acs_apigateway_dashboard</Namespace>
+            </Resource>
+            <Resource>
+                  <Description>CDN</Description>
+                  <Labels>[{"name":"product","value":"CDN"},{"name":"productCategory","value":"cdn"},{"name":"groupFlag","value":"true"}]</Labels>
+                  <Namespace>acs_cdn</Namespace>
+            </Resource>
+            <Resource>
+                  <Description>云企业网</Description>
+                  <Labels>[{"name":"product","value":"CEN"},{"name":"productCategory","value":"cen,cen_flow,cen_vbr"},{"name":"groupFlag","value":"true"}]</Labels>
+                  <Namespace>acs_cen</Namespace>
+            </Resource>
+      </Resources>
 
+</DescribeProjectMetaResponse>
 ```
 
 `JSON` 格式
@@ -167,5 +167,5 @@ http(s)://[Endpoint]/?Action=DescribeProjectMeta
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cms)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cms)查看更多错误码。
 
