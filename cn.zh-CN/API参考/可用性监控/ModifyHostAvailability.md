@@ -2,9 +2,9 @@
 
 修改可用性监控任务。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cms&api=ModifyHostAvailability)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cms&api=ModifyHostAvailability&type=RPC&version=2019-01-01)
 
 ## 请求参数 {#parameters .section}
 
@@ -100,7 +100,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -138,11 +138,10 @@ http(s)://[Endpoint]/?Action=ModifyHostAvailability
 
 ``` {#xml_return_success_demo}
 <CreateHostAvailabilityResponse>
-  <RequestId>ACBDBB40-DFB6-4F4C-8957-51FFB233969C</RequestId>
-  <Success>true</Success>
-  <Code>200</Code>
+      <RequestId>ACBDBB40-DFB6-4F4C-8957-51FFB233969C</RequestId>
+      <Success>true</Success>
+      <Code>200</Code>
 </CreateHostAvailabilityResponse>
-
 ```
 
 `JSON` 格式
@@ -157,5 +156,5 @@ http(s)://[Endpoint]/?Action=ModifyHostAvailability
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cms)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cms)查看更多错误码。
 
