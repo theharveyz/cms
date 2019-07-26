@@ -2,9 +2,9 @@
 
 查询报警联系人列表。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cms&api=DescribeContactList)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cms&api=DescribeContactList&type=RPC&version=2019-01-01)
 
 ## 请求参数 {#parameters .section}
 
@@ -23,7 +23,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -42,31 +42,31 @@
 |Contacts| | |报警联系方式。
 
  |
-|└Channels| | |报警通知方式。
+|Channels| | |报警通知方式。
 
  |
-|└AliIM|String|我的旺旺|旺旺。
+|AliIM|String|我的旺旺|旺旺。
 
  |
-|└DingWebHook|String|https://oapi.dingtalk.com/robot/send?access\_token=9bf44f8189597d07dfdd7a123455ffc112\*\*\*\*|钉钉机器人地址。
+|DingWebHook|String|https://oapi.dingtalk.com/robot/send?access\_token=9bf44f8189597d07dfdd7a123455ffc112\*\*\*\*|钉钉机器人地址。
 
  |
-|└Mail|String|xxxx@aliyun.com|邮件地址。
+|Mail|String|xxxx@aliyun.com|邮件地址。
 
  |
-|└SMS|String|1333333\*\*\*\*|手机号码。
+|SMS|String|1333333\*\*\*\*|手机号码。
 
  |
-|└CreateTime|Long|1552356159000|创建时间。
+|CreateTime|Long|1552356159000|创建时间。
 
  |
-|└Desc|String|我的联系方式|描述信息。
+|Desc|String|我的联系方式|描述信息。
 
  |
-|└Name|String|关某|联系人姓名。
+|Name|String|关某|联系人姓名。
 
  |
-|└UpdateTime|Long|1552356159000|更新时间。
+|UpdateTime|Long|1552356159000|更新时间。
 
  |
 |Total|Integer|15|总记录条数。
@@ -90,23 +90,22 @@ http(s)://[Endpoint]/?Action=DescribeContactList
 
 ``` {#xml_return_success_demo}
 <DescribeContactListResponse>
-  <RequestId>06D5ECC2-B9BE-42A4-8FA3-1A610FB08B83</RequestId>
-  <Contacts>
-    <Contact>
-      <Channels>
-        <SMS>1333333****</SMS>
-        <Mail>xxxxx@aliyun.com</Mail>
-      </Channels>
-      <Name>关某</Name>
-      <CreateTime>1553006761000</CreateTime>
-      <UpdateTime>1553084361000</UpdateTime>
-    </Contact>
-  </Contacts>
-  <Total>1</Total>
-  <Success>true</Success>
-  <Code>200</Code>
+      <RequestId>06D5ECC2-B9BE-42A4-8FA3-1A610FB08B83</RequestId>
+      <Contacts>
+            <Contact>
+                  <Channels>
+                        <SMS>1333333****</SMS>
+                        <Mail>xxxxx@aliyun.com</Mail>
+                  </Channels>
+                  <Name>关某</Name>
+                  <CreateTime>1553006761000</CreateTime>
+                  <UpdateTime>1553084361000</UpdateTime>
+            </Contact>
+      </Contacts>
+      <Total>1</Total>
+      <Success>true</Success>
+      <Code>200</Code>
 </DescribeContactListResponse>
-
 ```
 
 `JSON` 格式
@@ -135,5 +134,5 @@ http(s)://[Endpoint]/?Action=DescribeContactList
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cms)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cms)查看更多错误码。
 
