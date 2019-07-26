@@ -4,25 +4,28 @@ This topic describes parameters of a threshold alarm rule.
 
 ## Parameters {#section_qw0_so5_x63 .section}
 
--    Product: the name of the monitored service, such as ECS, RDS, or OSS.
--    Resource Range: the scope of the alarm rule. Valid values: All Resources, Application Groups, and Instances. If you set Resource Range to All Resources, the alarm rule is applicable to 1,000 instances or fewer. If the number of monitored resources is more than 1,000, you may not receive alarms when the specified metric reaches the threshold. We recommend that you add resources to service-specific application groups before creating the alarm rule.
-    -    All Resources: specifies that the alarm rule is applicable to all your instances of the specified service. For example, you set Resource Range to All Resources and set the alarm threshold for ApsaraDB for MongoDB CPU usage to 80%. CloudMonitor generates an alarm when the CPU usage of any of your ApsaraDB for MongoDB instances is higher than 80%.
-    -    Application Groups: specifies that the alarm rule is applicable to all instances in an application group. For example, you set Resource Range to Application Groups and set the alarm threshold for ECS instance CPU usage to 80%. CloudMonitor generates an alarm when the CPU usage of any of the ECS instances in your application group is higher than 80%.
-    -    Instances: specifies that the alarm rule is applicable to a specified instance. For example, you set Resource Range to Instances and set the alarm threshold for ECS instance CPU usage to 80%. CloudMonitor generates an alarm when the CPU usage of the ECS instance is higher than 80%.
--    Alarm Rule: the name of the alarm rule.
+-   **Product**: the monitored service, such as ECS, ApsaraDB for RDS, and Object Storage Service \(OSS\).
+-   **Resource Range**: the scope of the alarm rule. Valid values: **All Resources** and **Instances**.
 
--    Rule Description: the content of the alarm rule. This parameter defines the metric conditions that cause alarms. For example, the rule is described as follows: the average CPU usage in one minute is greater than or equal to 90%. CloudMonitor generates an alarm when the average CPU usage in one minute is greater than or equal to 90%.
+    **Note:** If you set **Resource Range** to **All Resources**, the alarm rule is applicable to 1,000 instances or fewer. If the number of monitored resources is more than 1,000, you may not receive alarms when the specified metric reaches the threshold. We recommend that you add resources to service-specific application groups before creating the alarm rule. To create a threshold alarm rule for a group, go to the Group Instances page, and click **Threshold alarm**.
 
-     **Alert rule example**: in host monitoring, a data point on the metric of a single host is reported at a 15-second interval. Therefore, 20 data points are reported in 5 minutes.
+    -   **All Resources**: specifies that the alarm rule is applicable to all your instances of the specified service. The system sends alarm notifications if any metric of these instances reaches the specified threshold.
+    -   **Instances**: specifies that the alarm rule is applicable to a specified instance. The system sends alarm notifications if any metric of the instance reaches the specified threshold.
+-   **Alarm Rule**: the name of the alarm rule.
+-   **Rule Description**: the content of the alarm rule. This parameter defines the metric conditions that cause alarms.
 
-    -   Average CPU usage in 5 minutes greater than 90% specifies that the average value of the 20 data points on CPU usage reported in 5 minutes is greater than 90%.
-    -   CPU usage in 5 minutes always greater than 90% specifies that the values of all the 20 data points on CPU usage reported in 5 minutes are greater than 90%.
-    -   CPU usage in 5 minutes greater than 90% for once specifies that the value of at least one of the 20 data points on CPU usage reported in 5 minutes is greater than 90%.
-    -   Total Internet outbound traffic in 5 minutes greater than 50 Mbit/s specifies that the sum of the values of the 20 data points on Internet outbound traffic reported in 5 minutes is greater than 50 Mbit/s.
--    **Mute For**: CloudMonitor sends an alarm only after detecting the specified exceptions consecutively for specified times.
--    **Effective Period**: the period when an alarm rule is effective. The system only sends alarms within the effective period according to the alarm rule. The system only records alarms if the alarms occur during a non-effective period.
--    **Notification Contact**: the contact group that CloudMonitor sends alarms to.
--    **Alarm Levels**: specifies the alarm severity level that corresponds to a specified notification method. Valid values: CRITICAL, WARN, and INFO.
-    -   INFO: sends alarms by means of emails and DingTalk ChatBot.
--    **Email Remarks**: custom supplementary information of an alarm email. CloudMonitor sends the remarks along with the alarm email.
+    **Alarm rule example**: in host monitoring, a data point on the metric of a single host is reported at a 15-second interval. Therefore, 20 data points are reported in 5 minutes.
+
+    -   Average CPU usage in a 5-minute cycle greater than 90% in three consecutive cycles: specifies that the average value of the 20 data points on CPU usage reported in a 5-minute cycle is greater than 90% in three consecutive cycles. The system sends alarm notifications if the specified metric reaches the threshold.
+    -   CPU usage in a 5-minute cycle always greater than 90% in three consecutive cycles: specifies that the values of the 20 data points on CPU usage reported in a 5-minute cycle are greater than 90% in three consecutive cycles. The system sends alarm notifications if the specified metric reaches the threshold.
+    -   CPU usage in a 5-minute cycle greater than 90% for once in three consecutive cycles: specifies that the value of at least one of the 20 data points on CPU usage reported in a 5-minute cycle is greater than 90% in three consecutive cycles. The system sends alarm notifications if the specified metric reaches the threshold.
+    -   Total public network outbound traffic in a 5-minute cycle greater than 50 MB/s in three consecutive cycles: specifies that the sum of the values of the 20 data points on public network outbound traffic reported in a 5-minute cycle is greater than 50 MB/s in three consecutive cycles. The system sends alarm notifications if the specified metric reaches the threshold.
+-   **Mute For**: CloudMonitor sends an alarm notification only after detecting the specified exceptions consecutively for specified times. The minimum value is 5 minutes and the maximum value is 24 hours.
+-   **Effective Period**: the period when an alarm rule is effective. The system only sends alarm notifications within the effective period according to the alarm rule. The system only records alarms if the alarms occur during a non-effective period.
+-   **Notification Contact**: the contact group that CloudMonitor sends alarm notifications to.
+-   **Alarm Levels**: specifies the alarm severity level that corresponds to a specified notification method. Valid values: CRITICAL, WARN, and INFO.
+    -   INFO: sends alarm notifications by means of emails and DingTalk ChatBot.
+-   **Auto Scaling**: an alarm triggers the corresponding scaling rule after you select Auto Scaling and configure the rule.
+-   **Email Remark**: custom supplementary information of an alarm email. CloudMonitor sends the remarks along with the alarm email.
+-   **HTTP CallBack**: CloudMonitor uses a POST request to push an alarm to the public URL address you provided. This callback supports HTTP-based requests.
 
