@@ -11,9 +11,9 @@
 -   Cursor是分页模式下的参数，只要存在就说明还有下一页，返回为null则说明没有下一页。
 -   Period一般包含60（即1分钟）、300（即5分钟）、900（即15分钟），请根据文档以及查询场景的需要考虑Period。例如查询一天范围使用Period为60，则返回1000条数据（实际存在1440，因为最大返回值不超过1000，则只返回前1000条）。如果使用Period为300，则返回288条数据。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cms&api=DescribeMetricData)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cms&api=DescribeMetricData&type=RPC&version=2019-01-01)
 
 ## 请求参数 {#parameters .section}
 
@@ -47,7 +47,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -86,94 +86,93 @@ http(s)://[Endpoint]/?Action=DescribeMetricData
 
 ``` {#xml_return_success_demo}
 <DescribeMetricDataResponse>
-  <Period>60</Period>
-  <Datapoints>
+    <Period>60</Period>
     <Datapoints>
-      <timestamp>1490152860000</timestamp>
-      <Maximum>100</Maximum>
-      <userId> 123456789876****</userId>
-      <Minimum>93.1</Minimum>
-      <instanceId>i-abcdefgh12****</instanceId>
-      <Average>99.52</Average>
+        <Datapoints>
+            <timestamp>1490152860000</timestamp>
+            <Maximum>100</Maximum>
+            <userId> 123456789876****</userId>
+            <Minimum>93.1</Minimum>
+            <instanceId>i-abcdefgh12****</instanceId>
+            <Average>99.52</Average>
+        </Datapoints>
+        <Datapoints>
+            <timestamp>1490152920000</timestamp>
+            <Maximum>100</Maximum>
+            <userId> 123456789876**** </userId>
+            <Minimum>92.59</Minimum>
+            <instanceId>i-abcdefgh12****</instanceId>
+            <Average>99.49</Average>
+        </Datapoints>
+        <Datapoints>
+            <timestamp>1490152980000</timestamp>
+            <Maximum>100</Maximum>
+            <userId>123456789876****</userId>
+            <Minimum>92.86</Minimum>
+            <instanceId>i-abcdefgh12****</instanceId>
+            <Average>99.44</Average>
+        </Datapoints>
+        <Datapoints>
+            <timestamp>1490153040000</timestamp>
+            <Maximum>100</Maximum>
+            <userId>123456789876****</userId>
+            <Minimum>91.43</Minimum>
+            <instanceId>i-abcdefgh12****</instanceId>
+            <Average>99.36</Average>
+        </Datapoints>
+        <Datapoints>
+            <timestamp>1490153100000</timestamp>
+            <Maximum>100</Maximum>
+            <userId>123456789876****</userId>
+            <Minimum>93.55</Minimum>
+            <instanceId>i-abcdefgh12****</instanceId>
+            <Average>99.51</Average>
+        </Datapoints>
+        <Datapoints>
+            <timestamp>1490153160000</timestamp>
+            <Maximum>100</Maximum>
+            <userId>123456789876****</userId>
+            <Minimum>93.1</Minimum>
+            <instanceId>i-abcdefgh12****</instanceId>
+            <Average>99.52</Average>
+        </Datapoints>
+        <Datapoints>
+            <timestamp>1490153220000</timestamp>
+            <Maximum>100</Maximum>
+            <userId>123456789876****</userId>
+            <Minimum>92.59</Minimum>
+            <instanceId>i-abcdefgh12****</instanceId>
+            <Average>99.42</Average>
+        </Datapoints>
+        <Datapoints>
+            <timestamp>1490153280000</timestamp>
+            <Maximum>100</Maximum>
+            <userId>123456789876****</userId>
+            <Minimum>91.18</Minimum>
+            <instanceId>i-abcdefgh12****</instanceId>
+            <Average>99.34</Average>
+        </Datapoints>
+        <Datapoints>
+            <timestamp>1490153340000</timestamp>
+            <Maximum>100</Maximum>
+            <userId>123456789876****</userId>
+            <Minimum>92.86</Minimum>
+            <instanceId>i-abcdefgh12****</instanceId>
+            <Average>99.46</Average>
+        </Datapoints>
+        <Datapoints>
+            <timestamp>1490153400000</timestamp>
+            <Maximum>100</Maximum>
+            <userId>123456789876****</userId>
+            <Minimum>91.18</Minimum>
+            <instanceId>i-abcdefgh12****</instanceId>
+            <Average>99.35</Average>
+        </Datapoints>
     </Datapoints>
-    <Datapoints>
-      <timestamp>1490152920000</timestamp>
-      <Maximum>100</Maximum>
-      <userId> 123456789876**** </userId>
-      <Minimum>92.59</Minimum>
-      <instanceId>i-abcdefgh12****</instanceId>
-      <Average>99.49</Average>
-    </Datapoints>
-    <Datapoints>
-      <timestamp>1490152980000</timestamp>
-      <Maximum>100</Maximum>
-      <userId>123456789876****</userId>
-      <Minimum>92.86</Minimum>
-      <instanceId>i-abcdefgh12****</instanceId>
-      <Average>99.44</Average>
-    </Datapoints>
-    <Datapoints>
-      <timestamp>1490153040000</timestamp>
-      <Maximum>100</Maximum>
-      <userId>123456789876****</userId>
-      <Minimum>91.43</Minimum>
-      <instanceId>i-abcdefgh12****</instanceId>
-      <Average>99.36</Average>
-    </Datapoints>
-    <Datapoints>
-      <timestamp>1490153100000</timestamp>
-      <Maximum>100</Maximum>
-      <userId>123456789876****</userId>
-      <Minimum>93.55</Minimum>
-      <instanceId>i-abcdefgh12****</instanceId>
-      <Average>99.51</Average>
-    </Datapoints>
-    <Datapoints>
-      <timestamp>1490153160000</timestamp>
-      <Maximum>100</Maximum>
-      <userId>123456789876****</userId>
-      <Minimum>93.1</Minimum>
-      <instanceId>i-abcdefgh12****</instanceId>
-      <Average>99.52</Average>
-    </Datapoints>
-    <Datapoints>
-      <timestamp>1490153220000</timestamp>
-      <Maximum>100</Maximum>
-      <userId>123456789876****</userId>
-      <Minimum>92.59</Minimum>
-      <instanceId>i-abcdefgh12****</instanceId>
-      <Average>99.42</Average>
-    </Datapoints>
-    <Datapoints>
-      <timestamp>1490153280000</timestamp>
-      <Maximum>100</Maximum>
-      <userId>123456789876****</userId>
-      <Minimum>91.18</Minimum>
-      <instanceId>i-abcdefgh12****</instanceId>
-      <Average>99.34</Average>
-    </Datapoints>
-    <Datapoints>
-      <timestamp>1490153340000</timestamp>
-      <Maximum>100</Maximum>
-      <userId>123456789876****</userId>
-      <Minimum>92.86</Minimum>
-      <instanceId>i-abcdefgh12****</instanceId>
-      <Average>99.46</Average>
-    </Datapoints>
-    <Datapoints>
-      <timestamp>1490153400000</timestamp>
-      <Maximum>100</Maximum>
-      <userId>123456789876****</userId>
-      <Minimum>91.18</Minimum>
-      <instanceId>i-abcdefgh12****</instanceId>
-      <Average>99.35</Average>
-    </Datapoints>
-  </Datapoints>
-  <RequestId>6661EC50-8625-4161-B349-E0DD59002AB7</RequestId>
-  <Success>true</Success>
-  <Code>200</Code>
+    <RequestId>6661EC50-8625-4161-B349-E0DD59002AB7</RequestId>
+    <Success>true</Success>
+    <Code>200</Code>
 </DescribeMetricDataResponse>
-
 ```
 
 `JSON` 格式
@@ -271,5 +270,5 @@ http(s)://[Endpoint]/?Action=DescribeMetricData
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cms)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cms)查看更多错误码。
 
