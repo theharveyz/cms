@@ -2,9 +2,9 @@
 
 查询任务的细粒度监控数据。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cms&api=DescribeSiteMonitorData)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cms&api=DescribeSiteMonitorData&type=RPC&version=2019-01-01)
 
 ## 请求参数 {#parameters .section}
 
@@ -41,7 +41,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -83,69 +83,68 @@ http(s)://[Endpoint]/?Action=DescribeSiteMonitorData
 
 ``` {#xml_return_success_demo}
 <DescribeSiteMonitorDataResponse>
-  <Data>
-    <Over5totalTime>0</Over5totalTime>
-    <Error4XXRate>0</Error4XXRate>
-    <UnavailableNumber>0</UnavailableNumber>
-    <Over2totalTime>0</Over2totalTime>
-    <timestamp>1551581040000</timestamp>
-    <Over100FailureRate>0</Over100FailureRate>
-    <Over10FailureRate>0</Over10FailureRate>
-    <Availability>100</Availability>
-    <Over80FailureRate>0</Over80FailureRate>
-    <userId>12345</userId>
-    <AvailableNumber>2</AvailableNumber>
-    <Unavailability>0</Unavailability>
-    <ErrorCodeMaximum>0</ErrorCodeMaximum>
-    <Over10totalTime>0</Over10totalTime>
-    <taskId>49f7b317-7645-4cc9-94fd-1****</taskId>
-    <Over30FailureRate>0</Over30FailureRate>
-    <Error6XXRate>0</Error6XXRate>
-    <Over500NumberRate>0</Over500NumberRate>
-    <Over3totalTime>0</Over3totalTime>
-    <Over400NumberRate>0</Over400NumberRate>
-    <Error5XXRate>0</Error5XXRate>
-    <Error5XXNumber>0</Error5XXNumber>
-    <Over90FailureRate>0</Over90FailureRate>
-    <Error4XXNumber>0</Error4XXNumber>
-    <Over50FailureRate>0</Over50FailureRate>
-    <ErrorCodeMinimum>0</ErrorCodeMinimum>
-    <Error6XXNumber>0</Error6XXNumber>
-  </Data>
-  <Data>
-    <Over5totalTime>0</Over5totalTime>
-    <Error4XXRate>0</Error4XXRate>
-    <UnavailableNumber>0</UnavailableNumber>
-    <Over2totalTime>0</Over2totalTime>
-    <timestamp>1551581100000</timestamp>
-    <Over100FailureRate>0</Over100FailureRate>
-    <Over10FailureRate>0</Over10FailureRate>
-    <Availability>100</Availability>
-    <Over80FailureRate>0</Over80FailureRate>
-    <userId>12345</userId>
-    <AvailableNumber>2</AvailableNumber>
-    <Unavailability>0</Unavailability>
-    <ErrorCodeMaximum>0</ErrorCodeMaximum>
-    <Over10totalTime>0</Over10totalTime>
-    <taskId>49f7b317-7645-4cc9-94fd-1****</taskId>
-    <Over30FailureRate>0</Over30FailureRate>
-    <Error6XXRate>0</Error6XXRate>
-    <Over500NumberRate>0</Over500NumberRate>
-    <Over3totalTime>0</Over3totalTime>
-    <Over400NumberRate>0</Over400NumberRate>
-    <Error5XXRate>0</Error5XXRate>
-    <Error5XXNumber>0</Error5XXNumber>
-    <Over90FailureRate>0</Over90FailureRate>
-    <Error4XXNumber>0</Error4XXNumber>
-    <Over50FailureRate>0</Over50FailureRate>
-    <ErrorCodeMinimum>0</ErrorCodeMinimum>
-    <Error6XXNumber>0</Error6XXNumber>
-  </Data>
-  <RequestId>DBDEAC51-EA3C-4853-8F25-6B48D38A28A9</RequestId>
-  <Success>true</Success>
-  <Code>200</Code>
+   <Data>
+            <Over5totalTime>0</Over5totalTime>
+            <Error4XXRate>0</Error4XXRate>
+            <UnavailableNumber>0</UnavailableNumber>
+            <Over2totalTime>0</Over2totalTime>
+            <timestamp>1551581040000</timestamp>
+            <Over100FailureRate>0</Over100FailureRate>
+            <Over10FailureRate>0</Over10FailureRate>
+            <Availability>100</Availability>
+            <Over80FailureRate>0</Over80FailureRate>
+            <userId>12345</userId>
+            <AvailableNumber>2</AvailableNumber>
+            <Unavailability>0</Unavailability>
+            <ErrorCodeMaximum>0</ErrorCodeMaximum>
+            <Over10totalTime>0</Over10totalTime>
+            <taskId>49f7b317-7645-4cc9-94fd-1****</taskId>
+            <Over30FailureRate>0</Over30FailureRate>
+            <Error6XXRate>0</Error6XXRate>
+            <Over500NumberRate>0</Over500NumberRate>
+            <Over3totalTime>0</Over3totalTime>
+            <Over400NumberRate>0</Over400NumberRate>
+            <Error5XXRate>0</Error5XXRate>
+            <Error5XXNumber>0</Error5XXNumber>
+            <Over90FailureRate>0</Over90FailureRate>
+            <Error4XXNumber>0</Error4XXNumber>
+            <Over50FailureRate>0</Over50FailureRate>
+            <ErrorCodeMinimum>0</ErrorCodeMinimum>
+            <Error6XXNumber>0</Error6XXNumber>
+      </Data>
+      <Data>
+            <Over5totalTime>0</Over5totalTime>
+            <Error4XXRate>0</Error4XXRate>
+            <UnavailableNumber>0</UnavailableNumber>
+            <Over2totalTime>0</Over2totalTime>
+            <timestamp>1551581100000</timestamp>
+            <Over100FailureRate>0</Over100FailureRate>
+            <Over10FailureRate>0</Over10FailureRate>
+            <Availability>100</Availability>
+            <Over80FailureRate>0</Over80FailureRate>
+            <userId>12345</userId>
+            <AvailableNumber>2</AvailableNumber>
+            <Unavailability>0</Unavailability>
+            <ErrorCodeMaximum>0</ErrorCodeMaximum>
+            <Over10totalTime>0</Over10totalTime>
+            <taskId>49f7b317-7645-4cc9-94fd-1****</taskId>
+            <Over30FailureRate>0</Over30FailureRate>
+            <Error6XXRate>0</Error6XXRate>
+            <Over500NumberRate>0</Over500NumberRate>
+            <Over3totalTime>0</Over3totalTime>
+            <Over400NumberRate>0</Over400NumberRate>
+            <Error5XXRate>0</Error5XXRate>
+            <Error5XXNumber>0</Error5XXNumber>
+            <Over90FailureRate>0</Over90FailureRate>
+            <Error4XXNumber>0</Error4XXNumber>
+            <Over50FailureRate>0</Over50FailureRate>
+            <ErrorCodeMinimum>0</ErrorCodeMinimum>
+            <Error6XXNumber>0</Error6XXNumber>
+      </Data>
+      <RequestId>DBDEAC51-EA3C-4853-8F25-6B48D38A28A9</RequestId>
+      <Success>true</Success>
+      <Code>200</Code>
 </DescribeSiteMonitorDataResponse>
-
 ```
 
 `JSON` 格式
@@ -220,5 +219,5 @@ http(s)://[Endpoint]/?Action=DescribeSiteMonitorData
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cms)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cms)查看更多错误码。
 
