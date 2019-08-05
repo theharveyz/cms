@@ -2,9 +2,9 @@
 
 添加或者修改规则的发送目标。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Cms&api=PutEventRuleTargets)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Cms&api=PutEventRuleTargets&type=RPC&version=2019-01-01)
 
 ## 请求参数 {#parameters .section}
 
@@ -77,7 +77,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -99,40 +99,40 @@
 |FailedFcParameters| | |Target中如果包含创建错误的函数服务，则返回这个字段。
 
  |
-|└FunctionName|String|functionTest1|函数名。
+|FunctionName|String|functionTest1|函数名。
 
  |
-|└Id|Integer|1|TargetId，Target唯一标识。
+|Id|Integer|1|TargetId，Target唯一标识。
 
  |
-|└Region|String|cn-hangzhou|RegionId。
+|Region|String|cn-hangzhou|RegionId。
 
  |
-|└ServiceName|String|serviceTest1|函数服务的名称。
+|ServiceName|String|serviceTest1|函数服务的名称。
 
  |
 |FailedMnsParameters| | |Target中如果包含创建错误的消息服务，则返回这个字段。
 
  |
-|└Id|Integer|2|TargetId，Target唯一标识。
+|Id|Integer|2|TargetId，Target唯一标识。
 
  |
-|└Queue|String|testQueue|队列名称。
+|Queue|String|testQueue|队列名称。
 
  |
-|└Region|String|cn-hangzhou|RegionId。
+|Region|String|cn-hangzhou|RegionId。
 
  |
 |FailedContactParameters| | |Target中如果包含创建错误的报警联系人组，则返回这个字段。
 
  |
-|└ContactGroupName|String|默认报警联系人组|报警联系人组。
+|ContactGroupName|String|默认报警联系人组|报警联系人组。
 
  |
-|└Id|Integer|2|TargetId，Target唯一标识。
+|Id|Integer|2|TargetId，Target唯一标识。
 
  |
-|└Level|String|3|报警通知级别，取值为2， 3，4。国际站没有电话、短信通知方式。
+|Level|String|3|报警通知级别，取值为2， 3，4。国际站没有电话、短信通知方式。
 
  -   2：电话、短信、钉钉、Email。
 -   3：短信、钉钉、Email。
@@ -158,11 +158,10 @@ http(s)://[Endpoint]/?Action=PutEventRuleTargets
 
 ``` {#xml_return_success_demo}
 <PutEventRuleTargetsResponse>
-  <RequestId>409C64DA-CF14-45DF-B463-471C790DD15A</RequestId>
-  <Success>true</Success>
-  <Code>200</Code>
+      <RequestId>409C64DA-CF14-45DF-B463-471C790DD15A</RequestId>
+      <Success>true</Success>
+      <Code>200</Code>
 </PutEventRuleTargetsResponse>
-
 ```
 
 `JSON` 格式
@@ -177,5 +176,5 @@ http(s)://[Endpoint]/?Action=PutEventRuleTargets
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Cms)
+访问[错误中心](https://error-center.aliyun.com/status/product/Cms)查看更多错误码。
 
