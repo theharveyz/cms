@@ -1,12 +1,12 @@
 # PutMetricRuleTargets {#doc_api_Cms_PutMetricRuleTargets .reference}
 
-You can call this operation to add or modify targets of an alert rule.
+You can call this operation to add or modify the message resource of an alert rule.
 
-Currently, this operation only supports targets of the MNS type.
+This operation only supports Message Notification Service \(MNS\) as the message service.
 
 ## Debugging {#apiExplorer .section}
 
-Alibaba Cloud provides OpenAPI Explorer to simplify API usage. You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Cms&api=PutMetricRuleTargets) to search for APIs, call APIs, and dynamically generate SDK example code.
+Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=Cms&api=PutMetricRuleTargets) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
 
 ## Request parameters {#parameters .section}
 
@@ -15,22 +15,22 @@ Alibaba Cloud provides OpenAPI Explorer to simplify API usage. You can use [Open
 |Action|String|Yes|PutMetricRuleTargets|The operation that you want to perform. Set this parameter to PutMetricRuleTargets.
 
  |
-|RuleId|String|Yes|rulexx12346|The ID of the alert rule for which you want to add or modify targets.
+|RuleId|String|Yes|rulexx12346|The ID of the alert rule.
 
  |
-|Targets.N.Arn|String|No|acs:mns:cn-hangzhou:111:/queues/test/message|The resource description in the format of acs:\{Service name abbreviation\}:\{regionId\}:\{userId\}:/\{Message resource type\}/\{Resource name\}/message. Example: acs:mns:cn-hangzhou:111:/queues/test/message.
+|Targets.N.Arn|String|No|acs:mns:cn-hangzhou:111:/queues/test/message|The resource description in the format of acs:\{service name abbreviation\}:\{regionId\}:\{userId\}:/\{message resource type\}/\{resource name\}/message, for example, acs:mns:cn-hangzhou:111:/queues/test/message.
 
- -   \{Service name abbreviation\}: Currently, only MNS is supported. Set this parameter to mns.
--   \{regionId\}: the ID of the region where the message queue or topic is located.
+ -   \{service name abbreviation\}: the abbreviation of the service name. Set this value to mns.
+-   \{regionId\}: the region ID of the message queue or topic.
 -   \{userId\}: the account ID of the user.
--   \{Message resource type\}: Set this parameter to queues or topics.
--   \{Resource name\}: If the message resource type is set to queues, set this parameter to the queue name. If the message resource type is set to topics, set this parameter to the topic name.
+-   \{message resource type\}: the type of the message resource. Valid values: queues and topics.
+-   \{resource name\}: the name of a queue if the resource type is queues, or the name of a topic if the type is topics.
 
  |
-|Targets.N.Id|String|No|1|The ID of the target. The ID must be unique in the alert rule.
+|Targets.N.Id|String|No|1|The ID of the message resource. The ID must be unique in the alert rule.
 
  |
-|Targets.N.Level|String|No|\["INFO", "WARN", "CRITICAL"\]|The severity of the alert rule, in the format of a JSON array. Valid values:
+|Targets.N.Level|String|No|\["INFO", "WARN", "CRITICAL"\]|The alert level, which is a string array. Valid values:
 
  -   INFO
 -   WARN
@@ -45,19 +45,25 @@ Alibaba Cloud provides OpenAPI Explorer to simplify API usage. You can use [Open
 |Code|String|200|The status code. A value of 200 indicates that the call was successful.
 
  |
-|FailData| | |The list of the targets that failed to be added or modified.
+|FailData| | |The list of error data.
 
  |
-|└Targets| | |The list of the targets that failed to be added or modified.
+|Targets| | |The list of message resources that failed to be added or modified.
 
  |
-|└Arn|String|acs:mns:cn-hangzhou:111:/queues/test/message|The resource description of the target. For more information, see the description in request parameters.
+|Arn|String|acs:mns:cn-hangzhou:111:/queues/test/message|The resource description in the format of acs:\{service name abbreviation\}:\{regionId\}:\{userId\}:/\{message resource type\}/\{resource name\}/message, for example, acs:mns:cn-hangzhou:111:/queues/test/message.
+
+ -   \{service name abbreviation\}: the abbreviation of the service name. Set this value to mns.
+-   \{regionId\}: the region ID of the message queue or topic.
+-   \{userId\}: the account ID of the user.
+-   \{message resource type\}: the type of the message resource. Valid values: queues and topics.
+-   \{resource name\}: the name of a queue if the resource type is queues, or the name of a topic if the type is topics.
 
  |
-|└Id|String|1|The ID of the target.
+|Id|String|1|The ID of the message resource.
 
  |
-|└Level|String|\["INFO", "WARN", "CRITICAL"\]|The severity of the alert rule, in the format of a JSON array. Valid values:
+|Level|String|\["INFO", "WARN", "CRITICAL"\]|The alert level, which is a string array. Valid values:
 
  -   INFO
 -   WARN
@@ -67,10 +73,10 @@ Alibaba Cloud provides OpenAPI Explorer to simplify API usage. You can use [Open
 |Message|String|success|The error message.
 
  |
-|RequestId|String|786E92D2-AC66-4250-B76F-F1E2FCDDBA1C|The ID of the request.
+|RequestId|String|786E92D2-AC66-4250-B76F-F1E2FCDDBA1C|The ID of the request, which can be used for troubleshooting.
 
  |
-|Success|Boolean|true|Indicates whether the call was successful.
+|Success|Boolean|true|Indicates whether the call is successful.
 
  |
 
@@ -133,6 +139,4 @@ Sample success response
 ```
 
 ## Error codes { .section}
-
-[View error codes.](https://error-center.aliyun.com/status/product/Cms)
 
