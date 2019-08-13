@@ -1,12 +1,12 @@
 # DescribeMetricRuleTargets {#doc_api_Cms_DescribeMetricRuleTargets .reference}
 
-You can call this operation to query targets of an alert rule.
+You can call this operation to query the message resources of an alert rule.
 
-Currently, this operation only supports targets of the MNS type.
+This operation only supports the Message Notification Service \(MNS\) as the message service.
 
 ## Debugging {#apiExplorer .section}
 
-Alibaba Cloud provides OpenAPI Explorer to simplify API usage. You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Cms&api=DescribeMetricRuleTargets) to search for APIs, call APIs, and dynamically generate SDK example code.
+Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=Cms&api=DescribeMetricRuleTargets) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
 
 ## Request parameters {#parameters .section}
 
@@ -15,7 +15,7 @@ Alibaba Cloud provides OpenAPI Explorer to simplify API usage. You can use [Open
 |Action|String|Yes|DescribeMetricRuleTargets|The operation that you want to perform. Set this parameter to DescribeMetricRuleTargets.
 
  |
-|RuleId|String|Yes|rulIdxxxxx1|The ID of the alert rule for which you want to query targets.
+|RuleId|String|Yes|rulIdxxxxx1|The ID of the alert rule.
 
  |
 
@@ -23,31 +23,31 @@ Alibaba Cloud provides OpenAPI Explorer to simplify API usage. You can use [Open
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|Code|String|200|The status code. A value of 200 indicates that the call was successful.
+|Code|String|200|The status code. The code 200 indicates that the call is successful.
 
  |
 |Message|String|success|The error message.
 
  |
-|RequestId|String|786E92D2-AC66-4250-B76F-F1E2FCDDBA1C|The ID of the request.
+|RequestId|String|786E92D2-AC66-4250-B76F-F1E2FCDDBA1C|The ID of the request, which can be used for troubleshooting.
 
  |
-|Targets| | |The targets that were queried.
+|Targets| | |The message resources to query.
 
  |
-|└Arn|String|acs:mns:cn-hangzhou:111:/queues/test/message|The resource description in the format of acs:\{Service name abbreviation\}:\{regionId\}:\{userId\}:/\{Message resource type\}/\{Resource name\}/message. Example: acs:mns:cn-hangzhou:111:/queues/test/message.
+|Arn|String|acs:mns:cn-hangzhou:111:/queues/test/message|The resource description is in the format of acs:\{service name abbreviation\}:\{regionId\}:\{userId\}:/\{message resource type\}/\{resource name\}/message, for example, acs:mns:cn-hangzhou:111:/queues/test/message.
 
- -   \{Service name abbreviation\}: Currently, only MNS is supported. This parameter has a fixed value of mns.
+ -   \{service name abbreviation\}: the abbreviation of the service name. Set this value to mns.
 -   \{userId\}: the account ID of the user.
--   \{regionId\}: the ID of the region where the message queue or topic is located.
--   \{Message resource type\}: The value can be queues or topics.
--   \{Resource name\}: If the message resource type is queues, the value of this parameter is the queue name. If the message resource type is topics, the value of this parameter is the topic name.
+-   \{regionId\}: the region ID of the message queue or topic.
+-   \{message resource type\}: the type of the message resource. Valid values: queues and topics.
+-   \{resource name\}: the name of a queue if the resource type is queues, or the name of a topic if the type is topics.
 
  |
-|└Id|String|1|The ID of the target.
+|Id|String|1|The ID of the message resource.
 
  |
-|└Level|String|\["INFO", "WARN", "CRITICAL"\]|The severity of the alert rule, in the format of a JSON array. Valid values:
+|Level|String|\["INFO", "WARN", "CRITICAL"\]|The alert level, which is a string array. Valid values:
 
  -   INFO
 -   WARN
@@ -113,6 +113,4 @@ Sample success response
 ```
 
 ## Error codes { .section}
-
-[View error codes.](https://error-center.aliyun.com/status/product/Cms)
 
